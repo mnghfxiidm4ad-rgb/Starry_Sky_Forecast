@@ -1,0 +1,106 @@
+{
+  "updatedAt": "2026-08-23T00:00:00+09:00",
+  "note": "モックデータです。実況の気象・光害値ではありません。",
+  "spots": [
+    {
+      "id": "fuji-gogome",
+      "name": "富士山五合目",
+      "subtitle": "富士スバルライン五合目",
+      "prefecture": "山梨県",
+      "lat": 35.4285,
+      "lng": 138.7516,
+      "elevation": 2305,
+      "lightPollution": "中",
+      "starScore": 3,
+      "description": "標高約2,300mの高地から望む富士山周辺の夜空。空気が薄く透明度が出やすい一方、山梨・静岡方面の街明かりが地平線近くに乗るため、光害は中程度です。夏の天の川や冬のオリオン座の撮影ポイントとして知られますが、五合目の照明と観光客のヘッドライトには注意が必要です。",
+      "condition": {
+        "label": "条件つき可",
+        "cloudCover": 35,
+        "transparency": 3,
+        "seeing": 3,
+        "moonPhase": "上弦",
+        "moonIllumination": 48
+      }
+    },
+    {
+      "id": "achi",
+      "name": "長野県阿智村",
+      "subtitle": "ヘブンスそのはら・天空の楽園",
+      "prefecture": "長野県",
+      "lat": 35.4417,
+      "lng": 137.6153,
+      "elevation": 1400,
+      "lightPollution": "低",
+      "starScore": 5,
+      "description": "環境省の星空継続観察で「日本一の星空」と評された南信州の観測適地。標高約1,400mの富士見台高原は街明かりが届きにくく、夏は天の川、冬は澄んだ大気で星が点に写りやすいのが特徴です。ナイトツアー開催時は照明が一斉消灯されるため、肉眼観測・広角撮影の双方に向きます。",
+      "condition": {
+        "label": "観測・撮影ともに適",
+        "cloudCover": 8,
+        "transparency": 5,
+        "seeing": 4,
+        "moonPhase": "三日月",
+        "moonIllumination": 12
+      }
+    },
+    {
+      "id": "nosegawa",
+      "name": "奈良県野迫川村",
+      "subtitle": "近畿の秘境・南紀の星空",
+      "prefecture": "奈良県",
+      "lat": 34.1664,
+      "lng": 135.6308,
+      "elevation": 850,
+      "lightPollution": "低",
+      "starScore": 5,
+      "description": "紀伊山地の山深い村で、近畿地方でも有数の暗い夜空が残るエリアです。大阪・奈良盆地の光害から距離があり、天の川の中心部が夏の南の空に大きく広がります。標高と山に囲まれた地形のおかげで湿度が下がる夜は、広角の天の川撮影に適したコンディションになりやすいです。",
+      "condition": {
+        "label": "観測向き・薄雲注意",
+        "cloudCover": 22,
+        "transparency": 4,
+        "seeing": 4,
+        "moonPhase": "三日月",
+        "moonIllumination": 12
+      }
+    },
+    {
+      "id": "bisei",
+      "name": "岡山県美星町",
+      "subtitle": "美星天文台・星空保護区",
+      "prefecture": "岡山県",
+      "lat": 34.7608,
+      "lng": 133.5439,
+      "elevation": 447,
+      "lightPollution": "低",
+      "starScore": 4,
+      "description": "「星の町」として照明条例と星空保護の取り組みが早くから進んだエリア。美星天文台周辺は光害が抑えられ、晴れの国・岡山らしい快晴率の高さが観測計画を立てやすくします。標高は中程度ですが、西日本の都市光から適度に離れており、中口径の眼視や広角撮影の入門〜中級スポットです。",
+      "condition": {
+        "label": "観測・撮影ともに適",
+        "cloudCover": 15,
+        "transparency": 4,
+        "seeing": 3,
+        "moonPhase": "三日月",
+        "moonIllumination": 12
+      }
+    },
+    {
+      "id": "ishigaki",
+      "name": "沖縄県石垣島",
+      "subtitle": "石垣島天文台",
+      "prefecture": "沖縄県",
+      "lat": 24.3725,
+      "lng": 124.1392,
+      "elevation": 31,
+      "lightPollution": "低",
+      "starScore": 4,
+      "description": "北緯24度の低緯度から、本州では地平線近くになる南の星座を高く見上げられます。石垣島天文台周辺は比較的暗い空が残り、冬の南天や夏の天の川南端の撮影に適します。亜熱帯特有の水蒸気で透明度が落ちる夜もあるため、湿度と雲の流れを見て計画するのがコツです。",
+      "condition": {
+        "label": "南天向き・湿度注意",
+        "cloudCover": 28,
+        "transparency": 3,
+        "seeing": 4,
+        "moonPhase": "上弦",
+        "moonIllumination": 48
+      }
+    }
+  ]
+}

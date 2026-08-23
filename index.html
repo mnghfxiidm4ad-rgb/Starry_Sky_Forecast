@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="星空観測・天体撮影のコンディション判定マップ。全国の観測スポットを星空スコアで色分け表示します。">
+  <title>星空予想 | 観測・撮影コンディションマップ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Old+Mincho:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#map">地図へスキップ</a>
+
+  <header class="site-header">
+    <div class="site-header__brand">
+      <span class="site-header__mark" aria-hidden="true">✦</span>
+      <div>
+        <h1 class="site-header__title">星空予想</h1>
+        <p class="site-header__sub">観測・天体撮影コンディションマップ</p>
+      </div>
+    </div>
+    <p class="site-header__meta">
+      <span id="mock-date">更新日時</span>
+      <span class="site-header__badge">デモデータ</span>
+    </p>
+  </header>
+
+  <nav class="date-bar" id="date-bar" aria-label="16日先までの予報日付"></nav>
+
+  <main>
+    <div id="map" role="application" aria-label="星空観測スポット地図"></div>
+
+    <aside class="legend" aria-label="星空スコア凡例">
+      <p class="legend__title">星空スコア</p>
+      <ul class="legend__list">
+        <li><span class="legend__dot score-5"></span>★5 絶好</li>
+        <li><span class="legend__dot score-4"></span>★4 良好</li>
+        <li><span class="legend__dot score-3"></span>★3 普通</li>
+        <li><span class="legend__dot score-2"></span>★2 やや不良</li>
+        <li><span class="legend__dot score-1"></span>★1 不向き</li>
+      </ul>
+    </aside>
+
+    <nav class="spot-chips" aria-label="観測スポット一覧">
+      <p class="spot-chips__label">スポット</p>
+      <div class="spot-chips__row" id="spot-chips"></div>
+    </nav>
+  </main>
+
+  <div class="panel-backdrop" id="panel-backdrop" hidden></div>
+
+  <aside
+    class="side-panel"
+    id="side-panel"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="panel-title"
+    aria-hidden="true"
+  >
+    <div class="side-panel__handle" aria-hidden="true"></div>
+    <button type="button" class="side-panel__close" id="panel-close" aria-label="パネルを閉じる">
+      <span aria-hidden="true">×</span>
+    </button>
+    <div class="side-panel__scroll" id="panel-content"></div>
+  </aside>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+  <script src="./data/auto_spots.js"></script>
+  <script src="./data/forecast.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>

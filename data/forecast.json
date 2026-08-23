@@ -1,0 +1,3430 @@
+{
+  "updatedAt": "2026-08-23T12:12:09+09:00",
+  "source": "Open-Meteo",
+  "forecastDays": 16,
+  "nightWindow": {
+    "startHour": 20,
+    "endHour": 3,
+    "nights": [
+      "2026-08-23",
+      "2026-08-24",
+      "2026-08-25",
+      "2026-08-26",
+      "2026-08-27",
+      "2026-08-28",
+      "2026-08-29",
+      "2026-08-30",
+      "2026-08-31",
+      "2026-09-01",
+      "2026-09-02",
+      "2026-09-03",
+      "2026-09-04",
+      "2026-09-05",
+      "2026-09-06",
+      "2026-09-07"
+    ]
+  },
+  "spots": [
+    {
+      "id": "fuji-gogome",
+      "name": "富士山五合目",
+      "subtitle": "富士スバルライン五合目",
+      "prefecture": "山梨県",
+      "lat": 35.4285,
+      "lng": 138.7516,
+      "lon": 138.7516,
+      "elevation": 2305,
+      "elevation_m": 2305,
+      "lightPollution": "中",
+      "bortle_scale": 4,
+      "description": "標高約2,300mの高地から望む富士山周辺の夜空。空気が薄く透明度が出やすい一方、山梨・静岡方面の街明かりが地平線近くに乗るため、光害は中程度です。夏の天の川や冬のオリオン座の撮影ポイントとして知られますが、五合目の照明と観光客のヘッドライトには注意が必要です。",
+      "starScore": 3,
+      "condition": {
+        "label": "条件つき可",
+        "cloudCover": 26,
+        "moonPhase": "十三夜",
+        "moonIllumination": 77,
+        "moonAge": 10.1
+      },
+      "hourlyCloud": [
+        {
+          "time": "2026-08-23T20:00",
+          "hour": "20:00",
+          "cloudCover": 39,
+          "moonUp": true
+        },
+        {
+          "time": "2026-08-23T21:00",
+          "hour": "21:00",
+          "cloudCover": 39,
+          "moonUp": true
+        },
+        {
+          "time": "2026-08-23T22:00",
+          "hour": "22:00",
+          "cloudCover": 37,
+          "moonUp": true
+        },
+        {
+          "time": "2026-08-23T23:00",
+          "hour": "23:00",
+          "cloudCover": 32,
+          "moonUp": true
+        },
+        {
+          "time": "2026-08-24T00:00",
+          "hour": "00:00",
+          "cloudCover": 21,
+          "moonUp": true
+        },
+        {
+          "time": "2026-08-24T01:00",
+          "hour": "01:00",
+          "cloudCover": 13,
+          "moonUp": false
+        },
+        {
+          "time": "2026-08-24T02:00",
+          "hour": "02:00",
+          "cloudCover": 12,
+          "moonUp": false
+        },
+        {
+          "time": "2026-08-24T03:00",
+          "hour": "03:00",
+          "cloudCover": 12,
+          "moonUp": false
+        }
+      ],
+      "daily": [
+        {
+          "date": "2026-08-23",
+          "offset": 0,
+          "starScore": 3,
+          "score100": 59,
+          "label": "条件つき可",
+          "cloudCover": 26,
+          "moonAge": 10.1,
+          "moonIllumination": 77,
+          "moonPhase": 0.342,
+          "moonPhaseName": "十三夜",
+          "moonrise": "2026-08-23T15:28",
+          "moonset": null,
+          "moonDownHours": 3,
+          "moonDownRatio": 0.38,
+          "hourlyCloud": [
+            {
+              "time": "2026-08-23T20:00",
+              "hour": "20:00",
+              "cloudCover": 39,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-23T21:00",
+              "hour": "21:00",
+              "cloudCover": 39,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-23T22:00",
+              "hour": "22:00",
+              "cloudCover": 37,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-23T23:00",
+              "hour": "23:00",
+              "cloudCover": 32,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-24T00:00",
+              "hour": "00:00",
+              "cloudCover": 21,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-24T01:00",
+              "hour": "01:00",
+              "cloudCover": 13,
+              "moonUp": false
+            },
+            {
+              "time": "2026-08-24T02:00",
+              "hour": "02:00",
+              "cloudCover": 12,
+              "moonUp": false
+            },
+            {
+              "time": "2026-08-24T03:00",
+              "hour": "03:00",
+              "cloudCover": 12,
+              "moonUp": false
+            }
+          ]
+        },
+        {
+          "date": "2026-08-24",
+          "offset": 1,
+          "starScore": 3,
+          "score100": 57,
+          "label": "条件つき可",
+          "cloudCover": 23,
+          "moonAge": 11.0,
+          "moonIllumination": 85,
+          "moonPhase": 0.372,
+          "moonPhaseName": "十三夜",
+          "moonrise": "2026-08-24T16:12",
+          "moonset": "2026-08-24T00:52",
+          "moonDownHours": 2,
+          "moonDownRatio": 0.25,
+          "hourlyCloud": [
+            {
+              "time": "2026-08-24T20:00",
+              "hour": "20:00",
+              "cloudCover": 22,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-24T21:00",
+              "hour": "21:00",
+              "cloudCover": 55,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-24T22:00",
+              "hour": "22:00",
+              "cloudCover": 26,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-24T23:00",
+              "hour": "23:00",
+              "cloudCover": 22,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-25T00:00",
+              "hour": "00:00",
+              "cloudCover": 18,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-25T01:00",
+              "hour": "01:00",
+              "cloudCover": 18,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-25T02:00",
+              "hour": "02:00",
+              "cloudCover": 14,
+              "moonUp": false
+            },
+            {
+              "time": "2026-08-25T03:00",
+              "hour": "03:00",
+              "cloudCover": 10,
+              "moonUp": false
+            }
+          ]
+        },
+        {
+          "date": "2026-08-25",
+          "offset": 2,
+          "starScore": 3,
+          "score100": 56,
+          "label": "月明かり注意",
+          "cloudCover": 19,
+          "moonAge": 11.9,
+          "moonIllumination": 91,
+          "moonPhase": 0.403,
+          "moonPhaseName": "十三夜",
+          "moonrise": "2026-08-25T16:49",
+          "moonset": "2026-08-25T01:52",
+          "moonDownHours": 1,
+          "moonDownRatio": 0.12,
+          "hourlyCloud": [
+            {
+              "time": "2026-08-25T20:00",
+              "hour": "20:00",
+              "cloudCover": 54,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-25T21:00",
+              "hour": "21:00",
+              "cloudCover": 27,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-25T22:00",
+              "hour": "22:00",
+              "cloudCover": 9,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-25T23:00",
+              "hour": "23:00",
+              "cloudCover": 6,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-26T00:00",
+              "hour": "00:00",
+              "cloudCover": 9,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-26T01:00",
+              "hour": "01:00",
+              "cloudCover": 17,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-26T02:00",
+              "hour": "02:00",
+              "cloudCover": 18,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-26T03:00",
+              "hour": "03:00",
+              "cloudCover": 13,
+              "moonUp": false
+            }
+          ]
+        },
+        {
+          "date": "2026-08-26",
+          "offset": 3,
+          "starScore": 1,
+          "score100": 20,
+          "label": "不向き",
+          "cloudCover": 85,
+          "moonAge": 12.8,
+          "moonIllumination": 96,
+          "moonPhase": 0.434,
+          "moonPhaseName": "十三夜",
+          "moonrise": "2026-08-26T17:22",
+          "moonset": "2026-08-26T02:53",
+          "moonDownHours": 0,
+          "moonDownRatio": 0.0,
+          "hourlyCloud": [
+            {
+              "time": "2026-08-26T20:00",
+              "hour": "20:00",
+              "cloudCover": 66,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-26T21:00",
+              "hour": "21:00",
+              "cloudCover": 78,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-26T22:00",
+              "hour": "22:00",
+              "cloudCover": 82,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-26T23:00",
+              "hour": "23:00",
+              "cloudCover": 87,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-27T00:00",
+              "hour": "00:00",
+              "cloudCover": 91,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-27T01:00",
+              "hour": "01:00",
+              "cloudCover": 92,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-27T02:00",
+              "hour": "02:00",
+              "cloudCover": 92,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-27T03:00",
+              "hour": "03:00",
+              "cloudCover": 92,
+              "moonUp": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-27",
+          "offset": 4,
+          "starScore": 3,
+          "score100": 45,
+          "label": "月明かり注意",
+          "cloudCover": 33,
+          "moonAge": 13.8,
+          "moonIllumination": 99,
+          "moonPhase": 0.466,
+          "moonPhaseName": "満月",
+          "moonrise": "2026-08-27T17:51",
+          "moonset": "2026-08-27T03:55",
+          "moonDownHours": 0,
+          "moonDownRatio": 0.0,
+          "hourlyCloud": [
+            {
+              "time": "2026-08-27T20:00",
+              "hour": "20:00",
+              "cloudCover": 69,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-27T21:00",
+              "hour": "21:00",
+              "cloudCover": 59,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-27T22:00",
+              "hour": "22:00",
+              "cloudCover": 49,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-27T23:00",
+              "hour": "23:00",
+              "cloudCover": 38,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-28T00:00",
+              "hour": "00:00",
+              "cloudCover": 28,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-28T01:00",
+              "hour": "01:00",
+              "cloudCover": 16,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-28T02:00",
+              "hour": "02:00",
+              "cloudCover": 5,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-28T03:00",
+              "hour": "03:00",
+              "cloudCover": 2,
+              "moonUp": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-28",
+          "offset": 5,
+          "starScore": 1,
+          "score100": 11,
+          "label": "不向き",
+          "cloudCover": 100,
+          "moonAge": 14.7,
+          "moonIllumination": 100,
+          "moonPhase": 0.498,
+          "moonPhaseName": "満月",
+          "moonrise": "2026-08-28T18:17",
+          "moonset": "2026-08-28T04:57",
+          "moonDownHours": 0,
+          "moonDownRatio": 0.0,
+          "hourlyCloud": [
+            {
+              "time": "2026-08-28T20:00",
+              "hour": "20:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-28T21:00",
+              "hour": "21:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-28T22:00",
+              "hour": "22:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-28T23:00",
+              "hour": "23:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-29T00:00",
+              "hour": "00:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-29T01:00",
+              "hour": "01:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-29T02:00",
+              "hour": "02:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-29T03:00",
+              "hour": "03:00",
+              "cloudCover": 100,
+              "moonUp": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-29",
+          "offset": 6,
+          "starScore": 1,
+          "score100": 11,
+          "label": "不向き",
+          "cloudCover": 100,
+          "moonAge": 15.7,
+          "moonIllumination": 99,
+          "moonPhase": 0.531,
+          "moonPhaseName": "満月",
+          "moonrise": "2026-08-29T18:43",
+          "moonset": "2026-08-29T05:59",
+          "moonDownHours": 0,
+          "moonDownRatio": 0.0,
+          "hourlyCloud": [
+            {
+              "time": "2026-08-29T20:00",
+              "hour": "20:00",
+              "cloudCover": 99,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-29T21:00",
+              "hour": "21:00",
+              "cloudCover": 99,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-29T22:00",
+              "hour": "22:00",
+              "cloudCover": 99,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-29T23:00",
+              "hour": "23:00",
+              "cloudCover": 99,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-30T00:00",
+              "hour": "00:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-30T01:00",
+              "hour": "01:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-30T02:00",
+              "hour": "02:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-30T03:00",
+              "hour": "03:00",
+              "cloudCover": 100,
+              "moonUp": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-30",
+          "offset": 7,
+          "starScore": 1,
+          "score100": 18,
+          "label": "不向き",
+          "cloudCover": 88,
+          "moonAge": 16.7,
+          "moonIllumination": 96,
+          "moonPhase": 0.565,
+          "moonPhaseName": "十八夜",
+          "moonrise": "2026-08-30T19:09",
+          "moonset": "2026-08-30T07:02",
+          "moonDownHours": 0,
+          "moonDownRatio": 0.0
+        },
+        {
+          "date": "2026-08-31",
+          "offset": 8,
+          "starScore": 1,
+          "score100": 24,
+          "label": "不向き",
+          "cloudCover": 80,
+          "moonAge": 17.7,
+          "moonIllumination": 91,
+          "moonPhase": 0.599,
+          "moonPhaseName": "十八夜",
+          "moonrise": "2026-08-31T19:36",
+          "moonset": "2026-08-31T08:06",
+          "moonDownHours": 0,
+          "moonDownRatio": 0.0
+        },
+        {
+          "date": "2026-09-01",
+          "offset": 9,
+          "starScore": 4,
+          "score100": 63,
+          "label": "月明かり注意",
+          "cloudCover": 9,
+          "moonAge": 18.8,
+          "moonIllumination": 83,
+          "moonPhase": 0.635,
+          "moonPhaseName": "十八夜",
+          "moonrise": "2026-09-01T20:06",
+          "moonset": "2026-09-01T09:12",
+          "moonDownHours": 1,
+          "moonDownRatio": 0.12
+        },
+        {
+          "date": "2026-09-02",
+          "offset": 10,
+          "starScore": 2,
+          "score100": 26,
+          "label": "やや不良",
+          "cloudCover": 88,
+          "moonAge": 19.8,
+          "moonIllumination": 74,
+          "moonPhase": 0.67,
+          "moonPhaseName": "十八夜",
+          "moonrise": "2026-09-02T20:41",
+          "moonset": "2026-09-02T10:21",
+          "moonDownHours": 1,
+          "moonDownRatio": 0.12
+        },
+        {
+          "date": "2026-09-03",
+          "offset": 11,
+          "starScore": 1,
+          "score100": 25,
+          "label": "不向き",
+          "cloudCover": 99,
+          "moonAge": 20.8,
+          "moonIllumination": 64,
+          "moonPhase": 0.706,
+          "moonPhaseName": "十八夜",
+          "moonrise": "2026-09-03T21:24",
+          "moonset": "2026-09-03T11:32",
+          "moonDownHours": 2,
+          "moonDownRatio": 0.25
+        },
+        {
+          "date": "2026-09-04",
+          "offset": 12,
+          "starScore": 2,
+          "score100": 29,
+          "label": "やや不良",
+          "cloudCover": 100,
+          "moonAge": 21.9,
+          "moonIllumination": 52,
+          "moonPhase": 0.743,
+          "moonPhaseName": "下弦",
+          "moonrise": "2026-09-04T22:15",
+          "moonset": "2026-09-04T12:43",
+          "moonDownHours": 3,
+          "moonDownRatio": 0.38
+        },
+        {
+          "date": "2026-09-05",
+          "offset": 13,
+          "starScore": 2,
+          "score100": 34,
+          "label": "やや不良",
+          "cloudCover": 100,
+          "moonAge": 23.0,
+          "moonIllumination": 41,
+          "moonPhase": 0.779,
+          "moonPhaseName": "下弦",
+          "moonrise": "2026-09-05T23:17",
+          "moonset": "2026-09-05T13:50",
+          "moonDownHours": 4,
+          "moonDownRatio": 0.5
+        },
+        {
+          "date": "2026-09-06",
+          "offset": 14,
+          "starScore": 2,
+          "score100": 38,
+          "label": "やや不良",
+          "cloudCover": 100,
+          "moonAge": 24.1,
+          "moonIllumination": 30,
+          "moonPhase": 0.816,
+          "moonPhaseName": "有明月",
+          "moonrise": null,
+          "moonset": "2026-09-06T14:49",
+          "moonDownHours": 5,
+          "moonDownRatio": 0.62
+        },
+        {
+          "date": "2026-09-07",
+          "offset": 15,
+          "starScore": 3,
+          "score100": 52,
+          "label": "条件つき可",
+          "cloudCover": 87,
+          "moonAge": 25.2,
+          "moonIllumination": 20,
+          "moonPhase": 0.853,
+          "moonPhaseName": "有明月",
+          "moonrise": "2026-09-07T00:26",
+          "moonset": "2026-09-07T15:39",
+          "moonDownHours": 4,
+          "moonDownRatio": 1.0
+        }
+      ]
+    },
+    {
+      "id": "achi",
+      "name": "長野県阿智村",
+      "subtitle": "ヘブンスそのはら・天空の楽園",
+      "prefecture": "長野県",
+      "lat": 35.4417,
+      "lng": 137.6153,
+      "lon": 137.6153,
+      "elevation": 1400,
+      "elevation_m": 1400,
+      "lightPollution": "低",
+      "bortle_scale": 3,
+      "description": "環境省の星空継続観察で「日本一の星空」と評された南信州の観測適地。標高約1,400mの富士見台高原は街明かりが届きにくく、夏は天の川、冬は澄んだ大気で星が点に写りやすいのが特徴です。ナイトツアー開催時は照明が一斉消灯されるため、肉眼観測・広角撮影の双方に向きます。",
+      "starScore": 2,
+      "condition": {
+        "label": "やや不良",
+        "cloudCover": 73,
+        "moonPhase": "十三夜",
+        "moonIllumination": 77,
+        "moonAge": 10.1
+      },
+      "hourlyCloud": [
+        {
+          "time": "2026-08-23T20:00",
+          "hour": "20:00",
+          "cloudCover": 41,
+          "moonUp": true
+        },
+        {
+          "time": "2026-08-23T21:00",
+          "hour": "21:00",
+          "cloudCover": 46,
+          "moonUp": true
+        },
+        {
+          "time": "2026-08-23T22:00",
+          "hour": "22:00",
+          "cloudCover": 53,
+          "moonUp": true
+        },
+        {
+          "time": "2026-08-23T23:00",
+          "hour": "23:00",
+          "cloudCover": 68,
+          "moonUp": true
+        },
+        {
+          "time": "2026-08-24T00:00",
+          "hour": "00:00",
+          "cloudCover": 77,
+          "moonUp": true
+        },
+        {
+          "time": "2026-08-24T01:00",
+          "hour": "01:00",
+          "cloudCover": 98,
+          "moonUp": false
+        },
+        {
+          "time": "2026-08-24T02:00",
+          "hour": "02:00",
+          "cloudCover": 100,
+          "moonUp": false
+        },
+        {
+          "time": "2026-08-24T03:00",
+          "hour": "03:00",
+          "cloudCover": 100,
+          "moonUp": false
+        }
+      ],
+      "daily": [
+        {
+          "date": "2026-08-23",
+          "offset": 0,
+          "starScore": 2,
+          "score100": 38,
+          "label": "やや不良",
+          "cloudCover": 73,
+          "moonAge": 10.1,
+          "moonIllumination": 77,
+          "moonPhase": 0.342,
+          "moonPhaseName": "十三夜",
+          "moonrise": "2026-08-23T15:33",
+          "moonset": "2026-08-23T00:02",
+          "moonDownHours": 3,
+          "moonDownRatio": 0.38,
+          "hourlyCloud": [
+            {
+              "time": "2026-08-23T20:00",
+              "hour": "20:00",
+              "cloudCover": 41,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-23T21:00",
+              "hour": "21:00",
+              "cloudCover": 46,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-23T22:00",
+              "hour": "22:00",
+              "cloudCover": 53,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-23T23:00",
+              "hour": "23:00",
+              "cloudCover": 68,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-24T00:00",
+              "hour": "00:00",
+              "cloudCover": 77,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-24T01:00",
+              "hour": "01:00",
+              "cloudCover": 98,
+              "moonUp": false
+            },
+            {
+              "time": "2026-08-24T02:00",
+              "hour": "02:00",
+              "cloudCover": 100,
+              "moonUp": false
+            },
+            {
+              "time": "2026-08-24T03:00",
+              "hour": "03:00",
+              "cloudCover": 100,
+              "moonUp": false
+            }
+          ]
+        },
+        {
+          "date": "2026-08-24",
+          "offset": 1,
+          "starScore": 3,
+          "score100": 51,
+          "label": "条件つき可",
+          "cloudCover": 40,
+          "moonAge": 11.0,
+          "moonIllumination": 85,
+          "moonPhase": 0.372,
+          "moonPhaseName": "十三夜",
+          "moonrise": "2026-08-24T16:16",
+          "moonset": "2026-08-24T00:57",
+          "moonDownHours": 2,
+          "moonDownRatio": 0.25,
+          "hourlyCloud": [
+            {
+              "time": "2026-08-24T20:00",
+              "hour": "20:00",
+              "cloudCover": 35,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-24T21:00",
+              "hour": "21:00",
+              "cloudCover": 40,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-24T22:00",
+              "hour": "22:00",
+              "cloudCover": 54,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-24T23:00",
+              "hour": "23:00",
+              "cloudCover": 68,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-25T00:00",
+              "hour": "00:00",
+              "cloudCover": 58,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-25T01:00",
+              "hour": "01:00",
+              "cloudCover": 20,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-25T02:00",
+              "hour": "02:00",
+              "cloudCover": 38,
+              "moonUp": false
+            },
+            {
+              "time": "2026-08-25T03:00",
+              "hour": "03:00",
+              "cloudCover": 7,
+              "moonUp": false
+            }
+          ]
+        },
+        {
+          "date": "2026-08-25",
+          "offset": 2,
+          "starScore": 3,
+          "score100": 61,
+          "label": "月明かり注意",
+          "cloudCover": 14,
+          "moonAge": 11.9,
+          "moonIllumination": 91,
+          "moonPhase": 0.403,
+          "moonPhaseName": "十三夜",
+          "moonrise": "2026-08-25T16:54",
+          "moonset": "2026-08-25T01:56",
+          "moonDownHours": 1,
+          "moonDownRatio": 0.12,
+          "hourlyCloud": [
+            {
+              "time": "2026-08-25T20:00",
+              "hour": "20:00",
+              "cloudCover": 23,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-25T21:00",
+              "hour": "21:00",
+              "cloudCover": 15,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-25T22:00",
+              "hour": "22:00",
+              "cloudCover": 8,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-25T23:00",
+              "hour": "23:00",
+              "cloudCover": 7,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-26T00:00",
+              "hour": "00:00",
+              "cloudCover": 8,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-26T01:00",
+              "hour": "01:00",
+              "cloudCover": 21,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-26T02:00",
+              "hour": "02:00",
+              "cloudCover": 25,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-26T03:00",
+              "hour": "03:00",
+              "cloudCover": 6,
+              "moonUp": false
+            }
+          ]
+        },
+        {
+          "date": "2026-08-26",
+          "offset": 3,
+          "starScore": 1,
+          "score100": 20,
+          "label": "不向き",
+          "cloudCover": 90,
+          "moonAge": 12.8,
+          "moonIllumination": 96,
+          "moonPhase": 0.434,
+          "moonPhaseName": "十三夜",
+          "moonrise": "2026-08-26T17:27",
+          "moonset": "2026-08-26T02:58",
+          "moonDownHours": 0,
+          "moonDownRatio": 0.0,
+          "hourlyCloud": [
+            {
+              "time": "2026-08-26T20:00",
+              "hour": "20:00",
+              "cloudCover": 62,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-26T21:00",
+              "hour": "21:00",
+              "cloudCover": 91,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-26T22:00",
+              "hour": "22:00",
+              "cloudCover": 98,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-26T23:00",
+              "hour": "23:00",
+              "cloudCover": 97,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-27T00:00",
+              "hour": "00:00",
+              "cloudCover": 96,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-27T01:00",
+              "hour": "01:00",
+              "cloudCover": 95,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-27T02:00",
+              "hour": "02:00",
+              "cloudCover": 92,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-27T03:00",
+              "hour": "03:00",
+              "cloudCover": 91,
+              "moonUp": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-27",
+          "offset": 4,
+          "starScore": 2,
+          "score100": 30,
+          "label": "やや不良",
+          "cloudCover": 68,
+          "moonAge": 13.8,
+          "moonIllumination": 99,
+          "moonPhase": 0.466,
+          "moonPhaseName": "満月",
+          "moonrise": "2026-08-27T17:56",
+          "moonset": "2026-08-27T04:00",
+          "moonDownHours": 0,
+          "moonDownRatio": 0.0,
+          "hourlyCloud": [
+            {
+              "time": "2026-08-27T20:00",
+              "hour": "20:00",
+              "cloudCover": 95,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-27T21:00",
+              "hour": "21:00",
+              "cloudCover": 95,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-27T22:00",
+              "hour": "22:00",
+              "cloudCover": 91,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-27T23:00",
+              "hour": "23:00",
+              "cloudCover": 84,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-28T00:00",
+              "hour": "00:00",
+              "cloudCover": 74,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-28T01:00",
+              "hour": "01:00",
+              "cloudCover": 54,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-28T02:00",
+              "hour": "02:00",
+              "cloudCover": 29,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-28T03:00",
+              "hour": "03:00",
+              "cloudCover": 20,
+              "moonUp": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-28",
+          "offset": 5,
+          "starScore": 1,
+          "score100": 22,
+          "label": "不向き",
+          "cloudCover": 83,
+          "moonAge": 14.7,
+          "moonIllumination": 100,
+          "moonPhase": 0.498,
+          "moonPhaseName": "満月",
+          "moonrise": "2026-08-28T18:22",
+          "moonset": "2026-08-28T05:02",
+          "moonDownHours": 0,
+          "moonDownRatio": 0.0,
+          "hourlyCloud": [
+            {
+              "time": "2026-08-28T20:00",
+              "hour": "20:00",
+              "cloudCover": 65,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-28T21:00",
+              "hour": "21:00",
+              "cloudCover": 80,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-28T22:00",
+              "hour": "22:00",
+              "cloudCover": 83,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-28T23:00",
+              "hour": "23:00",
+              "cloudCover": 81,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-29T00:00",
+              "hour": "00:00",
+              "cloudCover": 81,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-29T01:00",
+              "hour": "01:00",
+              "cloudCover": 85,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-29T02:00",
+              "hour": "02:00",
+              "cloudCover": 91,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-29T03:00",
+              "hour": "03:00",
+              "cloudCover": 95,
+              "moonUp": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-29",
+          "offset": 6,
+          "starScore": 2,
+          "score100": 29,
+          "label": "やや不良",
+          "cloudCover": 70,
+          "moonAge": 15.7,
+          "moonIllumination": 99,
+          "moonPhase": 0.531,
+          "moonPhaseName": "満月",
+          "moonrise": "2026-08-29T18:48",
+          "moonset": "2026-08-29T06:04",
+          "moonDownHours": 0,
+          "moonDownRatio": 0.0,
+          "hourlyCloud": [
+            {
+              "time": "2026-08-29T20:00",
+              "hour": "20:00",
+              "cloudCover": 88,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-29T21:00",
+              "hour": "21:00",
+              "cloudCover": 84,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-29T22:00",
+              "hour": "22:00",
+              "cloudCover": 79,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-29T23:00",
+              "hour": "23:00",
+              "cloudCover": 72,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-30T00:00",
+              "hour": "00:00",
+              "cloudCover": 65,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-30T01:00",
+              "hour": "01:00",
+              "cloudCover": 59,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-30T02:00",
+              "hour": "02:00",
+              "cloudCover": 55,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-30T03:00",
+              "hour": "03:00",
+              "cloudCover": 54,
+              "moonUp": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-30",
+          "offset": 7,
+          "starScore": 3,
+          "score100": 49,
+          "label": "月明かり注意",
+          "cloudCover": 33,
+          "moonAge": 16.7,
+          "moonIllumination": 96,
+          "moonPhase": 0.565,
+          "moonPhaseName": "十八夜",
+          "moonrise": "2026-08-30T19:13",
+          "moonset": "2026-08-30T07:06",
+          "moonDownHours": 0,
+          "moonDownRatio": 0.0
+        },
+        {
+          "date": "2026-08-31",
+          "offset": 8,
+          "starScore": 1,
+          "score100": 17,
+          "label": "不向き",
+          "cloudCover": 99,
+          "moonAge": 17.7,
+          "moonIllumination": 91,
+          "moonPhase": 0.599,
+          "moonPhaseName": "十八夜",
+          "moonrise": "2026-08-31T19:40",
+          "moonset": "2026-08-31T08:10",
+          "moonDownHours": 0,
+          "moonDownRatio": 0.0
+        },
+        {
+          "date": "2026-09-01",
+          "offset": 9,
+          "starScore": 2,
+          "score100": 41,
+          "label": "やや不良",
+          "cloudCover": 59,
+          "moonAge": 18.8,
+          "moonIllumination": 83,
+          "moonPhase": 0.635,
+          "moonPhaseName": "十八夜",
+          "moonrise": "2026-09-01T20:10",
+          "moonset": "2026-09-01T09:17",
+          "moonDownHours": 1,
+          "moonDownRatio": 0.12
+        },
+        {
+          "date": "2026-09-02",
+          "offset": 10,
+          "starScore": 2,
+          "score100": 42,
+          "label": "やや不良",
+          "cloudCover": 62,
+          "moonAge": 19.8,
+          "moonIllumination": 74,
+          "moonPhase": 0.67,
+          "moonPhaseName": "十八夜",
+          "moonrise": "2026-09-02T20:46",
+          "moonset": "2026-09-02T10:26",
+          "moonDownHours": 1,
+          "moonDownRatio": 0.12
+        },
+        {
+          "date": "2026-09-03",
+          "offset": 11,
+          "starScore": 2,
+          "score100": 39,
+          "label": "やや不良",
+          "cloudCover": 76,
+          "moonAge": 20.8,
+          "moonIllumination": 64,
+          "moonPhase": 0.706,
+          "moonPhaseName": "十八夜",
+          "moonrise": "2026-09-03T21:28",
+          "moonset": "2026-09-03T11:37",
+          "moonDownHours": 2,
+          "moonDownRatio": 0.25
+        },
+        {
+          "date": "2026-09-04",
+          "offset": 12,
+          "starScore": 2,
+          "score100": 33,
+          "label": "やや不良",
+          "cloudCover": 98,
+          "moonAge": 21.9,
+          "moonIllumination": 52,
+          "moonPhase": 0.743,
+          "moonPhaseName": "下弦",
+          "moonrise": "2026-09-04T22:20",
+          "moonset": "2026-09-04T12:47",
+          "moonDownHours": 3,
+          "moonDownRatio": 0.38
+        },
+        {
+          "date": "2026-09-05",
+          "offset": 13,
+          "starScore": 3,
+          "score100": 44,
+          "label": "条件つき可",
+          "cloudCover": 85,
+          "moonAge": 23.0,
+          "moonIllumination": 41,
+          "moonPhase": 0.779,
+          "moonPhaseName": "下弦",
+          "moonrise": "2026-09-05T23:22",
+          "moonset": "2026-09-05T13:55",
+          "moonDownHours": 4,
+          "moonDownRatio": 0.5
+        },
+        {
+          "date": "2026-09-06",
+          "offset": 14,
+          "starScore": 4,
+          "score100": 69,
+          "label": "観測向き",
+          "cloudCover": 45,
+          "moonAge": 24.1,
+          "moonIllumination": 30,
+          "moonPhase": 0.816,
+          "moonPhaseName": "有明月",
+          "moonrise": null,
+          "moonset": "2026-09-06T14:54",
+          "moonDownHours": 5,
+          "moonDownRatio": 0.62
+        },
+        {
+          "date": "2026-09-07",
+          "offset": 15,
+          "starScore": 3,
+          "score100": 48,
+          "label": "条件つき可",
+          "cloudCover": 100,
+          "moonAge": 25.2,
+          "moonIllumination": 20,
+          "moonPhase": 0.853,
+          "moonPhaseName": "有明月",
+          "moonrise": "2026-09-07T00:30",
+          "moonset": "2026-09-07T15:44",
+          "moonDownHours": 4,
+          "moonDownRatio": 1.0
+        }
+      ]
+    },
+    {
+      "id": "nosegawa",
+      "name": "奈良県野迫川村",
+      "subtitle": "近畿の秘境・南紀の星空",
+      "prefecture": "奈良県",
+      "lat": 34.1664,
+      "lng": 135.6308,
+      "lon": 135.6308,
+      "elevation": 850,
+      "elevation_m": 850,
+      "lightPollution": "低",
+      "bortle_scale": 3,
+      "description": "紀伊山地の山深い村で、近畿地方でも有数の暗い夜空が残るエリアです。大阪・奈良盆地の光害から距離があり、天の川の中心部が夏の南の空に大きく広がります。標高と山に囲まれた地形のおかげで湿度が下がる夜は、広角の天の川撮影に適したコンディションになりやすいです。",
+      "starScore": 4,
+      "condition": {
+        "label": "観測向き",
+        "cloudCover": 15,
+        "moonPhase": "十三夜",
+        "moonIllumination": 77,
+        "moonAge": 10.1
+      },
+      "hourlyCloud": [
+        {
+          "time": "2026-08-23T20:00",
+          "hour": "20:00",
+          "cloudCover": 11,
+          "moonUp": true
+        },
+        {
+          "time": "2026-08-23T21:00",
+          "hour": "21:00",
+          "cloudCover": 11,
+          "moonUp": true
+        },
+        {
+          "time": "2026-08-23T22:00",
+          "hour": "22:00",
+          "cloudCover": 14,
+          "moonUp": true
+        },
+        {
+          "time": "2026-08-23T23:00",
+          "hour": "23:00",
+          "cloudCover": 13,
+          "moonUp": true
+        },
+        {
+          "time": "2026-08-24T00:00",
+          "hour": "00:00",
+          "cloudCover": 16,
+          "moonUp": true
+        },
+        {
+          "time": "2026-08-24T01:00",
+          "hour": "01:00",
+          "cloudCover": 21,
+          "moonUp": true
+        },
+        {
+          "time": "2026-08-24T02:00",
+          "hour": "02:00",
+          "cloudCover": 20,
+          "moonUp": false
+        },
+        {
+          "time": "2026-08-24T03:00",
+          "hour": "03:00",
+          "cloudCover": 11,
+          "moonUp": false
+        }
+      ],
+      "daily": [
+        {
+          "date": "2026-08-23",
+          "offset": 0,
+          "starScore": 4,
+          "score100": 66,
+          "label": "観測向き",
+          "cloudCover": 15,
+          "moonAge": 10.1,
+          "moonIllumination": 77,
+          "moonPhase": 0.342,
+          "moonPhaseName": "十三夜",
+          "moonrise": "2026-08-23T15:37",
+          "moonset": "2026-08-23T00:14",
+          "moonDownHours": 2,
+          "moonDownRatio": 0.25,
+          "hourlyCloud": [
+            {
+              "time": "2026-08-23T20:00",
+              "hour": "20:00",
+              "cloudCover": 11,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-23T21:00",
+              "hour": "21:00",
+              "cloudCover": 11,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-23T22:00",
+              "hour": "22:00",
+              "cloudCover": 14,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-23T23:00",
+              "hour": "23:00",
+              "cloudCover": 13,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-24T00:00",
+              "hour": "00:00",
+              "cloudCover": 16,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-24T01:00",
+              "hour": "01:00",
+              "cloudCover": 21,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-24T02:00",
+              "hour": "02:00",
+              "cloudCover": 20,
+              "moonUp": false
+            },
+            {
+              "time": "2026-08-24T03:00",
+              "hour": "03:00",
+              "cloudCover": 11,
+              "moonUp": false
+            }
+          ]
+        },
+        {
+          "date": "2026-08-24",
+          "offset": 1,
+          "starScore": 3,
+          "score100": 60,
+          "label": "月明かり注意",
+          "cloudCover": 20,
+          "moonAge": 11.0,
+          "moonIllumination": 85,
+          "moonPhase": 0.372,
+          "moonPhaseName": "十三夜",
+          "moonrise": "2026-08-24T16:20",
+          "moonset": "2026-08-24T01:10",
+          "moonDownHours": 1,
+          "moonDownRatio": 0.12,
+          "hourlyCloud": [
+            {
+              "time": "2026-08-24T20:00",
+              "hour": "20:00",
+              "cloudCover": 19,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-24T21:00",
+              "hour": "21:00",
+              "cloudCover": 16,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-24T22:00",
+              "hour": "22:00",
+              "cloudCover": 26,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-24T23:00",
+              "hour": "23:00",
+              "cloudCover": 27,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-25T00:00",
+              "hour": "00:00",
+              "cloudCover": 23,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-25T01:00",
+              "hour": "01:00",
+              "cloudCover": 22,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-25T02:00",
+              "hour": "02:00",
+              "cloudCover": 17,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-25T03:00",
+              "hour": "03:00",
+              "cloudCover": 14,
+              "moonUp": false
+            }
+          ]
+        },
+        {
+          "date": "2026-08-25",
+          "offset": 2,
+          "starScore": 3,
+          "score100": 55,
+          "label": "月明かり注意",
+          "cloudCover": 23,
+          "moonAge": 11.9,
+          "moonIllumination": 91,
+          "moonPhase": 0.403,
+          "moonPhaseName": "十三夜",
+          "moonrise": "2026-08-25T16:59",
+          "moonset": "2026-08-25T02:08",
+          "moonDownHours": 0,
+          "moonDownRatio": 0.0,
+          "hourlyCloud": [
+            {
+              "time": "2026-08-25T20:00",
+              "hour": "20:00",
+              "cloudCover": 13,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-25T21:00",
+              "hour": "21:00",
+              "cloudCover": 21,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-25T22:00",
+              "hour": "22:00",
+              "cloudCover": 28,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-25T23:00",
+              "hour": "23:00",
+              "cloudCover": 27,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-26T00:00",
+              "hour": "00:00",
+              "cloudCover": 19,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-26T01:00",
+              "hour": "01:00",
+              "cloudCover": 24,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-26T02:00",
+              "hour": "02:00",
+              "cloudCover": 27,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-26T03:00",
+              "hour": "03:00",
+              "cloudCover": 27,
+              "moonUp": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-26",
+          "offset": 3,
+          "starScore": 1,
+          "score100": 21,
+          "label": "不向き",
+          "cloudCover": 88,
+          "moonAge": 12.8,
+          "moonIllumination": 96,
+          "moonPhase": 0.434,
+          "moonPhaseName": "十三夜",
+          "moonrise": "2026-08-26T17:32",
+          "moonset": "2026-08-26T03:09",
+          "moonDownHours": 0,
+          "moonDownRatio": 0.0,
+          "hourlyCloud": [
+            {
+              "time": "2026-08-26T20:00",
+              "hour": "20:00",
+              "cloudCover": 63,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-26T21:00",
+              "hour": "21:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-26T22:00",
+              "hour": "22:00",
+              "cloudCover": 99,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-26T23:00",
+              "hour": "23:00",
+              "cloudCover": 87,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-27T00:00",
+              "hour": "00:00",
+              "cloudCover": 79,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-27T01:00",
+              "hour": "01:00",
+              "cloudCover": 84,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-27T02:00",
+              "hour": "02:00",
+              "cloudCover": 93,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-27T03:00",
+              "hour": "03:00",
+              "cloudCover": 100,
+              "moonUp": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-27",
+          "offset": 4,
+          "starScore": 1,
+          "score100": 18,
+          "label": "不向き",
+          "cloudCover": 93,
+          "moonAge": 13.8,
+          "moonIllumination": 99,
+          "moonPhase": 0.466,
+          "moonPhaseName": "満月",
+          "moonrise": "2026-08-27T18:02",
+          "moonset": "2026-08-27T04:10",
+          "moonDownHours": 0,
+          "moonDownRatio": 0.0,
+          "hourlyCloud": [
+            {
+              "time": "2026-08-27T20:00",
+              "hour": "20:00",
+              "cloudCover": 93,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-27T21:00",
+              "hour": "21:00",
+              "cloudCover": 99,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-27T22:00",
+              "hour": "22:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-27T23:00",
+              "hour": "23:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-28T00:00",
+              "hour": "00:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-28T01:00",
+              "hour": "01:00",
+              "cloudCover": 93,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-28T02:00",
+              "hour": "02:00",
+              "cloudCover": 83,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-28T03:00",
+              "hour": "03:00",
+              "cloudCover": 77,
+              "moonUp": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-28",
+          "offset": 5,
+          "starScore": 1,
+          "score100": 14,
+          "label": "不向き",
+          "cloudCover": 99,
+          "moonAge": 14.7,
+          "moonIllumination": 100,
+          "moonPhase": 0.498,
+          "moonPhaseName": "満月",
+          "moonrise": "2026-08-28T18:29",
+          "moonset": "2026-08-28T05:12",
+          "moonDownHours": 0,
+          "moonDownRatio": 0.0,
+          "hourlyCloud": [
+            {
+              "time": "2026-08-28T20:00",
+              "hour": "20:00",
+              "cloudCover": 95,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-28T21:00",
+              "hour": "21:00",
+              "cloudCover": 98,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-28T22:00",
+              "hour": "22:00",
+              "cloudCover": 99,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-28T23:00",
+              "hour": "23:00",
+              "cloudCover": 99,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-29T00:00",
+              "hour": "00:00",
+              "cloudCover": 99,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-29T01:00",
+              "hour": "01:00",
+              "cloudCover": 99,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-29T02:00",
+              "hour": "02:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-29T03:00",
+              "hour": "03:00",
+              "cloudCover": 100,
+              "moonUp": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-29",
+          "offset": 6,
+          "starScore": 1,
+          "score100": 14,
+          "label": "不向き",
+          "cloudCover": 100,
+          "moonAge": 15.7,
+          "moonIllumination": 99,
+          "moonPhase": 0.531,
+          "moonPhaseName": "満月",
+          "moonrise": "2026-08-29T18:55",
+          "moonset": "2026-08-29T06:13",
+          "moonDownHours": 0,
+          "moonDownRatio": 0.0,
+          "hourlyCloud": [
+            {
+              "time": "2026-08-29T20:00",
+              "hour": "20:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-29T21:00",
+              "hour": "21:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-29T22:00",
+              "hour": "22:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-29T23:00",
+              "hour": "23:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-30T00:00",
+              "hour": "00:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-30T01:00",
+              "hour": "01:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-30T02:00",
+              "hour": "02:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-30T03:00",
+              "hour": "03:00",
+              "cloudCover": 100,
+              "moonUp": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-30",
+          "offset": 7,
+          "starScore": 2,
+          "score100": 26,
+          "label": "やや不良",
+          "cloudCover": 79,
+          "moonAge": 16.7,
+          "moonIllumination": 96,
+          "moonPhase": 0.565,
+          "moonPhaseName": "十八夜",
+          "moonrise": "2026-08-30T19:22",
+          "moonset": "2026-08-30T07:15",
+          "moonDownHours": 0,
+          "moonDownRatio": 0.0
+        },
+        {
+          "date": "2026-08-31",
+          "offset": 8,
+          "starScore": 1,
+          "score100": 17,
+          "label": "不向き",
+          "cloudCover": 100,
+          "moonAge": 17.7,
+          "moonIllumination": 91,
+          "moonPhase": 0.599,
+          "moonPhaseName": "十八夜",
+          "moonrise": "2026-08-31T19:50",
+          "moonset": "2026-08-31T08:17",
+          "moonDownHours": 0,
+          "moonDownRatio": 0.0
+        },
+        {
+          "date": "2026-09-01",
+          "offset": 9,
+          "starScore": 2,
+          "score100": 27,
+          "label": "やや不良",
+          "cloudCover": 87,
+          "moonAge": 18.8,
+          "moonIllumination": 83,
+          "moonPhase": 0.635,
+          "moonPhaseName": "十八夜",
+          "moonrise": "2026-09-01T20:21",
+          "moonset": "2026-09-01T09:23",
+          "moonDownHours": 1,
+          "moonDownRatio": 0.12
+        },
+        {
+          "date": "2026-09-02",
+          "offset": 10,
+          "starScore": 2,
+          "score100": 40,
+          "label": "やや不良",
+          "cloudCover": 66,
+          "moonAge": 19.8,
+          "moonIllumination": 74,
+          "moonPhase": 0.67,
+          "moonPhaseName": "十八夜",
+          "moonrise": "2026-09-02T20:57",
+          "moonset": "2026-09-02T10:31",
+          "moonDownHours": 1,
+          "moonDownRatio": 0.12
+        },
+        {
+          "date": "2026-09-03",
+          "offset": 11,
+          "starScore": 2,
+          "score100": 42,
+          "label": "やや不良",
+          "cloudCover": 71,
+          "moonAge": 20.8,
+          "moonIllumination": 64,
+          "moonPhase": 0.706,
+          "moonPhaseName": "十八夜",
+          "moonrise": "2026-09-03T21:41",
+          "moonset": "2026-09-03T11:42",
+          "moonDownHours": 2,
+          "moonDownRatio": 0.25
+        },
+        {
+          "date": "2026-09-04",
+          "offset": 12,
+          "starScore": 2,
+          "score100": 32,
+          "label": "やや不良",
+          "cloudCover": 100,
+          "moonAge": 21.9,
+          "moonIllumination": 52,
+          "moonPhase": 0.743,
+          "moonPhaseName": "下弦",
+          "moonrise": "2026-09-04T22:32",
+          "moonset": "2026-09-04T12:51",
+          "moonDownHours": 3,
+          "moonDownRatio": 0.38
+        },
+        {
+          "date": "2026-09-05",
+          "offset": 13,
+          "starScore": 2,
+          "score100": 37,
+          "label": "やや不良",
+          "cloudCover": 100,
+          "moonAge": 23.0,
+          "moonIllumination": 41,
+          "moonPhase": 0.779,
+          "moonPhaseName": "下弦",
+          "moonrise": "2026-09-05T23:35",
+          "moonset": "2026-09-05T13:58",
+          "moonDownHours": 4,
+          "moonDownRatio": 0.5
+        },
+        {
+          "date": "2026-09-06",
+          "offset": 14,
+          "starScore": 2,
+          "score100": 43,
+          "label": "やや不良",
+          "cloudCover": 97,
+          "moonAge": 24.1,
+          "moonIllumination": 30,
+          "moonPhase": 0.816,
+          "moonPhaseName": "有明月",
+          "moonrise": null,
+          "moonset": "2026-09-06T14:58",
+          "moonDownHours": 5,
+          "moonDownRatio": 0.62
+        },
+        {
+          "date": "2026-09-07",
+          "offset": 15,
+          "starScore": 3,
+          "score100": 53,
+          "label": "条件つき可",
+          "cloudCover": 90,
+          "moonAge": 25.2,
+          "moonIllumination": 20,
+          "moonPhase": 0.853,
+          "moonPhaseName": "有明月",
+          "moonrise": "2026-09-07T00:43",
+          "moonset": "2026-09-07T15:48",
+          "moonDownHours": 4,
+          "moonDownRatio": 1.0
+        }
+      ]
+    },
+    {
+      "id": "bisei",
+      "name": "岡山県美星町",
+      "subtitle": "美星天文台・星空保護区",
+      "prefecture": "岡山県",
+      "lat": 34.7608,
+      "lng": 133.5439,
+      "lon": 133.5439,
+      "elevation": 447,
+      "elevation_m": 447,
+      "lightPollution": "低",
+      "bortle_scale": 3,
+      "description": "「星の町」として照明条例と星空保護の取り組みが早くから進んだエリア。美星天文台周辺は光害が抑えられ、晴れの国・岡山らしい快晴率の高さが観測計画を立てやすくします。標高は中程度ですが、西日本の都市光から適度に離れており、中口径の眼視や広角撮影の入門〜中級スポットです。",
+      "starScore": 4,
+      "condition": {
+        "label": "観測向き",
+        "cloudCover": 15,
+        "moonPhase": "十三夜",
+        "moonIllumination": 77,
+        "moonAge": 10.1
+      },
+      "hourlyCloud": [
+        {
+          "time": "2026-08-23T20:00",
+          "hour": "20:00",
+          "cloudCover": 23,
+          "moonUp": true
+        },
+        {
+          "time": "2026-08-23T21:00",
+          "hour": "21:00",
+          "cloudCover": 28,
+          "moonUp": true
+        },
+        {
+          "time": "2026-08-23T22:00",
+          "hour": "22:00",
+          "cloudCover": 23,
+          "moonUp": true
+        },
+        {
+          "time": "2026-08-23T23:00",
+          "hour": "23:00",
+          "cloudCover": 13,
+          "moonUp": true
+        },
+        {
+          "time": "2026-08-24T00:00",
+          "hour": "00:00",
+          "cloudCover": 10,
+          "moonUp": true
+        },
+        {
+          "time": "2026-08-24T01:00",
+          "hour": "01:00",
+          "cloudCover": 9,
+          "moonUp": true
+        },
+        {
+          "time": "2026-08-24T02:00",
+          "hour": "02:00",
+          "cloudCover": 8,
+          "moonUp": false
+        },
+        {
+          "time": "2026-08-24T03:00",
+          "hour": "03:00",
+          "cloudCover": 7,
+          "moonUp": false
+        }
+      ],
+      "daily": [
+        {
+          "date": "2026-08-23",
+          "offset": 0,
+          "starScore": 4,
+          "score100": 66,
+          "label": "観測向き",
+          "cloudCover": 15,
+          "moonAge": 10.1,
+          "moonIllumination": 77,
+          "moonPhase": 0.342,
+          "moonPhaseName": "十三夜",
+          "moonrise": "2026-08-23T15:47",
+          "moonset": "2026-08-23T00:21",
+          "moonDownHours": 2,
+          "moonDownRatio": 0.25,
+          "hourlyCloud": [
+            {
+              "time": "2026-08-23T20:00",
+              "hour": "20:00",
+              "cloudCover": 23,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-23T21:00",
+              "hour": "21:00",
+              "cloudCover": 28,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-23T22:00",
+              "hour": "22:00",
+              "cloudCover": 23,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-23T23:00",
+              "hour": "23:00",
+              "cloudCover": 13,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-24T00:00",
+              "hour": "00:00",
+              "cloudCover": 10,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-24T01:00",
+              "hour": "01:00",
+              "cloudCover": 9,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-24T02:00",
+              "hour": "02:00",
+              "cloudCover": 8,
+              "moonUp": false
+            },
+            {
+              "time": "2026-08-24T03:00",
+              "hour": "03:00",
+              "cloudCover": 7,
+              "moonUp": false
+            }
+          ]
+        },
+        {
+          "date": "2026-08-24",
+          "offset": 1,
+          "starScore": 3,
+          "score100": 59,
+          "label": "月明かり注意",
+          "cloudCover": 22,
+          "moonAge": 11.0,
+          "moonIllumination": 85,
+          "moonPhase": 0.372,
+          "moonPhaseName": "十三夜",
+          "moonrise": "2026-08-24T16:31",
+          "moonset": "2026-08-24T01:16",
+          "moonDownHours": 1,
+          "moonDownRatio": 0.12,
+          "hourlyCloud": [
+            {
+              "time": "2026-08-24T20:00",
+              "hour": "20:00",
+              "cloudCover": 25,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-24T21:00",
+              "hour": "21:00",
+              "cloudCover": 20,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-24T22:00",
+              "hour": "22:00",
+              "cloudCover": 16,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-24T23:00",
+              "hour": "23:00",
+              "cloudCover": 12,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-25T00:00",
+              "hour": "00:00",
+              "cloudCover": 38,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-25T01:00",
+              "hour": "01:00",
+              "cloudCover": 48,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-25T02:00",
+              "hour": "02:00",
+              "cloudCover": 9,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-25T03:00",
+              "hour": "03:00",
+              "cloudCover": 6,
+              "moonUp": false
+            }
+          ]
+        },
+        {
+          "date": "2026-08-25",
+          "offset": 2,
+          "starScore": 3,
+          "score100": 60,
+          "label": "月明かり注意",
+          "cloudCover": 14,
+          "moonAge": 11.9,
+          "moonIllumination": 91,
+          "moonPhase": 0.403,
+          "moonPhaseName": "十三夜",
+          "moonrise": "2026-08-25T17:09",
+          "moonset": "2026-08-25T02:15",
+          "moonDownHours": 0,
+          "moonDownRatio": 0.0,
+          "hourlyCloud": [
+            {
+              "time": "2026-08-25T20:00",
+              "hour": "20:00",
+              "cloudCover": 31,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-25T21:00",
+              "hour": "21:00",
+              "cloudCover": 18,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-25T22:00",
+              "hour": "22:00",
+              "cloudCover": 14,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-25T23:00",
+              "hour": "23:00",
+              "cloudCover": 6,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-26T00:00",
+              "hour": "00:00",
+              "cloudCover": 4,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-26T01:00",
+              "hour": "01:00",
+              "cloudCover": 7,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-26T02:00",
+              "hour": "02:00",
+              "cloudCover": 19,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-26T03:00",
+              "hour": "03:00",
+              "cloudCover": 11,
+              "moonUp": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-26",
+          "offset": 3,
+          "starScore": 3,
+          "score100": 47,
+          "label": "月明かり注意",
+          "cloudCover": 37,
+          "moonAge": 12.8,
+          "moonIllumination": 96,
+          "moonPhase": 0.434,
+          "moonPhaseName": "十三夜",
+          "moonrise": "2026-08-26T17:42",
+          "moonset": "2026-08-26T03:16",
+          "moonDownHours": 0,
+          "moonDownRatio": 0.0,
+          "hourlyCloud": [
+            {
+              "time": "2026-08-26T20:00",
+              "hour": "20:00",
+              "cloudCover": 44,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-26T21:00",
+              "hour": "21:00",
+              "cloudCover": 8,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-26T22:00",
+              "hour": "22:00",
+              "cloudCover": 6,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-26T23:00",
+              "hour": "23:00",
+              "cloudCover": 14,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-27T00:00",
+              "hour": "00:00",
+              "cloudCover": 27,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-27T01:00",
+              "hour": "01:00",
+              "cloudCover": 45,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-27T02:00",
+              "hour": "02:00",
+              "cloudCover": 67,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-27T03:00",
+              "hour": "03:00",
+              "cloudCover": 84,
+              "moonUp": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-27",
+          "offset": 4,
+          "starScore": 1,
+          "score100": 23,
+          "label": "不向き",
+          "cloudCover": 83,
+          "moonAge": 13.8,
+          "moonIllumination": 99,
+          "moonPhase": 0.466,
+          "moonPhaseName": "満月",
+          "moonrise": "2026-08-27T18:11",
+          "moonset": "2026-08-27T04:18",
+          "moonDownHours": 0,
+          "moonDownRatio": 0.0,
+          "hourlyCloud": [
+            {
+              "time": "2026-08-27T20:00",
+              "hour": "20:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-27T21:00",
+              "hour": "21:00",
+              "cloudCover": 99,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-27T22:00",
+              "hour": "22:00",
+              "cloudCover": 87,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-27T23:00",
+              "hour": "23:00",
+              "cloudCover": 71,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-28T00:00",
+              "hour": "00:00",
+              "cloudCover": 62,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-28T01:00",
+              "hour": "01:00",
+              "cloudCover": 69,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-28T02:00",
+              "hour": "02:00",
+              "cloudCover": 83,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-28T03:00",
+              "hour": "03:00",
+              "cloudCover": 94,
+              "moonUp": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-28",
+          "offset": 5,
+          "starScore": 1,
+          "score100": 14,
+          "label": "不向き",
+          "cloudCover": 100,
+          "moonAge": 14.7,
+          "moonIllumination": 100,
+          "moonPhase": 0.498,
+          "moonPhaseName": "満月",
+          "moonrise": "2026-08-28T18:38",
+          "moonset": "2026-08-28T05:20",
+          "moonDownHours": 0,
+          "moonDownRatio": 0.0,
+          "hourlyCloud": [
+            {
+              "time": "2026-08-28T20:00",
+              "hour": "20:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-28T21:00",
+              "hour": "21:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-28T22:00",
+              "hour": "22:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-28T23:00",
+              "hour": "23:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-29T00:00",
+              "hour": "00:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-29T01:00",
+              "hour": "01:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-29T02:00",
+              "hour": "02:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-29T03:00",
+              "hour": "03:00",
+              "cloudCover": 100,
+              "moonUp": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-29",
+          "offset": 6,
+          "starScore": 2,
+          "score100": 32,
+          "label": "やや不良",
+          "cloudCover": 64,
+          "moonAge": 15.7,
+          "moonIllumination": 99,
+          "moonPhase": 0.531,
+          "moonPhaseName": "満月",
+          "moonrise": "2026-08-29T19:04",
+          "moonset": "2026-08-29T06:21",
+          "moonDownHours": 0,
+          "moonDownRatio": 0.0,
+          "hourlyCloud": [
+            {
+              "time": "2026-08-29T20:00",
+              "hour": "20:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-29T21:00",
+              "hour": "21:00",
+              "cloudCover": 99,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-29T22:00",
+              "hour": "22:00",
+              "cloudCover": 89,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-29T23:00",
+              "hour": "23:00",
+              "cloudCover": 75,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-30T00:00",
+              "hour": "00:00",
+              "cloudCover": 58,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-30T01:00",
+              "hour": "01:00",
+              "cloudCover": 42,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-30T02:00",
+              "hour": "02:00",
+              "cloudCover": 28,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-30T03:00",
+              "hour": "03:00",
+              "cloudCover": 18,
+              "moonUp": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-30",
+          "offset": 7,
+          "starScore": 2,
+          "score100": 37,
+          "label": "やや不良",
+          "cloudCover": 56,
+          "moonAge": 16.7,
+          "moonIllumination": 96,
+          "moonPhase": 0.565,
+          "moonPhaseName": "十八夜",
+          "moonrise": "2026-08-30T19:30",
+          "moonset": "2026-08-30T07:23",
+          "moonDownHours": 0,
+          "moonDownRatio": 0.0
+        },
+        {
+          "date": "2026-08-31",
+          "offset": 8,
+          "starScore": 1,
+          "score100": 21,
+          "label": "不向き",
+          "cloudCover": 91,
+          "moonAge": 17.7,
+          "moonIllumination": 91,
+          "moonPhase": 0.599,
+          "moonPhaseName": "十八夜",
+          "moonrise": "2026-08-31T19:58",
+          "moonset": "2026-08-31T08:27",
+          "moonDownHours": 0,
+          "moonDownRatio": 0.0
+        },
+        {
+          "date": "2026-09-01",
+          "offset": 9,
+          "starScore": 1,
+          "score100": 20,
+          "label": "不向き",
+          "cloudCover": 100,
+          "moonAge": 18.8,
+          "moonIllumination": 83,
+          "moonPhase": 0.635,
+          "moonPhaseName": "十八夜",
+          "moonrise": "2026-09-01T20:28",
+          "moonset": "2026-09-01T09:33",
+          "moonDownHours": 1,
+          "moonDownRatio": 0.12
+        },
+        {
+          "date": "2026-09-02",
+          "offset": 10,
+          "starScore": 1,
+          "score100": 24,
+          "label": "不向き",
+          "cloudCover": 100,
+          "moonAge": 19.8,
+          "moonIllumination": 74,
+          "moonPhase": 0.67,
+          "moonPhaseName": "十八夜",
+          "moonrise": "2026-09-02T21:04",
+          "moonset": "2026-09-02T10:41",
+          "moonDownHours": 2,
+          "moonDownRatio": 0.25
+        },
+        {
+          "date": "2026-09-03",
+          "offset": 11,
+          "starScore": 2,
+          "score100": 27,
+          "label": "やや不良",
+          "cloudCover": 100,
+          "moonAge": 20.8,
+          "moonIllumination": 64,
+          "moonPhase": 0.706,
+          "moonPhaseName": "十八夜",
+          "moonrise": "2026-09-03T21:47",
+          "moonset": "2026-09-03T11:52",
+          "moonDownHours": 2,
+          "moonDownRatio": 0.25
+        },
+        {
+          "date": "2026-09-04",
+          "offset": 12,
+          "starScore": 2,
+          "score100": 32,
+          "label": "やや不良",
+          "cloudCover": 99,
+          "moonAge": 21.9,
+          "moonIllumination": 52,
+          "moonPhase": 0.743,
+          "moonPhaseName": "下弦",
+          "moonrise": "2026-09-04T22:39",
+          "moonset": "2026-09-04T13:02",
+          "moonDownHours": 3,
+          "moonDownRatio": 0.38
+        },
+        {
+          "date": "2026-09-05",
+          "offset": 13,
+          "starScore": 2,
+          "score100": 37,
+          "label": "やや不良",
+          "cloudCover": 99,
+          "moonAge": 23.0,
+          "moonIllumination": 41,
+          "moonPhase": 0.779,
+          "moonPhaseName": "下弦",
+          "moonrise": "2026-09-05T23:41",
+          "moonset": "2026-09-05T14:09",
+          "moonDownHours": 4,
+          "moonDownRatio": 0.5
+        },
+        {
+          "date": "2026-09-06",
+          "offset": 14,
+          "starScore": 5,
+          "score100": 87,
+          "label": "新月級・観測適",
+          "cloudCover": 9,
+          "moonAge": 24.1,
+          "moonIllumination": 30,
+          "moonPhase": 0.816,
+          "moonPhaseName": "有明月",
+          "moonrise": null,
+          "moonset": "2026-09-06T15:08",
+          "moonDownHours": 5,
+          "moonDownRatio": 0.62
+        },
+        {
+          "date": "2026-09-07",
+          "offset": 15,
+          "starScore": 3,
+          "score100": 48,
+          "label": "条件つき可",
+          "cloudCover": 100,
+          "moonAge": 25.2,
+          "moonIllumination": 20,
+          "moonPhase": 0.853,
+          "moonPhaseName": "有明月",
+          "moonrise": "2026-09-07T00:50",
+          "moonset": "2026-09-07T15:58",
+          "moonDownHours": 4,
+          "moonDownRatio": 1.0
+        }
+      ]
+    },
+    {
+      "id": "ishigaki",
+      "name": "沖縄県石垣島",
+      "subtitle": "石垣島天文台",
+      "prefecture": "沖縄県",
+      "lat": 24.3725,
+      "lng": 124.1392,
+      "lon": 124.1392,
+      "elevation": 31,
+      "elevation_m": 31,
+      "lightPollution": "低",
+      "bortle_scale": 3,
+      "description": "北緯24度の低緯度から、本州では地平線近くになる南の星座を高く見上げられます。石垣島天文台周辺は比較的暗い空が残り、冬の南天や夏の天の川南端の撮影に適します。亜熱帯特有の水蒸気で透明度が落ちる夜もあるため、湿度と雲の流れを見て計画するのがコツです。",
+      "starScore": 1,
+      "condition": {
+        "label": "不向き",
+        "cloudCover": 98,
+        "moonPhase": "十三夜",
+        "moonIllumination": 77,
+        "moonAge": 10.1
+      },
+      "hourlyCloud": [
+        {
+          "time": "2026-08-23T20:00",
+          "hour": "20:00",
+          "cloudCover": 96,
+          "moonUp": true
+        },
+        {
+          "time": "2026-08-23T21:00",
+          "hour": "21:00",
+          "cloudCover": 98,
+          "moonUp": true
+        },
+        {
+          "time": "2026-08-23T22:00",
+          "hour": "22:00",
+          "cloudCover": 98,
+          "moonUp": true
+        },
+        {
+          "time": "2026-08-23T23:00",
+          "hour": "23:00",
+          "cloudCover": 100,
+          "moonUp": true
+        },
+        {
+          "time": "2026-08-24T00:00",
+          "hour": "00:00",
+          "cloudCover": 100,
+          "moonUp": true
+        },
+        {
+          "time": "2026-08-24T01:00",
+          "hour": "01:00",
+          "cloudCover": 100,
+          "moonUp": true
+        },
+        {
+          "time": "2026-08-24T02:00",
+          "hour": "02:00",
+          "cloudCover": 95,
+          "moonUp": true
+        },
+        {
+          "time": "2026-08-24T03:00",
+          "hour": "03:00",
+          "cloudCover": 99,
+          "moonUp": false
+        }
+      ],
+      "daily": [
+        {
+          "date": "2026-08-23",
+          "offset": 0,
+          "starScore": 1,
+          "score100": 23,
+          "label": "不向き",
+          "cloudCover": 98,
+          "moonAge": 10.1,
+          "moonIllumination": 77,
+          "moonPhase": 0.342,
+          "moonPhaseName": "十三夜",
+          "moonrise": "2026-08-23T15:54",
+          "moonset": "2026-08-23T01:33",
+          "moonDownHours": 1,
+          "moonDownRatio": 0.12,
+          "hourlyCloud": [
+            {
+              "time": "2026-08-23T20:00",
+              "hour": "20:00",
+              "cloudCover": 96,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-23T21:00",
+              "hour": "21:00",
+              "cloudCover": 98,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-23T22:00",
+              "hour": "22:00",
+              "cloudCover": 98,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-23T23:00",
+              "hour": "23:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-24T00:00",
+              "hour": "00:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-24T01:00",
+              "hour": "01:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-24T02:00",
+              "hour": "02:00",
+              "cloudCover": 95,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-24T03:00",
+              "hour": "03:00",
+              "cloudCover": 99,
+              "moonUp": false
+            }
+          ]
+        },
+        {
+          "date": "2026-08-24",
+          "offset": 1,
+          "starScore": 2,
+          "score100": 33,
+          "label": "やや不良",
+          "cloudCover": 70,
+          "moonAge": 11.0,
+          "moonIllumination": 85,
+          "moonPhase": 0.372,
+          "moonPhaseName": "十三夜",
+          "moonrise": "2026-08-24T16:40",
+          "moonset": "2026-08-24T02:26",
+          "moonDownHours": 0,
+          "moonDownRatio": 0.0,
+          "hourlyCloud": [
+            {
+              "time": "2026-08-24T20:00",
+              "hour": "20:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-24T21:00",
+              "hour": "21:00",
+              "cloudCover": 98,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-24T22:00",
+              "hour": "22:00",
+              "cloudCover": 70,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-24T23:00",
+              "hour": "23:00",
+              "cloudCover": 23,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-25T00:00",
+              "hour": "00:00",
+              "cloudCover": 23,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-25T01:00",
+              "hour": "01:00",
+              "cloudCover": 43,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-25T02:00",
+              "hour": "02:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-25T03:00",
+              "hour": "03:00",
+              "cloudCover": 100,
+              "moonUp": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-25",
+          "offset": 2,
+          "starScore": 1,
+          "score100": 19,
+          "label": "不向き",
+          "cloudCover": 96,
+          "moonAge": 11.9,
+          "moonIllumination": 91,
+          "moonPhase": 0.403,
+          "moonPhaseName": "十三夜",
+          "moonrise": "2026-08-25T17:23",
+          "moonset": "2026-08-25T03:22",
+          "moonDownHours": 0,
+          "moonDownRatio": 0.0,
+          "hourlyCloud": [
+            {
+              "time": "2026-08-25T20:00",
+              "hour": "20:00",
+              "cloudCover": 93,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-25T21:00",
+              "hour": "21:00",
+              "cloudCover": 97,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-25T22:00",
+              "hour": "22:00",
+              "cloudCover": 96,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-25T23:00",
+              "hour": "23:00",
+              "cloudCover": 96,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-26T00:00",
+              "hour": "00:00",
+              "cloudCover": 95,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-26T01:00",
+              "hour": "01:00",
+              "cloudCover": 97,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-26T02:00",
+              "hour": "02:00",
+              "cloudCover": 98,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-26T03:00",
+              "hour": "03:00",
+              "cloudCover": 93,
+              "moonUp": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-26",
+          "offset": 3,
+          "starScore": 1,
+          "score100": 15,
+          "label": "不向き",
+          "cloudCover": 100,
+          "moonAge": 12.8,
+          "moonIllumination": 96,
+          "moonPhase": 0.434,
+          "moonPhaseName": "十三夜",
+          "moonrise": "2026-08-26T18:01",
+          "moonset": "2026-08-26T04:18",
+          "moonDownHours": 0,
+          "moonDownRatio": 0.0,
+          "hourlyCloud": [
+            {
+              "time": "2026-08-26T20:00",
+              "hour": "20:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-26T21:00",
+              "hour": "21:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-26T22:00",
+              "hour": "22:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-26T23:00",
+              "hour": "23:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-27T00:00",
+              "hour": "00:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-27T01:00",
+              "hour": "01:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-27T02:00",
+              "hour": "02:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-27T03:00",
+              "hour": "03:00",
+              "cloudCover": 100,
+              "moonUp": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-27",
+          "offset": 4,
+          "starScore": 1,
+          "score100": 15,
+          "label": "不向き",
+          "cloudCover": 98,
+          "moonAge": 13.8,
+          "moonIllumination": 99,
+          "moonPhase": 0.466,
+          "moonPhaseName": "満月",
+          "moonrise": "2026-08-27T18:36",
+          "moonset": "2026-08-27T05:15",
+          "moonDownHours": 0,
+          "moonDownRatio": 0.0,
+          "hourlyCloud": [
+            {
+              "time": "2026-08-27T20:00",
+              "hour": "20:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-27T21:00",
+              "hour": "21:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-27T22:00",
+              "hour": "22:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-27T23:00",
+              "hour": "23:00",
+              "cloudCover": 100,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-28T00:00",
+              "hour": "00:00",
+              "cloudCover": 99,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-28T01:00",
+              "hour": "01:00",
+              "cloudCover": 99,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-28T02:00",
+              "hour": "02:00",
+              "cloudCover": 97,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-28T03:00",
+              "hour": "03:00",
+              "cloudCover": 92,
+              "moonUp": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-28",
+          "offset": 5,
+          "starScore": 3,
+          "score100": 45,
+          "label": "月明かり注意",
+          "cloudCover": 38,
+          "moonAge": 14.7,
+          "moonIllumination": 100,
+          "moonPhase": 0.498,
+          "moonPhaseName": "満月",
+          "moonrise": "2026-08-28T19:09",
+          "moonset": "2026-08-28T06:10",
+          "moonDownHours": 0,
+          "moonDownRatio": 0.0,
+          "hourlyCloud": [
+            {
+              "time": "2026-08-28T20:00",
+              "hour": "20:00",
+              "cloudCover": 12,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-28T21:00",
+              "hour": "21:00",
+              "cloudCover": 13,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-28T22:00",
+              "hour": "22:00",
+              "cloudCover": 31,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-28T23:00",
+              "hour": "23:00",
+              "cloudCover": 56,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-29T00:00",
+              "hour": "00:00",
+              "cloudCover": 70,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-29T01:00",
+              "hour": "01:00",
+              "cloudCover": 61,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-29T02:00",
+              "hour": "02:00",
+              "cloudCover": 40,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-29T03:00",
+              "hour": "03:00",
+              "cloudCover": 24,
+              "moonUp": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-29",
+          "offset": 6,
+          "starScore": 2,
+          "score100": 35,
+          "label": "やや不良",
+          "cloudCover": 58,
+          "moonAge": 15.7,
+          "moonIllumination": 99,
+          "moonPhase": 0.531,
+          "moonPhaseName": "満月",
+          "moonrise": "2026-08-29T19:41",
+          "moonset": "2026-08-29T07:05",
+          "moonDownHours": 0,
+          "moonDownRatio": 0.0,
+          "hourlyCloud": [
+            {
+              "time": "2026-08-29T20:00",
+              "hour": "20:00",
+              "cloudCover": 92,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-29T21:00",
+              "hour": "21:00",
+              "cloudCover": 93,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-29T22:00",
+              "hour": "22:00",
+              "cloudCover": 86,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-29T23:00",
+              "hour": "23:00",
+              "cloudCover": 71,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-30T00:00",
+              "hour": "00:00",
+              "cloudCover": 53,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-30T01:00",
+              "hour": "01:00",
+              "cloudCover": 35,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-30T02:00",
+              "hour": "02:00",
+              "cloudCover": 20,
+              "moonUp": true
+            },
+            {
+              "time": "2026-08-30T03:00",
+              "hour": "03:00",
+              "cloudCover": 13,
+              "moonUp": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-30",
+          "offset": 7,
+          "starScore": 3,
+          "score100": 61,
+          "label": "月明かり注意",
+          "cloudCover": 12,
+          "moonAge": 16.7,
+          "moonIllumination": 96,
+          "moonPhase": 0.565,
+          "moonPhaseName": "十八夜",
+          "moonrise": "2026-08-30T20:13",
+          "moonset": "2026-08-30T08:01",
+          "moonDownHours": 1,
+          "moonDownRatio": 0.12
+        },
+        {
+          "date": "2026-08-31",
+          "offset": 8,
+          "starScore": 4,
+          "score100": 65,
+          "label": "月明かり注意",
+          "cloudCover": 7,
+          "moonAge": 17.7,
+          "moonIllumination": 91,
+          "moonPhase": 0.599,
+          "moonPhaseName": "十八夜",
+          "moonrise": "2026-08-31T20:47",
+          "moonset": "2026-08-31T08:58",
+          "moonDownHours": 1,
+          "moonDownRatio": 0.12
+        },
+        {
+          "date": "2026-09-01",
+          "offset": 9,
+          "starScore": 3,
+          "score100": 61,
+          "label": "条件つき可",
+          "cloudCover": 22,
+          "moonAge": 18.8,
+          "moonIllumination": 83,
+          "moonPhase": 0.635,
+          "moonPhaseName": "十八夜",
+          "moonrise": "2026-09-01T21:24",
+          "moonset": "2026-09-01T09:57",
+          "moonDownHours": 2,
+          "moonDownRatio": 0.25
+        },
+        {
+          "date": "2026-09-02",
+          "offset": 10,
+          "starScore": 3,
+          "score100": 60,
+          "label": "条件つき可",
+          "cloudCover": 31,
+          "moonAge": 19.8,
+          "moonIllumination": 74,
+          "moonPhase": 0.67,
+          "moonPhaseName": "十八夜",
+          "moonrise": "2026-09-02T22:06",
+          "moonset": "2026-09-02T11:00",
+          "moonDownHours": 3,
+          "moonDownRatio": 0.38
+        },
+        {
+          "date": "2026-09-03",
+          "offset": 11,
+          "starScore": 3,
+          "score100": 51,
+          "label": "条件つき可",
+          "cloudCover": 56,
+          "moonAge": 20.8,
+          "moonIllumination": 64,
+          "moonPhase": 0.706,
+          "moonPhaseName": "十八夜",
+          "moonrise": "2026-09-03T22:54",
+          "moonset": "2026-09-03T12:04",
+          "moonDownHours": 3,
+          "moonDownRatio": 0.38
+        },
+        {
+          "date": "2026-09-04",
+          "offset": 12,
+          "starScore": 3,
+          "score100": 49,
+          "label": "条件つき可",
+          "cloudCover": 69,
+          "moonAge": 21.9,
+          "moonIllumination": 52,
+          "moonPhase": 0.743,
+          "moonPhaseName": "下弦",
+          "moonrise": "2026-09-04T23:50",
+          "moonset": "2026-09-04T13:11",
+          "moonDownHours": 4,
+          "moonDownRatio": 0.5
+        },
+        {
+          "date": "2026-09-05",
+          "offset": 13,
+          "starScore": 3,
+          "score100": 56,
+          "label": "条件つき可",
+          "cloudCover": 65,
+          "moonAge": 23.0,
+          "moonIllumination": 41,
+          "moonPhase": 0.779,
+          "moonPhaseName": "下弦",
+          "moonrise": null,
+          "moonset": "2026-09-05T14:16",
+          "moonDownHours": 5,
+          "moonDownRatio": 0.62
+        },
+        {
+          "date": "2026-09-06",
+          "offset": 14,
+          "starScore": 5,
+          "score100": 91,
+          "label": "新月級・観測適",
+          "cloudCover": 4,
+          "moonAge": 24.1,
+          "moonIllumination": 30,
+          "moonPhase": 0.816,
+          "moonPhaseName": "有明月",
+          "moonrise": "2026-09-06T00:52",
+          "moonset": "2026-09-06T15:17",
+          "moonDownHours": 6,
+          "moonDownRatio": 0.75
+        },
+        {
+          "date": "2026-09-07",
+          "offset": 15,
+          "starScore": 5,
+          "score100": 97,
+          "label": "新月級・観測適",
+          "cloudCover": 3,
+          "moonAge": 25.2,
+          "moonIllumination": 20,
+          "moonPhase": 0.853,
+          "moonPhaseName": "有明月",
+          "moonrise": "2026-09-07T01:59",
+          "moonset": "2026-09-07T16:10",
+          "moonDownHours": 4,
+          "moonDownRatio": 1.0
+        }
+      ]
+    }
+  ],
+  "errors": []
+}
