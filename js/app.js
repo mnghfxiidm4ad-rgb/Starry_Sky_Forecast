@@ -152,10 +152,8 @@
 
   function normalizeSpot(raw) {
     const elevation = Number(raw.elevation ?? raw.elevation_m ?? 0);
-    const bortle = raw.bortle_scale;
-    const starScore = Number(
-      raw.starScore ?? (bortle != null ? bortleToScore(bortle) : 3)
-    );
+    const bortle = raw.bortle_scale ?? raw.bortle_scale;
+    const starScore = Number(raw.starScore ?? (bortle != null ? bortleToScore(bortle) : 3));
     return {
       ...raw,
       lat: Number(raw.lat),
@@ -165,9 +163,20 @@
       lon: Number(raw.lon ?? raw.lng),
       starScore: Math.max(1, Math.min(5, starScore || 3)),
       lightPollution: raw.lightPollution || (bortle != null ? bortleToPollution(bortle) : "中"),
+      bortle_scale: bortle,
       subtitle: raw.subtitle || raw.category || "",
       description: raw.description || "",
+      overview: raw.overview || "",
+      viewDirection: raw.viewDirection || "",
+      surroundings: raw.surroundings || "",
+      accessNotes: raw.accessNotes || "",
       prefecture: raw.prefecture || "",
+      category: raw.category || raw.subtitle || "",
+      has_parking: raw.has_parking ?? raw.has_parking,
+      has_toilet: raw.has_toilet ?? raw.has_toilet,
+      is_24h: raw.is_24h ?? raw.is_24h,
+      winter_closure: raw.winter_closure ?? raw.winter_closure,
+      notes: raw.notes || raw.notes || "",
     };
   }
 
@@ -178,6 +187,116 @@
       .replaceAll(">", "&gt;")
       .replaceAll('"', "&quot;")
       .replaceAll("'", "&#39;");
+
+
+  const SYNODIC = 29.530588853;
+  const KNOWN_NEW = Date.UTC(2000, 0, 6, 18, 14, 0);
+
+  function moonFromDate(date) {
+    const d = date instanceof Date ? date : new Date(date);
+    let age = ((d.getTime() - KNOWN_NEW) / 86400000) % SYNODIC;
+    if (age < 0) age += SYNODIC;
+    const phase = age / SYNODIC;
+    const illumination = Math.round(((1 - Math.cos(2 * Math.PI * phase)) / 2) * 100);
+    let name = "有明月";
+    if (age < 1.85 || age >= 27.69) name = "新月";
+    else if (age < 5.54) name = "三日月";
+    else if (age < 9.23) name = "上弦の月";
+    else if (age < 13.0) name = "十三夜";
+    else if (age < 16.5) name = "満月";
+    else if (age < 20.2) name = "十八夜";
+    else if (age < 23.9) name = "下弦の月";
+    return { name, illumination, age: Math.round(age * 10) / 10 };
+  }
+
+  function selectedNightDate() {
+    const iso = forecastNights[selectedDayIndex];
+    if (iso) return new Date(iso + "T21:00:00+09:00");
+    const now = new Date();
+    const jst = new Date(now.getTime() + 9 * 3600000);
+    if (jst.getUTCHours() < 4) jst.setUTCDate(jst.getUTCDate() - 1);
+    return new Date(Date.UTC(jst.getUTCFullYear(), jst.getUTCMonth(), jst.getUTCDate(), 12, 0, 0));
+  }
+
+  function phaseText(value) {
+    if (value == null || value === "" || value === "—") return "";
+    if (typeof value === "number") return "";
+    const text = String(value).trim();
+    if (!text || /^\d+(\.\d+)?$/.test(text)) return "";
+    return text;
+  }
+
+  function resolveMoon(spot) {
+    const computed = moonFromDate(selectedNightDate());
+    const day = Array.isArray(spot.daily) ? spot.daily[selectedDayIndex] : null;
+    const c = spot.condition || {};
+    const name = phaseText(c.moonPhase) || phaseText(day && (day.moonPhaseName || day.moonPhaseName)) || computed.name;
+    const illumRaw = c.moonIllumination ?? (day && (day.moonIllumination ?? day.moonIllumination));
+    const illumination = Number.isFinite(Number(illumRaw)) ? Math.round(Number(illumRaw)) : computed.illumination;
+    const ageRaw = c.moonAge ?? (day && (day.moonAge ?? day.moonAge));
+    const age = Number.isFinite(Number(ageRaw)) ? Number(ageRaw) : computed.age;
+    return { name, illumination, age };
+  }
+
+  function formatStamp(iso) {
+    const date = new Date(iso);
+    if (Number.isNaN(date.getTime())) return "";
+    const p = (n) => String(n).padStart(2, "0");
+    return date.getFullYear() + "/" + p(date.getMonth() + 1) + "/" + p(date.getDate()) + " " + p(date.getHours()) + ":" + p(date.getMinutes()) + " 更新";
+  }
+
+  function flagText(flag, yes, no) {
+    if (flag === true) return yes;
+    if (flag === false) return no;
+    return "情報なし";
+  }
+
+  function defaultViewDirection(spot) {
+    const lat = Number(spot.lat);
+    if (lat && lat < 27) return "南〜南東（低緯度のため南天の星座が高く、夏は天の川の中心も見上げやすい）";
+    if (Number(spot.elevation) >= 1500) return "南〜南西（高地で地平まで開けやすく、夏の天の川と冬のオリオン座が狙い目）";
+    return "南〜南東（日本の観測では天の川中心が南寄りに見えることが多く、街明かりの少ない方角を優先）";
+  }
+
+  function defaultSurroundings(spot) {
+    const pollution = spot.lightPollution || "中";
+    const bortle = spot.bortle_scale != null ? "Bortle " + spot.bortle_scale + " 相当" : "光害度「" + pollution + "」";
+    const elev = Number(spot.elevation) || 0;
+    const air = elev >= 1000 ? "標高があり大気が薄く、透明度が出やすい傾向です。" : elev >= 400 ? "丘陵〜山地で、盆地の街明かりから距離を取りやすい立地です。" : "低地のため、遠方の都市光が地平線に乗る夜があります。";
+    return (spot.prefecture || "当地") + "の" + (spot.category || spot.subtitle || "観測地点") + "周辺は、" + bortle + "の空の明るさです。" + air + "肉眼では天頂付近、撮影では街明かりと反対側の方位を選ぶとコントラストが乗りやすくなります。";
+  }
+
+  function defaultAccessNotes(spot) {
+    const parking = flagText(spot.has_parking ?? spot.has_parking, "駐車場の記載あり", "駐車場の記載なし（路肩駐車は避け、公共スペースを確認）");
+    const toilet = flagText(spot.has_toilet ?? spot.has_toilet, "トイレの記載あり", "トイレの記載なし（事前に沿道の公衆トイレを済ませる）");
+    const winter = spot.winter_closure || spot.winter_closure ? "標高や積雪の関係で冬季閉鎖の可能性があります。" : "";
+    const hours = (spot.is_24h || spot.is_24h) ? "終日利用の記載がありますが、現地の門扉・禁止事項を優先してください。" : "夜間開放の可否は施設・自治体の案内を優先してください。";
+    return parking + "。" + toilet + "。" + hours + winter + "夜間は気温が急低下し、段差や濡れた岩場で転倒しやすいため、ヘッドライトは足元確認の最短に留め、防寒と予備電池を用意してください。";
+  }
+
+  function defaultOverview(spot) {
+    const name = spot.name || "この地点";
+    const pref = spot.prefecture || "日本";
+    const cat = spot.category || spot.subtitle || "観測スポット";
+    const elev = Number(spot.elevation) || 0;
+    const elevText = elev ? "標高約" + elev.toLocaleString("ja-JP") + "m" : "標高情報は未整備";
+    return (
+      pref + "の" + cat + "「" + name + "」は、" + elevText +
+      "に位置する星空観測の候補地です。周辺の光害度は「" + (spot.lightPollution || "中") +
+      "」で、街明かりから離れた方角を選べば天の川や明るい星座を追いやすくなります。" +
+      "地図上のスコアは雲量・月明かり・湿度・光害を総合した目安なので、現地では風と足元の安全もあわせて判断してください。" +
+      "夜間は急な冷え込みと路面の濡れに備え、ヘッドライトは足元確認の最短に留め、私有地や施設の消灯ルールを守って短時間でも計画的に利用しましょう。"
+    );
+  }
+
+  function buildSpotCopy(spot) {
+    return {
+      overview: spot.overview && String(spot.overview).length >= 80 ? spot.overview : (spot.description && String(spot.description).length >= 80 ? spot.description : defaultOverview(spot)),
+      viewDirection: spot.viewDirection || defaultViewDirection(spot),
+      surroundings: spot.surroundings || defaultSurroundings(spot),
+      accessNotes: spot.accessNotes || spot.notes || defaultAccessNotes(spot),
+    };
+  }
 
   const isMobile = () => window.matchMedia("(max-width: 768px)").matches;
 
@@ -238,6 +357,11 @@
         starScore: liveNorm.starScore,
         condition: liveNorm.condition || spot.condition,
         hourlyCloud: liveNorm.hourlyCloud,
+        overview: spot.overview || liveNorm.overview,
+        viewDirection: spot.viewDirection || liveNorm.viewDirection,
+        surroundings: spot.surroundings || liveNorm.surroundings,
+        accessNotes: spot.accessNotes || liveNorm.accessNotes,
+        description: spot.description || liveNorm.description,
       };
     });
     const sourceFile = auto
@@ -247,9 +371,9 @@
         : spots
           ? "./data/spots.json"
           : "fallback";
-    const nights = forecast?.nightWindow?.nights || forecastList[0]?.daily?.map((d) => d.date) || [];
+    const nights = forecast?.nightWindow?.nights || forecast?.nightWindow?.nights || forecastList[0]?.daily?.map((d) => d.date || d.date) || [];
     return {
-      updatedAt: forecast?.updatedAt || auto?.updatedAt || spots?.updatedAt || FALLBACK.updatedAt,
+      updatedAt: forecast?.updatedAt || forecast?.updatedAt || auto?.updatedAt || auto?.updatedAt || spots?.updatedAt || spots?.updatedAt || FALLBACK.updatedAt,
       sourceFile,
       hasForecast: Boolean(forecastList.length),
       nights,
@@ -346,17 +470,33 @@
 
   function applyDay(index) {
     selectedDayIndex = index;
+    const computed = moonFromDate(selectedNightDate());
     allSpots.forEach((spot) => {
       const day = Array.isArray(spot.daily) ? spot.daily[index] : null;
-      if (!day) return;
-      spot.starScore = day.starScore;
-      spot.hourlyCloud = day.hourlyCloud || [];
+      if (day) {
+        spot.starScore = day.starScore ?? day.starScore;
+        spot.hourlyCloud = day.hourlyCloud || day.hourlyCloud || [];
+        spot.condition = {
+          label: day.label || day.label,
+          cloudCover: day.cloudCover ?? day.cloudCover,
+          humidity: day.humidity ?? day.humidity,
+          hasForecast: true,
+          moonPhase: day.moonPhaseName || day.moonPhaseName || computed.name,
+          moonIllumination: day.moonIllumination ?? day.moonIllumination ?? computed.illumination,
+          moonAge: day.moonAge ?? day.moonAge ?? computed.age,
+        };
+        return;
+      }
+      spot.hourlyCloud = [];
       spot.condition = {
-        label: day.label,
-        cloudCover: day.cloudCover,
-        moonPhase: day.moonPhaseName,
-        moonIllumination: day.moonIllumination,
-        moonAge: day.moonAge,
+        ...(spot.condition || {}),
+        label: "気象予報なし",
+        cloudCover: null,
+        humidity: null,
+        hasForecast: false,
+        moonPhase: computed.name,
+        moonIllumination: computed.illumination,
+        moonAge: computed.age,
       };
     });
     document.querySelectorAll(".date-bar__btn").forEach((btn) => {
@@ -367,7 +507,10 @@
     });
     if (els.panel.classList.contains("is-open") && activeId) {
       const current = allSpots.find((s) => s.id === activeId);
-      if (current) els.panelContent.innerHTML = panelHtml(current);
+      if (current) {
+        els.panelContent.innerHTML = panelHtml(current);
+        bindPanelEvents();
+      }
     }
   }
 
@@ -442,10 +585,24 @@
   }
 
   function panelHtml(spot) {
+    const moon = resolveMoon(spot);
     const c = spot.condition || {};
-    const cloud = Number(c.cloudCover ?? 0);
-    const live = Boolean(spot.hourlyCloud);
-    const kicker = live ? "今夜の予報" : "今夜の判定（モック）";
+    const copy = buildSpotCopy(spot);
+    const hasForecast = c.hasForecast === true || (Array.isArray(spot.daily) && spot.daily[selectedDayIndex] && Number.isFinite(Number(spot.daily[selectedDayIndex].cloudCover ?? spot.daily[selectedDayIndex].cloudCover)));
+    const cloudRaw = c.cloudCover;
+    const hasCloud = hasForecast && Number.isFinite(Number(cloudRaw));
+    const cloud = hasCloud ? Math.round(Number(cloudRaw)) : null;
+    const humidity = c.humidity;
+    const live = Boolean(spot.hourlyCloud && spot.hourlyCloud.length);
+    const kicker = hasForecast ? "選択日の気象予報" : "気象予報なし（月相は計算値）";
+    const cloudLabel = selectedDayIndex === 0 ? "今夜の平均雲量" : "この夜の平均雲量";
+    const cloudText = hasCloud ? cloud + "%" : "予報なし";
+    const humidityBlock = hasForecast && Number.isFinite(Number(humidity))
+      ? `<div class="meter"><label><span>夜間の平均湿度</span><span>${Math.round(Number(humidity))}%</span></label><div class="meter-bar"><span style="width:${Math.round(Number(humidity))}%"></span></div></div>`
+      : "";
+    const forecastNote = hasForecast
+      ? ""
+      : `<p class="panel-notice">この地点には選択した夜の気象予報がありません。月相・月明かりは日付から計算した値、星空スコアは標高と光害の静的な目安です。</p>`;
     return `
       <p class="panel-kicker">${escapeHtml(spot.prefecture)} ・ ${kicker}</p>
       <h2 class="panel-title" id="panel-title">${escapeHtml(spot.name)}</h2>
@@ -457,27 +614,38 @@
       <dl class="stats">
         <div class="stat"><dt>標高</dt><dd>${escapeHtml(spot.elevation)} m</dd></div>
         <div class="stat"><dt>光害度</dt><dd>${escapeHtml(spot.lightPollution)}${spot.bortle_scale != null ? " / Bortle " + escapeHtml(spot.bortle_scale) : ""}</dd></div>
-        <div class="stat"><dt>月相</dt><dd>${escapeHtml(c.moonPhase || "—")}</dd></div>
-        <div class="stat"><dt>月明かり</dt><dd>${escapeHtml(c.moonIllumination ?? "—")}%</dd></div>
+        <div class="stat"><dt>月相</dt><dd>${escapeHtml(moon.name)}</dd></div>
+        <div class="stat"><dt>月明かり</dt><dd>${escapeHtml(moon.illumination)}%</dd></div>
+        <div class="stat"><dt>${cloudLabel}</dt><dd>${cloudText}</dd></div>
       </dl>
-      <p class="panel-desc">${escapeHtml(spot.description)}</p>
-      ${spot.notes ? `<p class="panel-notes">${escapeHtml(spot.notes)}</p>` : ""}
-      <div class="condition-grid">
-        <div class="meter">
-          <label><span>今夜の平均雲量</span><span>${cloud}%</span></label>
-          <div class="meter-bar"><span style="width:${cloud}%"></span></div>
-        </div>
-      </div>
+      <p class="panel-moon-note">月齢 ${escapeHtml(moon.age)} 日相当 ／ 輝面比 ${escapeHtml(moon.illumination)}%（選択した日付の21時時点）</p>
+      ${forecastNote}
+      ${humidityBlock ? `<div class="condition-grid">${humidityBlock}</div>` : ""}
+      <section class="panel-article"><h3>スポットの概要・見どころ</h3><p>${escapeHtml(copy.overview)}</p></section>
+      <section class="panel-article"><h3>開けている方角</h3><p>${escapeHtml(copy.viewDirection)}</p></section>
+      <section class="panel-article"><h3>光害と周辺環境</h3><p>${escapeHtml(copy.surroundings)}</p></section>
+      <section class="panel-article">
+        <h3>現地の注意点</h3>
+        <p>${escapeHtml(copy.accessNotes)}</p>
+        <ul class="panel-facilities">
+          <li>駐車場：${escapeHtml(flagText(spot.has_parking ?? spot.has_parking, "あり", "なし／未確認"))}</li>
+          <li>トイレ：${escapeHtml(flagText(spot.has_toilet ?? spot.has_toilet, "あり", "なし／未確認"))}</li>
+          <li>夜間利用：${escapeHtml((spot.is_24h || spot.is_24h) ? "終日の記載あり" : "要確認")}</li>
+        </ul>
+      </section>
       ${hourlyCloudHtml(spot.hourlyCloud)}
       ${calendarHtml(spot)}
       <section class="ad-slot" aria-label="スポンサーリンク枠">
         <p class="ad-slot__label">スポンサーリンク</p>
-        <div class="ad-slot__box">
-          広告用プレースホルダー
-          <small>300 × 250 想定</small>
-        </div>
+        <div class="ad-slot__box">広告用プレースホルダー<small>300 × 250 想定</small></div>
       </section>
     `;
+  }
+
+  function bindPanelEvents() {
+    els.panelContent.querySelectorAll(".cal-card").forEach((card) => {
+      card.addEventListener("click", () => applyDay(Number(card.dataset.day)));
+    });
   }
 
   function panToSpot(spot) {
@@ -502,9 +670,7 @@
   function openSpot(spot, shouldPan) {
     lastFocus = document.activeElement;
     els.panelContent.innerHTML = panelHtml(spot);
-    els.panelContent.querySelectorAll(".cal-card").forEach((card) => {
-      card.addEventListener("click", () => applyDay(Number(card.dataset.day)));
-    });
+    bindPanelEvents();
     els.panel.classList.add("is-open");
     els.panel.setAttribute("aria-hidden", "false");
     document.body.classList.add("is-panel-open");
@@ -553,32 +719,53 @@
     els.backdrop.addEventListener("click", closePanel);
     map.on("click", closePanel);
     document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && els.panel.classList.contains("is-open")) {
-        closePanel();
+      if (event.key !== "Escape") return;
+      const openLegal = document.querySelector(".legal-modal.is-open");
+      if (openLegal) {
+        closeLegal();
+        return;
       }
+      if (els.panel.classList.contains("is-open")) closePanel();
     });
+    document.querySelectorAll("[data-legal]").forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        openLegal(link.getAttribute("data-legal"));
+      });
+    });
+    document.querySelectorAll("[data-legal-close]").forEach((btn) => {
+      btn.addEventListener("click", closeLegal);
+    });
+    const legalBackdrop = document.getElementById("legal-backdrop");
+    if (legalBackdrop) legalBackdrop.addEventListener("click", closeLegal);
+    if (location.hash) openLegal(location.hash.replace("#", ""));
+    window.addEventListener("hashchange", () => openLegal(location.hash.replace("#", "")));
+  }
+
+  function openLegal(id) {
+    const modal = document.getElementById(id);
+    if (!modal || !modal.classList.contains("legal-modal")) return;
+    document.querySelectorAll(".legal-modal").forEach((node) => node.classList.remove("is-open"));
+    modal.classList.add("is-open");
+    const backdrop = document.getElementById("legal-backdrop");
+    if (backdrop) backdrop.hidden = false;
+    document.body.classList.add("is-legal-open");
+  }
+
+  function closeLegal() {
+    document.querySelectorAll(".legal-modal").forEach((node) => node.classList.remove("is-open"));
+    const backdrop = document.getElementById("legal-backdrop");
+    if (backdrop) backdrop.hidden = true;
+    document.body.classList.remove("is-legal-open");
+    if (location.hash) history.replaceState(null, "", location.pathname + location.search);
   }
 
   function setHeaderMeta(data) {
-    const date = new Date(data.updatedAt);
-    const live = Boolean(data.hasForecast);
-    const badge = document.querySelector(".site-header__badge");
-    if (!Number.isNaN(date.getTime())) {
-      const stamp = new Intl.DateTimeFormat("ja-JP", {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-        weekday: "short",
-        hour: "2-digit",
-        minute: "2-digit",
-        hour12: false,
-      }).format(date);
-      els.mockDate.textContent = "更新 " + stamp;
-      els.mockDate.title = "予報データの更新日時";
-    }
-    if (badge) {
-      const count = Array.isArray(data.spots) ? data.spots.length : 0;
-      badge.textContent = (live ? "Open-Meteo" : "自動収集") + " " + count + "件";
+    const stamp = formatStamp(data.updatedAt) || formatStamp(new Date().toISOString());
+    if (els.mockDate) {
+      els.mockDate.textContent = stamp;
+      els.mockDate.title = "気象データ・予報データの取得日時";
+      if (data.updatedAt) els.mockDate.setAttribute("datetime", data.updatedAt);
     }
   }
 
