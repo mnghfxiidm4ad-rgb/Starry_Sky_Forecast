@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="星空観測・天体撮影のコンディション判定マップ。全国の観測スポットを星空スコアで色分け表示します。">
+  <meta name="description" content="星空観測・天体撮影のコンディション判定マップ。全国の観測スポットを星空スコアで色分けし、雲量・月相・光害の目安を公開しています。">
   <title>星空予想 | 観測・撮影コンディションマップ</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,8 +25,8 @@
       </div>
     </div>
     <p class="site-header__meta">
-      <span id="mock-date">更新日時</span>
-      <span class="site-header__badge">デモデータ</span>
+      <time id="mock-date" datetime="">----/--/-- --:-- 更新</time>
+      <a class="site-header__link" href="#about" data-legal="about">サイトについて</a>
     </p>
   </header>
 
@@ -34,7 +34,6 @@
 
   <main>
     <div id="map" role="application" aria-label="星空観測スポット地図"></div>
-
     <aside class="legend" aria-label="星空スコア凡例">
       <p class="legend__title">星空スコア</p>
       <ul class="legend__list">
@@ -45,7 +44,6 @@
         <li><span class="legend__dot score-1"></span>★1 不向き</li>
       </ul>
     </aside>
-
     <nav class="spot-chips" aria-label="観測スポット一覧">
       <p class="spot-chips__label">スポット</p>
       <div class="spot-chips__row" id="spot-chips"></div>
@@ -53,21 +51,132 @@
   </main>
 
   <div class="panel-backdrop" id="panel-backdrop" hidden></div>
-
-  <aside
-    class="side-panel"
-    id="side-panel"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="panel-title"
-    aria-hidden="true"
-  >
+  <aside class="side-panel" id="side-panel" role="dialog" aria-modal="true" aria-labelledby="panel-title" aria-hidden="true">
     <div class="side-panel__handle" aria-hidden="true"></div>
-    <button type="button" class="side-panel__close" id="panel-close" aria-label="パネルを閉じる">
-      <span aria-hidden="true">×</span>
-    </button>
+    <button type="button" class="side-panel__close" id="panel-close" aria-label="パネルを閉じる"><span aria-hidden="true">×</span></button>
     <div class="side-panel__scroll" id="panel-content"></div>
   </aside>
+
+  <footer class="site-footer">
+    <a href="#about" data-legal="about">当サイトについて</a>
+    <a href="#privacy" data-legal="privacy">プライバシーポリシー</a>
+    <a href="#disclaimer" data-legal="disclaimer">免責事項</a>
+    <a href="#contact" data-legal="contact">お問い合わせ</a>
+    <span>© 星空予想</span>
+  </footer>
+
+  <div class="legal-backdrop" id="legal-backdrop" hidden></div>
+
+  <article class="legal-modal" id="about" aria-labelledby="about-title">
+    <div class="legal-modal__head">
+      <h2 id="about-title">当サイトについて・星空スコアの計算基準</h2>
+      <button type="button" class="legal-modal__close" data-legal-close aria-label="閉じる">×</button>
+    </div>
+    <div class="legal-modal__body">
+      <h3>サイトの目的</h3>
+      <p>星空予想は、星空観測と天体撮影の計画を立てる人向けに、全国の展望地・公共スポットのコンディション目安を地図で示す個人運営サイトです。国土地理院の地図タイル上に、雲量・月相・光害などを総合した星空スコア（★1〜★5）を色分けして表示します。</p>
+      <h3>使い方</h3>
+      <ul>
+        <li>上部の日付バーで今夜から最大16日先まで切り替え、ピンの色でその夜の目安を確認します。</li>
+        <li>ピンまたはスポット名を選ぶと、解説・月相・雲量・注意点が左側（スマホでは下部）に開きます。</li>
+        <li>直近7日は20時〜翌3時の時間帯別雲量、8日目以降は日次の総合判定を表示します。</li>
+        <li>地図は標準地図・淡色地図・航空写真を切り替えられます。クラスタをタップすると周辺へ拡大します。</li>
+      </ul>
+      <h3>パネルに出る主な項目</h3>
+      <ul>
+        <li><strong>星空スコア（★1〜★5）</strong>：その夜の観測しやすさの総合目安です。</li>
+        <li><strong>今夜の平均雲量</strong>：日本時間20時〜翌3時（8時間）の雲量を平均した値です。気象予報が無い地点・日付は「予報なし」と表示します。</li>
+        <li><strong>夜間の平均湿度</strong>：同じ時間帯の相対湿度の平均です。予報が無い場合は表示しません。</li>
+        <li><strong>月相・月明かり</strong>：選択日の21時（JST）時点の月の見え方です。予報の有無にかかわらず日付から計算できます。</li>
+        <li><strong>光害度 / Bortle</strong>：周辺の夜空の明るさの目安です。標高や地点データから割り当てています。</li>
+        <li><strong>時間帯別雲量</strong>：直近7日は1時間ごとの雲量バーを出します。8日目以降や予報が無い地点には出しません。</li>
+      </ul>
+      <h3>星空スコア（★1〜★5）の判定ロジック</h3>
+      <p>スコアは100点満点の内部点を星5段階に変換しています。気象値は Open-Meteo の1時間値を、日本時間の20時・21時・22時・23時・0時・1時・2時・3時で平均します。</p>
+      <h4>計算式</h4>
+      <p>内部点 S は次のとおりです。</p>
+      <p><code>S = 雲量点 + 月照率点 + 月の出没点 + 光害点 − 湿度減点</code></p>
+      <ul>
+        <li><strong>雲量点（0〜50）</strong>：<code>50 × (1 − 平均雲量% ÷ 100)</code>。平均雲量0%で50点、100%で0点。厚い雲は天体そのものが見えないため最も重い指標です。</li>
+        <li><strong>月照率点（0〜28）</strong>：<code>28 × (1 − 輝面比% ÷ 100)</code>。新月で最大、満月で0点に近づきます。</li>
+        <li><strong>月の出没点（0〜12）</strong>：<code>12 × (月が地平線下の時間 ÷ 8時間)</code>。同じ月齢でも、月が沈んでいる時間が多い夜は加点します。</li>
+        <li><strong>光害点（0〜20）</strong>：<code>max(0, 20 − max(1, Bortle−1) × 3)</code>。Bortle が小さい（暗い空）ほど高く、都市近傍は快晴でも満点になりません。光害度の低／中／高は Bortle 3／4／6 相当として扱います。</li>
+        <li><strong>湿度減点（0〜10）</strong>：夜間平均湿度が65%未満は減点なし、65%以上で3点、75%以上で6点、85%以上で10点。高湿度は霞・結露・透明度低下の目安です。</li>
+      </ul>
+      <h4>月相・月明かりの計算</h4>
+      <p>既知の新月（2000年1月6日 18:14 UTC）からの経過日数を朔望月 29.530588853 日で割った余りを月齢とします。輝面比は</p>
+      <p><code>輝面比% = round( (1 − cos(2π × 月齢 ÷ 朔望月)) ÷ 2 × 100 )</code></p>
+      <p>です。名称の目安は、新月（月齢0付近）→ 三日月 → 上弦の月 → 十三夜 → 満月 → 十八夜 → 下弦の月 → 有明月、です。予報JSONに日次の月相がある場合はそちらを優先します。</p>
+      <h4>星への換算</h4>
+      <ul>
+        <li>★5 … S が 80点以上（観測・撮影ともに適しやすい）</li>
+        <li>★4 … 62点以上</li>
+        <li>★3 … 44点以上</li>
+        <li>★2 … 26点以上</li>
+        <li>★1 … 26点未満</li>
+      </ul>
+      <p>月が明るく、かつ夜の大半で空に残る場合はラベルを「月明かり注意」にします。雲が少なく月が長い時間沈んでいる夜は「新月級・観測適」と表示することがあります。</p>
+      <h4>気象予報が無い場合</h4>
+      <p>自動収集した地点の多くは、16日分の詳細予報をまだ持っていません。その場合は次のように扱います。</p>
+      <ul>
+        <li>今夜の平均雲量・湿度・時間帯別雲量は「予報なし」とし、0%などの仮の数値は出しません。</li>
+        <li>月相と月明かりは、選択した日付の21時（JST）から上記の式で計算して表示します。</li>
+        <li>星空スコアは、標高と光害（Bortle）から付けた静的な目安です。雲の予報は含まれません。</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="legal-modal" id="privacy" aria-labelledby="privacy-title">
+    <div class="legal-modal__head">
+      <h2 id="privacy-title">プライバシーポリシー</h2>
+      <button type="button" class="legal-modal__close" data-legal-close aria-label="閉じる">×</button>
+    </div>
+    <div class="legal-modal__body">
+      <p>星空予想（以下「当サイト」）は、Google AdSense 等の広告配信と、アクセス解析を利用する場合の取り扱いを次のとおり定めます。</p>
+      <h3>Cookie とパーソナライズ広告</h3>
+      <p>当サイトは Google AdSense を利用することがあります。Google などの第三者配信事業者は Cookie を使用して、ユーザーが当サイトや他のサイトに過去にアクセスした情報に基づき広告を配信します。Google の広告 Cookie を使用することにより、Google やそのパートナーは、ユーザーが当サイトや他のインターネット上のサイトにアクセスした情報に基づいて、適切な広告を表示できます。</p>
+      <p>パーソナライズ広告を無効にする場合は、<a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">Google 広告設定</a>、または <a href="https://optout.aboutads.info/" target="_blank" rel="noopener noreferrer">www.aboutads.info</a> からオプトアウトできます。</p>
+      <h3>アクセス解析</h3>
+      <p>当サイトは、利用状況の把握のため Google アナリティクス等のアクセス解析ツールを導入する場合があります。これらは Cookie を利用して匿名のトラフィックデータを収集します。個人を特定する情報は収集しません。ブラウザの設定で Cookie を無効にすることで、収集を拒否できます。</p>
+      <h3>保有データ</h3>
+      <p>地図表示と予報計算に必要な公開位置情報（観測スポットの名称・緯度経度・標高）を掲載します。お問い合わせフォームから送信された内容は、回答とサイト改善の目的に限り利用します。</p>
+    </div>
+  </article>
+
+  <article class="legal-modal" id="disclaimer" aria-labelledby="disclaimer-title">
+    <div class="legal-modal__head">
+      <h2 id="disclaimer-title">免責事項</h2>
+      <button type="button" class="legal-modal__close" data-legal-close aria-label="閉じる">×</button>
+    </div>
+    <div class="legal-modal__body">
+      <p>当サイトの星空スコアと気象値は、Open-Meteo 等の公開予報と計算モデルに基づく目安です。実際の雲の切れ間、霧、風、気温、道路状況とは異なる場合があります。</p>
+      <ul>
+        <li>現地の安全確保、通行止め、施設の開門、野生動物、落石、凍結、高山病などの判断は、利用者ご自身の責任で行ってください。</li>
+        <li>天候は急変します。予報が良くても、現地で雲が広がったり雷が近づいたりした場合は観測を中止してください。</li>
+        <li>駐車場・トイレ・冬季閉鎖の情報は公開データや自動抽出を含み、最新の現地案内と異なることがあります。</li>
+        <li>当サイトの情報を利用した損害について、当サイトは責任を負いません。</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="legal-modal" id="contact" aria-labelledby="contact-title">
+    <div class="legal-modal__head">
+      <h2 id="contact-title">お問い合わせ・運営者情報</h2>
+      <button type="button" class="legal-modal__close" data-legal-close aria-label="閉じる">×</button>
+    </div>
+    <div class="legal-modal__body">
+      <h3>お問い合わせ</h3>
+      <p>誤情報の指摘、スポット情報の修正、広告掲載に関するご連絡は、Google フォームから受け付けます。個人情報は回答に必要な範囲でのみ利用します。</p>
+      <p><a href="https://docs.google.com/forms/" target="_blank" rel="noopener noreferrer">Googleフォームで問い合わせる</a>（公開前に運営者のフォームURLへ差し替えてください）</p>
+      <h3>運営者情報</h3>
+      <ul>
+        <li>サイト名：星空予想</li>
+        <li>運営：個人サイト（星空予想 編集部）</li>
+        <li>所在地：日本国内（詳細はお問い合わせ時に必要な範囲で開示します）</li>
+        <li>コンテンツ：星空観測の計画支援を目的とした地図・解説・予報の要約</li>
+      </ul>
+    </div>
+  </article>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>

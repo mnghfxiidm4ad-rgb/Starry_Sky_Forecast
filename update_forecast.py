@@ -76,7 +76,7 @@ def phase_name(age: float) -> str:
     if age < 6.0:
         return "三日月"
     if age < 9.0:
-        return "上弦"
+        return "上弦の月"
     if age < 13.5:
         return "十三夜"
     if age < 16.0:
@@ -84,7 +84,7 @@ def phase_name(age: float) -> str:
     if age < 21.0:
         return "十八夜"
     if age < 24.0:
-        return "下弦"
+        return "下弦の月"
     return "有明月"
 
 
@@ -108,7 +108,7 @@ def fetch_open_meteo(lat: float, lng: float) -> dict:
     params = {
         "latitude": f"{lat:.4f}",
         "longitude": f"{lng:.4f}",
-        "hourly": "cloud_cover",
+        "hourly": "cloud_cover,relative_humidity_2m",
         "daily": "moon_phase,moonrise,moonset",
         "timezone": "Asia/Tokyo",
         "forecast_days": FORECAST_DAYS,
@@ -116,12 +116,18 @@ def fetch_open_meteo(lat: float, lng: float) -> dict:
     return http_json(f"{API_URL}?{urllib.parse.urlencode(params)}")
 
 
-def hourly_index(api: dict) -> dict[str, int | None]:
+def hourly_index(api: dict) -> dict[str, dict]:
     times = api.get("hourly", {}).get("time") or []
     clouds = api.get("hourly", {}).get("cloud_cover") or []
+    hums = api.get("hourly", {}).get("relative_humidity_2m") or []
     out = {}
-    for stamp, cover in zip(times, clouds):
-        out[stamp] = None if cover is None else int(round(float(cover)))
+    for i, stamp in enumerate(times):
+        cover = clouds[i] if i < len(clouds) else None
+        hum = hums[i] if i < len(hums) else None
+        out[stamp] = {
+            "cloud": None if cover is None else int(round(float(cover))),
+            "humidity": None if hum is None else int(round(float(hum))),
+        }
     return out
 
 
@@ -177,11 +183,19 @@ def night_hours(night_start: datetime) -> list[datetime]:
     return hours
 
 
-def score_night(avg_cloud: float, illum: int, moon_down_ratio: float, bortle: int) -> tuple[int, int, str]:
+def score_night(avg_cloud: float, illum: int, moon_down_ratio: float, bortle: int, avg_humidity: float | None = None) -> tuple[int, int, str]:
     cloud_pts = 50 * (1 - max(0.0, min(100.0, avg_cloud)) / 100.0)
     moon_pts = 28 * (1 - illum / 100.0) + 12 * moon_down_ratio
     bortle_pts = max(0.0, 20 - max(1, bortle - 1) * 3)
-    score100 = int(round(max(0.0, min(100.0, cloud_pts + moon_pts + bortle_pts))))
+    humidity_penalty = 0.0
+    if avg_humidity is not None:
+        if avg_humidity >= 85:
+            humidity_penalty = 10.0
+        elif avg_humidity >= 75:
+            humidity_penalty = 6.0
+        elif avg_humidity >= 65:
+            humidity_penalty = 3.0
+    score100 = int(round(max(0.0, min(100.0, cloud_pts + moon_pts + bortle_pts - humidity_penalty))))
     if score100 >= 80:
         stars, label = 5, "観測・撮影ともに適"
     elif score100 >= 62:
@@ -216,13 +230,18 @@ def build_daily(api: dict, night_starts: list[datetime], bortle: int) -> list[di
         }
         hourly = []
         covers = []
+        hums = []
         down = 0
         for hour in night_hours(start):
             stamp = hour.strftime("%Y-%m-%dT%H:00")
-            cover = clouds.get(stamp)
+            rec = clouds.get(stamp) or {}
+            cover = rec.get("cloud") if isinstance(rec, dict) else rec
             if cover is None:
                 continue
             covers.append(cover)
+            hum = rec.get("humidity") if isinstance(rec, dict) else None
+            if hum is not None:
+                hums.append(hum)
             up = moon_is_up(hour, events)
             if not up:
                 down += 1
@@ -231,14 +250,16 @@ def build_daily(api: dict, night_starts: list[datetime], bortle: int) -> list[di
                     "time": stamp,
                     "hour": f"{hour.hour:02d}:00",
                     "cloudCover": cover,
+                    "humidity": hum,
                     "moonUp": up,
                 }
             )
         if not covers:
             continue
         avg = int(round(sum(covers) / len(covers)))
+        avg_hum = int(round(sum(hums) / len(hums))) if hums else None
         down_ratio = down / max(1, len(hourly))
-        stars, score100, label = score_night(avg, moon["illumination"], down_ratio, bortle)
+        stars, score100, label = score_night(avg, moon["illumination"], down_ratio, bortle, avg_hum)
         row = {
             "date": day_key,
             "offset": index,
@@ -246,6 +267,7 @@ def build_daily(api: dict, night_starts: list[datetime], bortle: int) -> list[di
             "score100": score100,
             "label": label,
             "cloudCover": avg,
+            "humidity": avg_hum,
             "moonAge": moon["age"],
             "moonIllumination": moon["illumination"],
             "moonPhase": moon["phase"],
@@ -287,10 +309,15 @@ def to_output_spot(spot: dict, daily: list[dict]) -> dict:
         "lightPollution": spot.get("lightPollution", ""),
         "bortle_scale": spot_bortle(spot),
         "description": spot.get("description", ""),
+        "overview": spot.get("overview", ""),
+        "viewDirection": spot.get("viewDirection", ""),
+        "surroundings": spot.get("surroundings", ""),
+        "accessNotes": spot.get("accessNotes", ""),
         "starScore": tonight.get("starScore", spot.get("starScore", 3)),
         "condition": {
             "label": tonight.get("label", "判定なし"),
             "cloudCover": tonight.get("cloudCover", 0),
+            "humidity": tonight.get("humidity"),
             "moonPhase": tonight.get("moonPhaseName", "—"),
             "moonIllumination": tonight.get("moonIllumination", 0),
             "moonAge": tonight.get("moonAge", 0),
