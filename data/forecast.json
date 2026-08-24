@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T06:27:26+09:00",
+  "updatedAt": "2026-08-24T18:54:53+09:00",
   "source": "Open-Meteo",
   "forecastDays": 16,
   "nightWindow": {
@@ -45,8 +45,8 @@
       "starScore": 3,
       "condition": {
         "label": "条件つき可",
-        "cloudCover": 21,
-        "humidity": 84,
+        "cloudCover": 27,
+        "humidity": 74,
         "moonPhase": "十三夜",
         "moonIllumination": 85,
         "moonAge": 11.0
@@ -55,57 +55,57 @@
         {
           "time": "2026-08-24T20:00",
           "hour": "20:00",
-          "cloudCover": 19,
-          "humidity": 76,
+          "cloudCover": 11,
+          "humidity": 69,
           "moonUp": true
         },
         {
           "time": "2026-08-24T21:00",
           "hour": "21:00",
-          "cloudCover": 19,
-          "humidity": 76,
+          "cloudCover": 32,
+          "humidity": 68,
           "moonUp": true
         },
         {
           "time": "2026-08-24T22:00",
           "hour": "22:00",
-          "cloudCover": 21,
-          "humidity": 81,
+          "cloudCover": 42,
+          "humidity": 69,
           "moonUp": true
         },
         {
           "time": "2026-08-24T23:00",
           "hour": "23:00",
-          "cloudCover": 27,
-          "humidity": 84,
+          "cloudCover": 39,
+          "humidity": 72,
           "moonUp": true
         },
         {
           "time": "2026-08-25T00:00",
           "hour": "00:00",
-          "cloudCover": 26,
-          "humidity": 86,
+          "cloudCover": 33,
+          "humidity": 73,
           "moonUp": true
         },
         {
           "time": "2026-08-25T01:00",
           "hour": "01:00",
-          "cloudCover": 29,
-          "humidity": 86,
+          "cloudCover": 27,
+          "humidity": 76,
           "moonUp": true
         },
         {
           "time": "2026-08-25T02:00",
           "hour": "02:00",
-          "cloudCover": 18,
-          "humidity": 89,
+          "cloudCover": 21,
+          "humidity": 82,
           "moonUp": false
         },
         {
           "time": "2026-08-25T03:00",
           "hour": "03:00",
           "cloudCover": 12,
-          "humidity": 90,
+          "humidity": 85,
           "moonUp": false
         }
       ],
@@ -116,8 +116,8 @@
           "starScore": 3,
           "score100": 52,
           "label": "条件つき可",
-          "cloudCover": 21,
-          "humidity": 84,
+          "cloudCover": 27,
+          "humidity": 74,
           "moonAge": 11.0,
           "moonIllumination": 85,
           "moonPhase": 0.372,
@@ -130,57 +130,57 @@
             {
               "time": "2026-08-24T20:00",
               "hour": "20:00",
-              "cloudCover": 19,
-              "humidity": 76,
+              "cloudCover": 11,
+              "humidity": 69,
               "moonUp": true
             },
             {
               "time": "2026-08-24T21:00",
               "hour": "21:00",
-              "cloudCover": 19,
-              "humidity": 76,
+              "cloudCover": 32,
+              "humidity": 68,
               "moonUp": true
             },
             {
               "time": "2026-08-24T22:00",
               "hour": "22:00",
-              "cloudCover": 21,
-              "humidity": 81,
+              "cloudCover": 42,
+              "humidity": 69,
               "moonUp": true
             },
             {
               "time": "2026-08-24T23:00",
               "hour": "23:00",
-              "cloudCover": 27,
-              "humidity": 84,
+              "cloudCover": 39,
+              "humidity": 72,
               "moonUp": true
             },
             {
               "time": "2026-08-25T00:00",
               "hour": "00:00",
-              "cloudCover": 26,
-              "humidity": 86,
+              "cloudCover": 33,
+              "humidity": 73,
               "moonUp": true
             },
             {
               "time": "2026-08-25T01:00",
               "hour": "01:00",
-              "cloudCover": 29,
-              "humidity": 86,
+              "cloudCover": 27,
+              "humidity": 76,
               "moonUp": true
             },
             {
               "time": "2026-08-25T02:00",
               "hour": "02:00",
-              "cloudCover": 18,
-              "humidity": 89,
+              "cloudCover": 21,
+              "humidity": 82,
               "moonUp": false
             },
             {
               "time": "2026-08-25T03:00",
               "hour": "03:00",
               "cloudCover": 12,
-              "humidity": 90,
+              "humidity": 85,
               "moonUp": false
             }
           ]
@@ -189,10 +189,10 @@
           "date": "2026-08-25",
           "offset": 1,
           "starScore": 3,
-          "score100": 54,
+          "score100": 57,
           "label": "月明かり注意",
-          "cloudCover": 10,
-          "humidity": 82,
+          "cloudCover": 5,
+          "humidity": 79,
           "moonAge": 11.9,
           "moonIllumination": 91,
           "moonPhase": 0.403,
@@ -205,57 +205,57 @@
             {
               "time": "2026-08-25T20:00",
               "hour": "20:00",
-              "cloudCover": 17,
-              "humidity": 80,
+              "cloudCover": 7,
+              "humidity": 72,
               "moonUp": true
             },
             {
               "time": "2026-08-25T21:00",
               "hour": "21:00",
-              "cloudCover": 14,
-              "humidity": 83,
+              "cloudCover": 7,
+              "humidity": 77,
               "moonUp": true
             },
             {
               "time": "2026-08-25T22:00",
               "hour": "22:00",
-              "cloudCover": 10,
-              "humidity": 84,
+              "cloudCover": 7,
+              "humidity": 81,
               "moonUp": true
             },
             {
               "time": "2026-08-25T23:00",
               "hour": "23:00",
-              "cloudCover": 10,
-              "humidity": 84,
+              "cloudCover": 7,
+              "humidity": 82,
               "moonUp": true
             },
             {
               "time": "2026-08-26T00:00",
               "hour": "00:00",
-              "cloudCover": 9,
-              "humidity": 83,
+              "cloudCover": 4,
+              "humidity": 81,
               "moonUp": true
             },
             {
               "time": "2026-08-26T01:00",
               "hour": "01:00",
-              "cloudCover": 9,
-              "humidity": 82,
+              "cloudCover": 2,
+              "humidity": 80,
               "moonUp": true
             },
             {
               "time": "2026-08-26T02:00",
               "hour": "02:00",
-              "cloudCover": 5,
-              "humidity": 81,
+              "cloudCover": 2,
+              "humidity": 80,
               "moonUp": true
             },
             {
               "time": "2026-08-26T03:00",
               "hour": "03:00",
-              "cloudCover": 3,
-              "humidity": 82,
+              "cloudCover": 2,
+              "humidity": 81,
               "moonUp": false
             }
           ]
@@ -264,9 +264,9 @@
           "date": "2026-08-26",
           "offset": 2,
           "starScore": 1,
-          "score100": 17,
+          "score100": 25,
           "label": "不向き",
-          "cloudCover": 79,
+          "cloudCover": 63,
           "humidity": 80,
           "moonAge": 12.8,
           "moonIllumination": 96,
@@ -280,57 +280,57 @@
             {
               "time": "2026-08-26T20:00",
               "hour": "20:00",
-              "cloudCover": 71,
-              "humidity": 78,
+              "cloudCover": 100,
+              "humidity": 77,
               "moonUp": true
             },
             {
               "time": "2026-08-26T21:00",
               "hour": "21:00",
-              "cloudCover": 85,
-              "humidity": 75,
+              "cloudCover": 72,
+              "humidity": 77,
               "moonUp": true
             },
             {
               "time": "2026-08-26T22:00",
               "hour": "22:00",
-              "cloudCover": 71,
-              "humidity": 73,
+              "cloudCover": 23,
+              "humidity": 76,
               "moonUp": true
             },
             {
               "time": "2026-08-26T23:00",
               "hour": "23:00",
-              "cloudCover": 78,
-              "humidity": 72,
+              "cloudCover": 53,
+              "humidity": 81,
               "moonUp": true
             },
             {
               "time": "2026-08-27T00:00",
               "hour": "00:00",
-              "cloudCover": 79,
-              "humidity": 83,
+              "cloudCover": 49,
+              "humidity": 85,
               "moonUp": true
             },
             {
               "time": "2026-08-27T01:00",
               "hour": "01:00",
-              "cloudCover": 69,
-              "humidity": 85,
+              "cloudCover": 75,
+              "humidity": 86,
               "moonUp": true
             },
             {
               "time": "2026-08-27T02:00",
               "hour": "02:00",
-              "cloudCover": 85,
-              "humidity": 86,
+              "cloudCover": 60,
+              "humidity": 83,
               "moonUp": true
             },
             {
               "time": "2026-08-27T03:00",
               "hour": "03:00",
-              "cloudCover": 97,
-              "humidity": 92,
+              "cloudCover": 69,
+              "humidity": 77,
               "moonUp": true
             }
           ]
@@ -339,10 +339,10 @@
           "date": "2026-08-27",
           "offset": 3,
           "starScore": 1,
-          "score100": 22,
+          "score100": 2,
           "label": "不向き",
-          "cloudCover": 59,
-          "humidity": 98,
+          "cloudCover": 98,
+          "humidity": 99,
           "moonAge": 13.8,
           "moonIllumination": 99,
           "moonPhase": 0.466,
@@ -355,57 +355,57 @@
             {
               "time": "2026-08-27T20:00",
               "hour": "20:00",
-              "cloudCover": 60,
-              "humidity": 99,
+              "cloudCover": 100,
+              "humidity": 100,
               "moonUp": true
             },
             {
               "time": "2026-08-27T21:00",
               "hour": "21:00",
-              "cloudCover": 48,
-              "humidity": 98,
+              "cloudCover": 100,
+              "humidity": 100,
               "moonUp": true
             },
             {
               "time": "2026-08-27T22:00",
               "hour": "22:00",
-              "cloudCover": 62,
-              "humidity": 98,
+              "cloudCover": 100,
+              "humidity": 100,
               "moonUp": true
             },
             {
               "time": "2026-08-27T23:00",
               "hour": "23:00",
-              "cloudCover": 88,
-              "humidity": 98,
+              "cloudCover": 100,
+              "humidity": 99,
               "moonUp": true
             },
             {
               "time": "2026-08-28T00:00",
               "hour": "00:00",
-              "cloudCover": 98,
-              "humidity": 98,
+              "cloudCover": 100,
+              "humidity": 100,
               "moonUp": true
             },
             {
               "time": "2026-08-28T01:00",
               "hour": "01:00",
-              "cloudCover": 73,
-              "humidity": 97,
+              "cloudCover": 96,
+              "humidity": 99,
               "moonUp": true
             },
             {
               "time": "2026-08-28T02:00",
               "hour": "02:00",
-              "cloudCover": 33,
-              "humidity": 97,
+              "cloudCover": 91,
+              "humidity": 98,
               "moonUp": true
             },
             {
               "time": "2026-08-28T03:00",
               "hour": "03:00",
-              "cloudCover": 7,
-              "humidity": 96,
+              "cloudCover": 94,
+              "humidity": 98,
               "moonUp": true
             }
           ]
@@ -414,10 +414,10 @@
           "date": "2026-08-28",
           "offset": 4,
           "starScore": 1,
-          "score100": 2,
+          "score100": 1,
           "label": "不向き",
-          "cloudCover": 99,
-          "humidity": 98,
+          "cloudCover": 100,
+          "humidity": 99,
           "moonAge": 14.7,
           "moonIllumination": 100,
           "moonPhase": 0.498,
@@ -430,7 +430,7 @@
             {
               "time": "2026-08-28T20:00",
               "hour": "20:00",
-              "cloudCover": 98,
+              "cloudCover": 99,
               "humidity": 98,
               "moonUp": true
             },
@@ -438,49 +438,49 @@
               "time": "2026-08-28T21:00",
               "hour": "21:00",
               "cloudCover": 100,
-              "humidity": 97,
+              "humidity": 98,
               "moonUp": true
             },
             {
               "time": "2026-08-28T22:00",
               "hour": "22:00",
               "cloudCover": 100,
-              "humidity": 98,
+              "humidity": 99,
               "moonUp": true
             },
             {
               "time": "2026-08-28T23:00",
               "hour": "23:00",
               "cloudCover": 100,
-              "humidity": 98,
+              "humidity": 100,
               "moonUp": true
             },
             {
               "time": "2026-08-29T00:00",
               "hour": "00:00",
               "cloudCover": 100,
-              "humidity": 99,
+              "humidity": 100,
               "moonUp": true
             },
             {
               "time": "2026-08-29T01:00",
               "hour": "01:00",
-              "cloudCover": 99,
-              "humidity": 99,
+              "cloudCover": 100,
+              "humidity": 100,
               "moonUp": true
             },
             {
               "time": "2026-08-29T02:00",
               "hour": "02:00",
-              "cloudCover": 99,
-              "humidity": 98,
+              "cloudCover": 100,
+              "humidity": 100,
               "moonUp": true
             },
             {
               "time": "2026-08-29T03:00",
               "hour": "03:00",
-              "cloudCover": 98,
-              "humidity": 97,
+              "cloudCover": 100,
+              "humidity": 99,
               "moonUp": true
             }
           ]
@@ -506,7 +506,7 @@
               "time": "2026-08-29T20:00",
               "hour": "20:00",
               "cloudCover": 100,
-              "humidity": 96,
+              "humidity": 99,
               "moonUp": true
             },
             {
@@ -541,14 +541,14 @@
               "time": "2026-08-30T01:00",
               "hour": "01:00",
               "cloudCover": 100,
-              "humidity": 100,
+              "humidity": 99,
               "moonUp": true
             },
             {
               "time": "2026-08-30T02:00",
               "hour": "02:00",
               "cloudCover": 100,
-              "humidity": 100,
+              "humidity": 99,
               "moonUp": true
             },
             {
@@ -564,10 +564,10 @@
           "date": "2026-08-30",
           "offset": 6,
           "starScore": 1,
-          "score100": 3,
+          "score100": 2,
           "label": "不向き",
-          "cloudCover": 99,
-          "humidity": 99,
+          "cloudCover": 100,
+          "humidity": 100,
           "moonAge": 16.7,
           "moonIllumination": 96,
           "moonPhase": 0.565,
@@ -588,7 +588,7 @@
               "time": "2026-08-30T21:00",
               "hour": "21:00",
               "cloudCover": 100,
-              "humidity": 99,
+              "humidity": 100,
               "moonUp": true
             },
             {
@@ -601,36 +601,36 @@
             {
               "time": "2026-08-30T23:00",
               "hour": "23:00",
-              "cloudCover": 99,
+              "cloudCover": 100,
               "humidity": 100,
               "moonUp": true
             },
             {
               "time": "2026-08-31T00:00",
               "hour": "00:00",
-              "cloudCover": 99,
+              "cloudCover": 100,
               "humidity": 100,
               "moonUp": true
             },
             {
               "time": "2026-08-31T01:00",
               "hour": "01:00",
-              "cloudCover": 99,
+              "cloudCover": 100,
               "humidity": 100,
               "moonUp": true
             },
             {
               "time": "2026-08-31T02:00",
               "hour": "02:00",
-              "cloudCover": 98,
-              "humidity": 99,
+              "cloudCover": 100,
+              "humidity": 100,
               "moonUp": true
             },
             {
               "time": "2026-08-31T03:00",
               "hour": "03:00",
-              "cloudCover": 98,
-              "humidity": 97,
+              "cloudCover": 100,
+              "humidity": 99,
               "moonUp": true
             }
           ]
@@ -655,11 +655,11 @@
         {
           "date": "2026-09-01",
           "offset": 8,
-          "starScore": 2,
-          "score100": 31,
-          "label": "やや不良",
-          "cloudCover": 53,
-          "humidity": 96,
+          "starScore": 1,
+          "score100": 8,
+          "label": "不向き",
+          "cloudCover": 99,
+          "humidity": 99,
           "moonAge": 18.8,
           "moonIllumination": 83,
           "moonPhase": 0.635,
@@ -672,11 +672,11 @@
         {
           "date": "2026-09-02",
           "offset": 9,
-          "starScore": 1,
-          "score100": 11,
-          "label": "不向き",
-          "cloudCover": 98,
-          "humidity": 99,
+          "starScore": 2,
+          "score100": 30,
+          "label": "やや不良",
+          "cloudCover": 60,
+          "humidity": 93,
           "moonAge": 19.8,
           "moonIllumination": 74,
           "moonPhase": 0.67,
@@ -692,8 +692,8 @@
           "starScore": 1,
           "score100": 16,
           "label": "不向き",
-          "cloudCover": 96,
-          "humidity": 99,
+          "cloudCover": 97,
+          "humidity": 100,
           "moonAge": 20.8,
           "moonIllumination": 64,
           "moonPhase": 0.706,
@@ -709,8 +709,8 @@
           "starScore": 1,
           "score100": 19,
           "label": "不向き",
-          "cloudCover": 99,
-          "humidity": 97,
+          "cloudCover": 100,
+          "humidity": 100,
           "moonAge": 21.9,
           "moonIllumination": 52,
           "moonPhase": 0.743,
@@ -727,7 +727,7 @@
           "score100": 24,
           "label": "不向き",
           "cloudCover": 100,
-          "humidity": 99,
+          "humidity": 100,
           "moonAge": 23.0,
           "moonIllumination": 41,
           "moonPhase": 0.779,
@@ -740,11 +740,11 @@
         {
           "date": "2026-09-06",
           "offset": 13,
-          "starScore": 3,
-          "score100": 50,
-          "label": "条件つき可",
-          "cloudCover": 56,
-          "humidity": 99,
+          "starScore": 2,
+          "score100": 28,
+          "label": "やや不良",
+          "cloudCover": 100,
+          "humidity": 100,
           "moonAge": 24.1,
           "moonIllumination": 30,
           "moonPhase": 0.816,
@@ -758,10 +758,10 @@
           "date": "2026-09-07",
           "offset": 14,
           "starScore": 2,
-          "score100": 35,
+          "score100": 32,
           "label": "やや不良",
-          "cloudCover": 95,
-          "humidity": 98,
+          "cloudCover": 100,
+          "humidity": 99,
           "moonAge": 25.2,
           "moonIllumination": 20,
           "moonPhase": 0.853,
@@ -774,18 +774,18 @@
         {
           "date": "2026-09-08",
           "offset": 15,
-          "starScore": 2,
-          "score100": 41,
-          "label": "やや不良",
-          "cloudCover": 94,
-          "humidity": 98,
+          "starScore": 3,
+          "score100": 46,
+          "label": "条件つき可",
+          "cloudCover": 83,
+          "humidity": 92,
           "moonAge": 26.3,
           "moonIllumination": 11,
           "moonPhase": 0.89,
           "moonPhaseName": "有明月",
           "moonrise": "2026-09-08T01:39",
           "moonset": "2026-09-08T16:20",
-          "moonDownHours": 2,
+          "moonDownHours": 4,
           "moonDownRatio": 1.0
         }
       ]
@@ -810,7 +810,7 @@
       "starScore": 1,
       "condition": {
         "label": "不向き",
-        "cloudCover": 74,
+        "cloudCover": 85,
         "humidity": 98,
         "moonPhase": "十三夜",
         "moonIllumination": 85,
@@ -820,28 +820,28 @@
         {
           "time": "2026-08-24T20:00",
           "hour": "20:00",
-          "cloudCover": 30,
-          "humidity": 94,
+          "cloudCover": 82,
+          "humidity": 98,
           "moonUp": true
         },
         {
           "time": "2026-08-24T21:00",
           "hour": "21:00",
-          "cloudCover": 29,
-          "humidity": 96,
+          "cloudCover": 45,
+          "humidity": 97,
           "moonUp": true
         },
         {
           "time": "2026-08-24T22:00",
           "hour": "22:00",
-          "cloudCover": 46,
-          "humidity": 99,
+          "cloudCover": 67,
+          "humidity": 98,
           "moonUp": true
         },
         {
           "time": "2026-08-24T23:00",
           "hour": "23:00",
-          "cloudCover": 100,
+          "cloudCover": 87,
           "humidity": 99,
           "moonUp": true
         },
@@ -869,7 +869,7 @@
         {
           "time": "2026-08-25T03:00",
           "hour": "03:00",
-          "cloudCover": 84,
+          "cloudCover": 100,
           "humidity": 99,
           "moonUp": false
         }
@@ -879,9 +879,9 @@
           "date": "2026-08-24",
           "offset": 0,
           "starScore": 1,
-          "score100": 24,
+          "score100": 19,
           "label": "不向き",
-          "cloudCover": 74,
+          "cloudCover": 85,
           "humidity": 98,
           "moonAge": 11.0,
           "moonIllumination": 85,
@@ -895,28 +895,28 @@
             {
               "time": "2026-08-24T20:00",
               "hour": "20:00",
-              "cloudCover": 30,
-              "humidity": 94,
+              "cloudCover": 82,
+              "humidity": 98,
               "moonUp": true
             },
             {
               "time": "2026-08-24T21:00",
               "hour": "21:00",
-              "cloudCover": 29,
-              "humidity": 96,
+              "cloudCover": 45,
+              "humidity": 97,
               "moonUp": true
             },
             {
               "time": "2026-08-24T22:00",
               "hour": "22:00",
-              "cloudCover": 46,
-              "humidity": 99,
+              "cloudCover": 67,
+              "humidity": 98,
               "moonUp": true
             },
             {
               "time": "2026-08-24T23:00",
               "hour": "23:00",
-              "cloudCover": 100,
+              "cloudCover": 87,
               "humidity": 99,
               "moonUp": true
             },
@@ -944,7 +944,7 @@
             {
               "time": "2026-08-25T03:00",
               "hour": "03:00",
-              "cloudCover": 84,
+              "cloudCover": 100,
               "humidity": 99,
               "moonUp": false
             }
@@ -954,10 +954,10 @@
           "date": "2026-08-25",
           "offset": 1,
           "starScore": 3,
-          "score100": 54,
+          "score100": 48,
           "label": "月明かり注意",
-          "cloudCover": 8,
-          "humidity": 90,
+          "cloudCover": 21,
+          "humidity": 95,
           "moonAge": 11.9,
           "moonIllumination": 91,
           "moonPhase": 0.403,
@@ -970,57 +970,57 @@
             {
               "time": "2026-08-25T20:00",
               "hour": "20:00",
-              "cloudCover": 14,
-              "humidity": 89,
+              "cloudCover": 28,
+              "humidity": 90,
               "moonUp": true
             },
             {
               "time": "2026-08-25T21:00",
               "hour": "21:00",
-              "cloudCover": 12,
-              "humidity": 90,
+              "cloudCover": 40,
+              "humidity": 93,
               "moonUp": true
             },
             {
               "time": "2026-08-25T22:00",
               "hour": "22:00",
-              "cloudCover": 8,
-              "humidity": 93,
+              "cloudCover": 49,
+              "humidity": 98,
               "moonUp": true
             },
             {
               "time": "2026-08-25T23:00",
               "hour": "23:00",
-              "cloudCover": 4,
-              "humidity": 93,
+              "cloudCover": 26,
+              "humidity": 98,
               "moonUp": true
             },
             {
               "time": "2026-08-26T00:00",
               "hour": "00:00",
-              "cloudCover": 8,
-              "humidity": 93,
+              "cloudCover": 7,
+              "humidity": 97,
               "moonUp": true
             },
             {
               "time": "2026-08-26T01:00",
               "hour": "01:00",
-              "cloudCover": 5,
-              "humidity": 90,
+              "cloudCover": 3,
+              "humidity": 94,
               "moonUp": true
             },
             {
               "time": "2026-08-26T02:00",
               "hour": "02:00",
-              "cloudCover": 4,
-              "humidity": 88,
+              "cloudCover": 7,
+              "humidity": 94,
               "moonUp": true
             },
             {
               "time": "2026-08-26T03:00",
               "hour": "03:00",
-              "cloudCover": 6,
-              "humidity": 88,
+              "cloudCover": 7,
+              "humidity": 94,
               "moonUp": false
             }
           ]
@@ -1029,10 +1029,10 @@
           "date": "2026-08-26",
           "offset": 2,
           "starScore": 1,
-          "score100": 19,
+          "score100": 22,
           "label": "不向き",
-          "cloudCover": 72,
-          "humidity": 90,
+          "cloudCover": 66,
+          "humidity": 89,
           "moonAge": 12.8,
           "moonIllumination": 96,
           "moonPhase": 0.434,
@@ -1045,57 +1045,57 @@
             {
               "time": "2026-08-26T20:00",
               "hour": "20:00",
-              "cloudCover": 78,
-              "humidity": 89,
+              "cloudCover": 77,
+              "humidity": 88,
               "moonUp": true
             },
             {
               "time": "2026-08-26T21:00",
               "hour": "21:00",
-              "cloudCover": 76,
+              "cloudCover": 31,
               "humidity": 89,
               "moonUp": true
             },
             {
               "time": "2026-08-26T22:00",
               "hour": "22:00",
-              "cloudCover": 78,
-              "humidity": 86,
+              "cloudCover": 79,
+              "humidity": 87,
               "moonUp": true
             },
             {
               "time": "2026-08-26T23:00",
               "hour": "23:00",
-              "cloudCover": 77,
+              "cloudCover": 40,
               "humidity": 88,
               "moonUp": true
             },
             {
               "time": "2026-08-27T00:00",
               "hour": "00:00",
-              "cloudCover": 69,
-              "humidity": 93,
+              "cloudCover": 59,
+              "humidity": 92,
               "moonUp": true
             },
             {
               "time": "2026-08-27T01:00",
               "hour": "01:00",
-              "cloudCover": 60,
-              "humidity": 91,
+              "cloudCover": 78,
+              "humidity": 93,
               "moonUp": true
             },
             {
               "time": "2026-08-27T02:00",
               "hour": "02:00",
-              "cloudCover": 83,
-              "humidity": 91,
+              "cloudCover": 69,
+              "humidity": 89,
               "moonUp": true
             },
             {
               "time": "2026-08-27T03:00",
               "hour": "03:00",
-              "cloudCover": 58,
-              "humidity": 95,
+              "cloudCover": 94,
+              "humidity": 86,
               "moonUp": true
             }
           ]
@@ -1104,10 +1104,10 @@
           "date": "2026-08-27",
           "offset": 3,
           "starScore": 1,
-          "score100": 18,
+          "score100": 5,
           "label": "不向き",
-          "cloudCover": 73,
-          "humidity": 97,
+          "cloudCover": 98,
+          "humidity": 98,
           "moonAge": 13.8,
           "moonIllumination": 99,
           "moonPhase": 0.466,
@@ -1120,57 +1120,57 @@
             {
               "time": "2026-08-27T20:00",
               "hour": "20:00",
-              "cloudCover": 86,
-              "humidity": 97,
+              "cloudCover": 97,
+              "humidity": 98,
               "moonUp": true
             },
             {
               "time": "2026-08-27T21:00",
               "hour": "21:00",
-              "cloudCover": 81,
-              "humidity": 95,
+              "cloudCover": 95,
+              "humidity": 98,
               "moonUp": true
             },
             {
               "time": "2026-08-27T22:00",
               "hour": "22:00",
-              "cloudCover": 87,
+              "cloudCover": 100,
               "humidity": 96,
               "moonUp": true
             },
             {
               "time": "2026-08-27T23:00",
               "hour": "23:00",
-              "cloudCover": 98,
-              "humidity": 98,
+              "cloudCover": 100,
+              "humidity": 95,
               "moonUp": true
             },
             {
               "time": "2026-08-28T00:00",
               "hour": "00:00",
-              "cloudCover": 98,
-              "humidity": 99,
+              "cloudCover": 96,
+              "humidity": 97,
               "moonUp": true
             },
             {
               "time": "2026-08-28T01:00",
               "hour": "01:00",
-              "cloudCover": 75,
-              "humidity": 98,
+              "cloudCover": 100,
+              "humidity": 99,
               "moonUp": true
             },
             {
               "time": "2026-08-28T02:00",
               "hour": "02:00",
-              "cloudCover": 41,
-              "humidity": 97,
+              "cloudCover": 100,
+              "humidity": 100,
               "moonUp": true
             },
             {
               "time": "2026-08-28T03:00",
               "hour": "03:00",
-              "cloudCover": 21,
-              "humidity": 96,
+              "cloudCover": 100,
+              "humidity": 100,
               "moonUp": true
             }
           ]
@@ -1179,10 +1179,10 @@
           "date": "2026-08-28",
           "offset": 4,
           "starScore": 1,
-          "score100": 13,
+          "score100": 4,
           "label": "不向き",
-          "cloudCover": 82,
-          "humidity": 98,
+          "cloudCover": 99,
+          "humidity": 95,
           "moonAge": 14.7,
           "moonIllumination": 100,
           "moonPhase": 0.498,
@@ -1195,7 +1195,7 @@
             {
               "time": "2026-08-28T20:00",
               "hour": "20:00",
-              "cloudCover": 96,
+              "cloudCover": 100,
               "humidity": 99,
               "moonUp": true
             },
@@ -1203,49 +1203,49 @@
               "time": "2026-08-28T21:00",
               "hour": "21:00",
               "cloudCover": 100,
-              "humidity": 100,
+              "humidity": 98,
               "moonUp": true
             },
             {
               "time": "2026-08-28T22:00",
               "hour": "22:00",
               "cloudCover": 100,
-              "humidity": 100,
+              "humidity": 96,
               "moonUp": true
             },
             {
               "time": "2026-08-28T23:00",
               "hour": "23:00",
-              "cloudCover": 100,
-              "humidity": 100,
+              "cloudCover": 99,
+              "humidity": 94,
               "moonUp": true
             },
             {
               "time": "2026-08-29T00:00",
               "hour": "00:00",
-              "cloudCover": 100,
-              "humidity": 100,
+              "cloudCover": 99,
+              "humidity": 92,
               "moonUp": true
             },
             {
               "time": "2026-08-29T01:00",
               "hour": "01:00",
-              "cloudCover": 80,
-              "humidity": 98,
+              "cloudCover": 98,
+              "humidity": 92,
               "moonUp": true
             },
             {
               "time": "2026-08-29T02:00",
               "hour": "02:00",
-              "cloudCover": 51,
-              "humidity": 96,
+              "cloudCover": 97,
+              "humidity": 93,
               "moonUp": true
             },
             {
               "time": "2026-08-29T03:00",
               "hour": "03:00",
-              "cloudCover": 29,
-              "humidity": 93,
+              "cloudCover": 97,
+              "humidity": 94,
               "moonUp": true
             }
           ]
@@ -1257,7 +1257,7 @@
           "score100": 4,
           "label": "不向き",
           "cloudCover": 100,
-          "humidity": 99,
+          "humidity": 100,
           "moonAge": 15.7,
           "moonIllumination": 99,
           "moonPhase": 0.531,
@@ -1271,7 +1271,7 @@
               "time": "2026-08-29T20:00",
               "hour": "20:00",
               "cloudCover": 100,
-              "humidity": 96,
+              "humidity": 100,
               "moonUp": true
             },
             {
@@ -1306,14 +1306,14 @@
               "time": "2026-08-30T01:00",
               "hour": "01:00",
               "cloudCover": 100,
-              "humidity": 100,
+              "humidity": 99,
               "moonUp": true
             },
             {
               "time": "2026-08-30T02:00",
               "hour": "02:00",
               "cloudCover": 100,
-              "humidity": 100,
+              "humidity": 99,
               "moonUp": true
             },
             {
@@ -1329,10 +1329,10 @@
           "date": "2026-08-30",
           "offset": 6,
           "starScore": 1,
-          "score100": 6,
+          "score100": 8,
           "label": "不向き",
-          "cloudCover": 98,
-          "humidity": 99,
+          "cloudCover": 95,
+          "humidity": 97,
           "moonAge": 16.7,
           "moonIllumination": 96,
           "moonPhase": 0.565,
@@ -1345,57 +1345,57 @@
             {
               "time": "2026-08-30T20:00",
               "hour": "20:00",
-              "cloudCover": 100,
-              "humidity": 100,
+              "cloudCover": 93,
+              "humidity": 98,
               "moonUp": true
             },
             {
               "time": "2026-08-30T21:00",
               "hour": "21:00",
-              "cloudCover": 100,
-              "humidity": 100,
+              "cloudCover": 92,
+              "humidity": 98,
               "moonUp": true
             },
             {
               "time": "2026-08-30T22:00",
               "hour": "22:00",
-              "cloudCover": 99,
-              "humidity": 100,
+              "cloudCover": 92,
+              "humidity": 98,
               "moonUp": true
             },
             {
               "time": "2026-08-30T23:00",
               "hour": "23:00",
-              "cloudCover": 98,
-              "humidity": 100,
+              "cloudCover": 94,
+              "humidity": 97,
               "moonUp": true
             },
             {
               "time": "2026-08-31T00:00",
               "hour": "00:00",
-              "cloudCover": 97,
-              "humidity": 99,
+              "cloudCover": 95,
+              "humidity": 97,
               "moonUp": true
             },
             {
               "time": "2026-08-31T01:00",
               "hour": "01:00",
-              "cloudCover": 96,
-              "humidity": 98,
+              "cloudCover": 97,
+              "humidity": 96,
               "moonUp": true
             },
             {
               "time": "2026-08-31T02:00",
               "hour": "02:00",
-              "cloudCover": 95,
-              "humidity": 98,
+              "cloudCover": 98,
+              "humidity": 95,
               "moonUp": true
             },
             {
               "time": "2026-08-31T03:00",
               "hour": "03:00",
-              "cloudCover": 95,
-              "humidity": 97,
+              "cloudCover": 99,
+              "humidity": 95,
               "moonUp": true
             }
           ]
@@ -1404,10 +1404,10 @@
           "date": "2026-08-31",
           "offset": 7,
           "starScore": 1,
-          "score100": 9,
+          "score100": 15,
           "label": "不向き",
-          "cloudCover": 95,
-          "humidity": 96,
+          "cloudCover": 84,
+          "humidity": 99,
           "moonAge": 17.7,
           "moonIllumination": 91,
           "moonPhase": 0.599,
@@ -1421,10 +1421,10 @@
           "date": "2026-09-01",
           "offset": 8,
           "starScore": 1,
-          "score100": 10,
+          "score100": 11,
           "label": "不向き",
-          "cloudCover": 100,
-          "humidity": 100,
+          "cloudCover": 99,
+          "humidity": 99,
           "moonAge": 18.8,
           "moonIllumination": 83,
           "moonPhase": 0.635,
@@ -1438,10 +1438,10 @@
           "date": "2026-09-02",
           "offset": 9,
           "starScore": 1,
-          "score100": 19,
+          "score100": 13,
           "label": "不向き",
-          "cloudCover": 87,
-          "humidity": 99,
+          "cloudCover": 99,
+          "humidity": 93,
           "moonAge": 19.8,
           "moonIllumination": 74,
           "moonPhase": 0.67,
@@ -1455,10 +1455,10 @@
           "date": "2026-09-03",
           "offset": 10,
           "starScore": 2,
-          "score100": 35,
+          "score100": 40,
           "label": "やや不良",
-          "cloudCover": 64,
-          "humidity": 95,
+          "cloudCover": 55,
+          "humidity": 92,
           "moonAge": 20.8,
           "moonIllumination": 64,
           "moonPhase": 0.706,
@@ -1471,11 +1471,11 @@
         {
           "date": "2026-09-04",
           "offset": 11,
-          "starScore": 4,
-          "score100": 62,
-          "label": "観測向き",
-          "cloudCover": 19,
-          "humidity": 97,
+          "starScore": 1,
+          "score100": 22,
+          "label": "不向き",
+          "cloudCover": 100,
+          "humidity": 98,
           "moonAge": 21.9,
           "moonIllumination": 52,
           "moonPhase": 0.743,
@@ -1489,10 +1489,10 @@
           "date": "2026-09-05",
           "offset": 12,
           "starScore": 2,
-          "score100": 30,
+          "score100": 27,
           "label": "やや不良",
-          "cloudCover": 93,
-          "humidity": 99,
+          "cloudCover": 99,
+          "humidity": 100,
           "moonAge": 23.0,
           "moonIllumination": 41,
           "moonPhase": 0.779,
@@ -1506,10 +1506,10 @@
           "date": "2026-09-06",
           "offset": 13,
           "starScore": 2,
-          "score100": 31,
+          "score100": 34,
           "label": "やや不良",
-          "cloudCover": 100,
-          "humidity": 99,
+          "cloudCover": 94,
+          "humidity": 100,
           "moonAge": 24.1,
           "moonIllumination": 30,
           "moonPhase": 0.816,
@@ -1523,9 +1523,9 @@
           "date": "2026-09-07",
           "offset": 14,
           "starScore": 2,
-          "score100": 36,
+          "score100": 43,
           "label": "やや不良",
-          "cloudCover": 98,
+          "cloudCover": 85,
           "humidity": 98,
           "moonAge": 25.2,
           "moonIllumination": 20,
@@ -1539,18 +1539,18 @@
         {
           "date": "2026-09-08",
           "offset": 15,
-          "starScore": 3,
-          "score100": 60,
-          "label": "条件つき可",
-          "cloudCover": 62,
-          "humidity": 97,
+          "starScore": 4,
+          "score100": 68,
+          "label": "観測向き",
+          "cloudCover": 45,
+          "humidity": 95,
           "moonAge": 26.3,
           "moonIllumination": 11,
           "moonPhase": 0.89,
           "moonPhaseName": "有明月",
           "moonrise": "2026-09-08T01:44",
           "moonset": "2026-09-08T16:25",
-          "moonDownHours": 2,
+          "moonDownHours": 4,
           "moonDownRatio": 1.0
         }
       ]
@@ -1572,11 +1572,11 @@
       "viewDirection": "南（夏の天の川中心）。東西は山稜で地平が切れ、都市光の帯が入りにくい地形です。",
       "surroundings": "集落の街灯は少なく光害度は低めです。展望地や道の駅を間借りする形の駐車が多く、民家に近い場所では話し声とライトが迷惑になりやすい環境です。山間部特有の放射冷却で、晴れた夜ほど地面が冷えます。",
       "accessNotes": "専用の大規模駐車場は限られ、トイレも道の駅や少数の公共施設に点在します。冬季は路面凍結、梅雨〜秋は霧に注意。ヘッドライトは対向車と住民への配慮を優先し、路肩への長時間駐車は避けてください。防寒、予備灯、通信が不安定なことへの備えが必要です。",
-      "starScore": 3,
+      "starScore": 2,
       "condition": {
-        "label": "月明かり注意",
-        "cloudCover": 12,
-        "humidity": 96,
+        "label": "やや不良",
+        "cloudCover": 64,
+        "humidity": 98,
         "moonPhase": "十三夜",
         "moonIllumination": 85,
         "moonAge": 11.0
@@ -1585,56 +1585,56 @@
         {
           "time": "2026-08-24T20:00",
           "hour": "20:00",
-          "cloudCover": 22,
-          "humidity": 97,
+          "cloudCover": 11,
+          "humidity": 98,
           "moonUp": true
         },
         {
           "time": "2026-08-24T21:00",
           "hour": "21:00",
-          "cloudCover": 20,
-          "humidity": 97,
+          "cloudCover": 10,
+          "humidity": 98,
           "moonUp": true
         },
         {
           "time": "2026-08-24T22:00",
           "hour": "22:00",
-          "cloudCover": 13,
-          "humidity": 97,
+          "cloudCover": 35,
+          "humidity": 98,
           "moonUp": true
         },
         {
           "time": "2026-08-24T23:00",
           "hour": "23:00",
-          "cloudCover": 7,
-          "humidity": 96,
+          "cloudCover": 100,
+          "humidity": 99,
           "moonUp": true
         },
         {
           "time": "2026-08-25T00:00",
           "hour": "00:00",
-          "cloudCover": 3,
-          "humidity": 95,
+          "cloudCover": 100,
+          "humidity": 99,
           "moonUp": true
         },
         {
           "time": "2026-08-25T01:00",
           "hour": "01:00",
-          "cloudCover": 3,
-          "humidity": 94,
+          "cloudCover": 95,
+          "humidity": 99,
           "moonUp": true
         },
         {
           "time": "2026-08-25T02:00",
           "hour": "02:00",
-          "cloudCover": 5,
-          "humidity": 96,
+          "cloudCover": 81,
+          "humidity": 99,
           "moonUp": true
         },
         {
           "time": "2026-08-25T03:00",
           "hour": "03:00",
-          "cloudCover": 23,
+          "cloudCover": 79,
           "humidity": 98,
           "moonUp": false
         }
@@ -1643,11 +1643,11 @@
         {
           "date": "2026-08-24",
           "offset": 0,
-          "starScore": 3,
-          "score100": 54,
-          "label": "月明かり注意",
-          "cloudCover": 12,
-          "humidity": 96,
+          "starScore": 2,
+          "score100": 28,
+          "label": "やや不良",
+          "cloudCover": 64,
+          "humidity": 98,
           "moonAge": 11.0,
           "moonIllumination": 85,
           "moonPhase": 0.372,
@@ -1660,56 +1660,56 @@
             {
               "time": "2026-08-24T20:00",
               "hour": "20:00",
-              "cloudCover": 22,
-              "humidity": 97,
+              "cloudCover": 11,
+              "humidity": 98,
               "moonUp": true
             },
             {
               "time": "2026-08-24T21:00",
               "hour": "21:00",
-              "cloudCover": 20,
-              "humidity": 97,
+              "cloudCover": 10,
+              "humidity": 98,
               "moonUp": true
             },
             {
               "time": "2026-08-24T22:00",
               "hour": "22:00",
-              "cloudCover": 13,
-              "humidity": 97,
+              "cloudCover": 35,
+              "humidity": 98,
               "moonUp": true
             },
             {
               "time": "2026-08-24T23:00",
               "hour": "23:00",
-              "cloudCover": 7,
-              "humidity": 96,
+              "cloudCover": 100,
+              "humidity": 99,
               "moonUp": true
             },
             {
               "time": "2026-08-25T00:00",
               "hour": "00:00",
-              "cloudCover": 3,
-              "humidity": 95,
+              "cloudCover": 100,
+              "humidity": 99,
               "moonUp": true
             },
             {
               "time": "2026-08-25T01:00",
               "hour": "01:00",
-              "cloudCover": 3,
-              "humidity": 94,
+              "cloudCover": 95,
+              "humidity": 99,
               "moonUp": true
             },
             {
               "time": "2026-08-25T02:00",
               "hour": "02:00",
-              "cloudCover": 5,
-              "humidity": 96,
+              "cloudCover": 81,
+              "humidity": 99,
               "moonUp": true
             },
             {
               "time": "2026-08-25T03:00",
               "hour": "03:00",
-              "cloudCover": 23,
+              "cloudCover": 79,
               "humidity": 98,
               "moonUp": false
             }
@@ -1719,10 +1719,10 @@
           "date": "2026-08-25",
           "offset": 1,
           "starScore": 3,
-          "score100": 50,
+          "score100": 49,
           "label": "月明かり注意",
-          "cloudCover": 13,
-          "humidity": 92,
+          "cloudCover": 15,
+          "humidity": 88,
           "moonAge": 11.9,
           "moonIllumination": 91,
           "moonPhase": 0.403,
@@ -1735,57 +1735,57 @@
             {
               "time": "2026-08-25T20:00",
               "hour": "20:00",
-              "cloudCover": 14,
-              "humidity": 95,
+              "cloudCover": 19,
+              "humidity": 89,
               "moonUp": true
             },
             {
               "time": "2026-08-25T21:00",
               "hour": "21:00",
-              "cloudCover": 7,
-              "humidity": 94,
+              "cloudCover": 18,
+              "humidity": 88,
               "moonUp": true
             },
             {
               "time": "2026-08-25T22:00",
               "hour": "22:00",
-              "cloudCover": 9,
-              "humidity": 92,
+              "cloudCover": 17,
+              "humidity": 87,
               "moonUp": true
             },
             {
               "time": "2026-08-25T23:00",
               "hour": "23:00",
-              "cloudCover": 16,
-              "humidity": 90,
+              "cloudCover": 21,
+              "humidity": 88,
               "moonUp": true
             },
             {
               "time": "2026-08-26T00:00",
               "hour": "00:00",
-              "cloudCover": 13,
-              "humidity": 93,
+              "cloudCover": 22,
+              "humidity": 90,
               "moonUp": true
             },
             {
               "time": "2026-08-26T01:00",
               "hour": "01:00",
-              "cloudCover": 15,
-              "humidity": 92,
+              "cloudCover": 13,
+              "humidity": 90,
               "moonUp": true
             },
             {
               "time": "2026-08-26T02:00",
               "hour": "02:00",
-              "cloudCover": 15,
-              "humidity": 92,
+              "cloudCover": 7,
+              "humidity": 88,
               "moonUp": true
             },
             {
               "time": "2026-08-26T03:00",
               "hour": "03:00",
-              "cloudCover": 12,
-              "humidity": 90,
+              "cloudCover": 5,
+              "humidity": 86,
               "moonUp": true
             }
           ]
@@ -1793,11 +1793,11 @@
         {
           "date": "2026-08-26",
           "offset": 2,
-          "starScore": 1,
-          "score100": 15,
-          "label": "不向き",
-          "cloudCover": 80,
-          "humidity": 90,
+          "starScore": 2,
+          "score100": 33,
+          "label": "やや不良",
+          "cloudCover": 44,
+          "humidity": 89,
           "moonAge": 12.8,
           "moonIllumination": 96,
           "moonPhase": 0.434,
@@ -1810,56 +1810,56 @@
             {
               "time": "2026-08-26T20:00",
               "hour": "20:00",
-              "cloudCover": 90,
-              "humidity": 85,
+              "cloudCover": 21,
+              "humidity": 83,
               "moonUp": true
             },
             {
               "time": "2026-08-26T21:00",
               "hour": "21:00",
-              "cloudCover": 38,
+              "cloudCover": 27,
               "humidity": 86,
               "moonUp": true
             },
             {
               "time": "2026-08-26T22:00",
               "hour": "22:00",
-              "cloudCover": 94,
-              "humidity": 86,
+              "cloudCover": 33,
+              "humidity": 85,
               "moonUp": true
             },
             {
               "time": "2026-08-26T23:00",
               "hour": "23:00",
-              "cloudCover": 76,
-              "humidity": 88,
+              "cloudCover": 53,
+              "humidity": 86,
               "moonUp": true
             },
             {
               "time": "2026-08-27T00:00",
               "hour": "00:00",
-              "cloudCover": 78,
-              "humidity": 90,
+              "cloudCover": 73,
+              "humidity": 88,
               "moonUp": true
             },
             {
               "time": "2026-08-27T01:00",
               "hour": "01:00",
-              "cloudCover": 96,
-              "humidity": 92,
+              "cloudCover": 34,
+              "humidity": 93,
               "moonUp": true
             },
             {
               "time": "2026-08-27T02:00",
               "hour": "02:00",
-              "cloudCover": 81,
-              "humidity": 96,
+              "cloudCover": 38,
+              "humidity": 95,
               "moonUp": true
             },
             {
               "time": "2026-08-27T03:00",
               "hour": "03:00",
-              "cloudCover": 85,
+              "cloudCover": 71,
               "humidity": 98,
               "moonUp": true
             }
@@ -1869,9 +1869,9 @@
           "date": "2026-08-27",
           "offset": 3,
           "starScore": 1,
-          "score100": 5,
+          "score100": 4,
           "label": "不向き",
-          "cloudCover": 99,
+          "cloudCover": 100,
           "humidity": 98,
           "moonAge": 13.8,
           "moonIllumination": 99,
@@ -1885,22 +1885,22 @@
             {
               "time": "2026-08-27T20:00",
               "hour": "20:00",
-              "cloudCover": 94,
-              "humidity": 96,
+              "cloudCover": 100,
+              "humidity": 94,
               "moonUp": true
             },
             {
               "time": "2026-08-27T21:00",
               "hour": "21:00",
-              "cloudCover": 99,
-              "humidity": 98,
+              "cloudCover": 100,
+              "humidity": 97,
               "moonUp": true
             },
             {
               "time": "2026-08-27T22:00",
               "hour": "22:00",
               "cloudCover": 100,
-              "humidity": 99,
+              "humidity": 98,
               "moonUp": true
             },
             {
@@ -1913,29 +1913,29 @@
             {
               "time": "2026-08-28T00:00",
               "hour": "00:00",
-              "cloudCover": 99,
-              "humidity": 98,
+              "cloudCover": 100,
+              "humidity": 99,
               "moonUp": true
             },
             {
               "time": "2026-08-28T01:00",
               "hour": "01:00",
-              "cloudCover": 99,
-              "humidity": 98,
+              "cloudCover": 100,
+              "humidity": 99,
               "moonUp": true
             },
             {
               "time": "2026-08-28T02:00",
               "hour": "02:00",
               "cloudCover": 100,
-              "humidity": 98,
+              "humidity": 100,
               "moonUp": true
             },
             {
               "time": "2026-08-28T03:00",
               "hour": "03:00",
               "cloudCover": 100,
-              "humidity": 99,
+              "humidity": 100,
               "moonUp": true
             }
           ]
@@ -1946,8 +1946,8 @@
           "starScore": 1,
           "score100": 4,
           "label": "不向き",
-          "cloudCover": 99,
-          "humidity": 99,
+          "cloudCover": 100,
+          "humidity": 100,
           "moonAge": 14.7,
           "moonIllumination": 100,
           "moonPhase": 0.498,
@@ -1961,7 +1961,7 @@
               "time": "2026-08-28T20:00",
               "hour": "20:00",
               "cloudCover": 100,
-              "humidity": 99,
+              "humidity": 100,
               "moonUp": true
             },
             {
@@ -1974,43 +1974,43 @@
             {
               "time": "2026-08-28T22:00",
               "hour": "22:00",
-              "cloudCover": 99,
+              "cloudCover": 100,
               "humidity": 100,
               "moonUp": true
             },
             {
               "time": "2026-08-28T23:00",
               "hour": "23:00",
-              "cloudCover": 98,
+              "cloudCover": 100,
               "humidity": 100,
               "moonUp": true
             },
             {
               "time": "2026-08-29T00:00",
               "hour": "00:00",
-              "cloudCover": 98,
+              "cloudCover": 100,
               "humidity": 100,
               "moonUp": true
             },
             {
               "time": "2026-08-29T01:00",
               "hour": "01:00",
-              "cloudCover": 98,
+              "cloudCover": 100,
               "humidity": 99,
               "moonUp": true
             },
             {
               "time": "2026-08-29T02:00",
               "hour": "02:00",
-              "cloudCover": 99,
-              "humidity": 98,
+              "cloudCover": 100,
+              "humidity": 99,
               "moonUp": true
             },
             {
               "time": "2026-08-29T03:00",
               "hour": "03:00",
               "cloudCover": 100,
-              "humidity": 97,
+              "humidity": 99,
               "moonUp": true
             }
           ]
@@ -2035,8 +2035,8 @@
             {
               "time": "2026-08-29T20:00",
               "hour": "20:00",
-              "cloudCover": 100,
-              "humidity": 99,
+              "cloudCover": 97,
+              "humidity": 98,
               "moonUp": true
             },
             {
@@ -2094,10 +2094,10 @@
           "date": "2026-08-30",
           "offset": 6,
           "starScore": 1,
-          "score100": 5,
+          "score100": 6,
           "label": "不向き",
-          "cloudCover": 100,
-          "humidity": 100,
+          "cloudCover": 99,
+          "humidity": 99,
           "moonAge": 16.7,
           "moonIllumination": 96,
           "moonPhase": 0.565,
@@ -2110,21 +2110,21 @@
             {
               "time": "2026-08-30T20:00",
               "hour": "20:00",
-              "cloudCover": 99,
-              "humidity": 99,
+              "cloudCover": 95,
+              "humidity": 94,
               "moonUp": true
             },
             {
               "time": "2026-08-30T21:00",
               "hour": "21:00",
-              "cloudCover": 99,
-              "humidity": 100,
+              "cloudCover": 100,
+              "humidity": 98,
               "moonUp": true
             },
             {
               "time": "2026-08-30T22:00",
               "hour": "22:00",
-              "cloudCover": 99,
+              "cloudCover": 100,
               "humidity": 100,
               "moonUp": true
             },
@@ -2160,7 +2160,7 @@
               "time": "2026-08-31T03:00",
               "hour": "03:00",
               "cloudCover": 100,
-              "humidity": 99,
+              "humidity": 100,
               "moonUp": true
             }
           ]
@@ -2169,10 +2169,10 @@
           "date": "2026-08-31",
           "offset": 7,
           "starScore": 1,
-          "score100": 9,
+          "score100": 13,
           "label": "不向き",
-          "cloudCover": 96,
-          "humidity": 100,
+          "cloudCover": 87,
+          "humidity": 99,
           "moonAge": 17.7,
           "moonIllumination": 91,
           "moonPhase": 0.599,
@@ -2186,9 +2186,9 @@
           "date": "2026-09-01",
           "offset": 8,
           "starScore": 1,
-          "score100": 11,
+          "score100": 12,
           "label": "不向き",
-          "cloudCover": 99,
+          "cloudCover": 97,
           "humidity": 98,
           "moonAge": 18.8,
           "moonIllumination": 83,
@@ -2203,10 +2203,10 @@
           "date": "2026-09-02",
           "offset": 9,
           "starScore": 1,
-          "score100": 15,
+          "score100": 13,
           "label": "不向き",
-          "cloudCover": 96,
-          "humidity": 99,
+          "cloudCover": 100,
+          "humidity": 100,
           "moonAge": 19.8,
           "moonIllumination": 74,
           "moonPhase": 0.67,
@@ -2220,10 +2220,10 @@
           "date": "2026-09-03",
           "offset": 10,
           "starScore": 1,
-          "score100": 17,
+          "score100": 20,
           "label": "不向き",
-          "cloudCover": 100,
-          "humidity": 99,
+          "cloudCover": 95,
+          "humidity": 100,
           "moonAge": 20.8,
           "moonIllumination": 64,
           "moonPhase": 0.706,
@@ -2239,7 +2239,7 @@
           "starScore": 1,
           "score100": 22,
           "label": "不向き",
-          "cloudCover": 100,
+          "cloudCover": 99,
           "humidity": 100,
           "moonAge": 21.9,
           "moonIllumination": 52,
@@ -2254,9 +2254,9 @@
           "date": "2026-09-05",
           "offset": 12,
           "starScore": 2,
-          "score100": 30,
+          "score100": 27,
           "label": "やや不良",
-          "cloudCover": 94,
+          "cloudCover": 100,
           "humidity": 100,
           "moonAge": 23.0,
           "moonIllumination": 41,
@@ -2271,9 +2271,9 @@
           "date": "2026-09-06",
           "offset": 13,
           "starScore": 2,
-          "score100": 40,
+          "score100": 31,
           "label": "やや不良",
-          "cloudCover": 83,
+          "cloudCover": 100,
           "humidity": 99,
           "moonAge": 24.1,
           "moonIllumination": 30,
@@ -2287,11 +2287,11 @@
         {
           "date": "2026-09-07",
           "offset": 14,
-          "starScore": 3,
-          "score100": 48,
-          "label": "条件つき可",
-          "cloudCover": 74,
-          "humidity": 98,
+          "starScore": 2,
+          "score100": 36,
+          "label": "やや不良",
+          "cloudCover": 99,
+          "humidity": 99,
           "moonAge": 25.2,
           "moonIllumination": 20,
           "moonPhase": 0.853,
@@ -2304,18 +2304,18 @@
         {
           "date": "2026-09-08",
           "offset": 15,
-          "starScore": 5,
-          "score100": 83,
-          "label": "新月級・観測適",
-          "cloudCover": 15,
-          "humidity": 97,
+          "starScore": 3,
+          "score100": 56,
+          "label": "条件つき可",
+          "cloudCover": 69,
+          "humidity": 96,
           "moonAge": 26.3,
           "moonIllumination": 11,
           "moonPhase": 0.89,
           "moonPhaseName": "有明月",
           "moonrise": "2026-09-08T01:56",
           "moonset": "2026-09-08T16:30",
-          "moonDownHours": 2,
+          "moonDownHours": 4,
           "moonDownRatio": 1.0
         }
       ]
@@ -2351,48 +2351,48 @@
           "time": "2026-08-24T20:00",
           "hour": "20:00",
           "cloudCover": 10,
-          "humidity": 87,
+          "humidity": 89,
           "moonUp": true
         },
         {
           "time": "2026-08-24T21:00",
           "hour": "21:00",
-          "cloudCover": 17,
-          "humidity": 89,
+          "cloudCover": 10,
+          "humidity": 90,
           "moonUp": true
         },
         {
           "time": "2026-08-24T22:00",
           "hour": "22:00",
-          "cloudCover": 17,
-          "humidity": 92,
+          "cloudCover": 16,
+          "humidity": 91,
           "moonUp": true
         },
         {
           "time": "2026-08-24T23:00",
           "hour": "23:00",
-          "cloudCover": 14,
-          "humidity": 93,
+          "cloudCover": 19,
+          "humidity": 91,
           "moonUp": true
         },
         {
           "time": "2026-08-25T00:00",
           "hour": "00:00",
-          "cloudCover": 18,
-          "humidity": 94,
+          "cloudCover": 23,
+          "humidity": 92,
           "moonUp": true
         },
         {
           "time": "2026-08-25T01:00",
           "hour": "01:00",
-          "cloudCover": 23,
+          "cloudCover": 26,
           "humidity": 94,
           "moonUp": true
         },
         {
           "time": "2026-08-25T02:00",
           "hour": "02:00",
-          "cloudCover": 28,
+          "cloudCover": 26,
           "humidity": 95,
           "moonUp": true
         },
@@ -2426,48 +2426,48 @@
               "time": "2026-08-24T20:00",
               "hour": "20:00",
               "cloudCover": 10,
-              "humidity": 87,
+              "humidity": 89,
               "moonUp": true
             },
             {
               "time": "2026-08-24T21:00",
               "hour": "21:00",
-              "cloudCover": 17,
-              "humidity": 89,
+              "cloudCover": 10,
+              "humidity": 90,
               "moonUp": true
             },
             {
               "time": "2026-08-24T22:00",
               "hour": "22:00",
-              "cloudCover": 17,
-              "humidity": 92,
+              "cloudCover": 16,
+              "humidity": 91,
               "moonUp": true
             },
             {
               "time": "2026-08-24T23:00",
               "hour": "23:00",
-              "cloudCover": 14,
-              "humidity": 93,
+              "cloudCover": 19,
+              "humidity": 91,
               "moonUp": true
             },
             {
               "time": "2026-08-25T00:00",
               "hour": "00:00",
-              "cloudCover": 18,
-              "humidity": 94,
+              "cloudCover": 23,
+              "humidity": 92,
               "moonUp": true
             },
             {
               "time": "2026-08-25T01:00",
               "hour": "01:00",
-              "cloudCover": 23,
+              "cloudCover": 26,
               "humidity": 94,
               "moonUp": true
             },
             {
               "time": "2026-08-25T02:00",
               "hour": "02:00",
-              "cloudCover": 28,
+              "cloudCover": 26,
               "humidity": 95,
               "moonUp": true
             },
@@ -2484,10 +2484,10 @@
           "date": "2026-08-25",
           "offset": 1,
           "starScore": 3,
-          "score100": 49,
+          "score100": 53,
           "label": "月明かり注意",
-          "cloudCover": 15,
-          "humidity": 89,
+          "cloudCover": 7,
+          "humidity": 87,
           "moonAge": 11.9,
           "moonIllumination": 91,
           "moonPhase": 0.403,
@@ -2500,57 +2500,57 @@
             {
               "time": "2026-08-25T20:00",
               "hour": "20:00",
-              "cloudCover": 9,
-              "humidity": 83,
+              "cloudCover": 2,
+              "humidity": 82,
               "moonUp": true
             },
             {
               "time": "2026-08-25T21:00",
               "hour": "21:00",
               "cloudCover": 2,
-              "humidity": 89,
+              "humidity": 86,
               "moonUp": true
             },
             {
               "time": "2026-08-25T22:00",
               "hour": "22:00",
-              "cloudCover": 1,
-              "humidity": 89,
+              "cloudCover": 7,
+              "humidity": 86,
               "moonUp": true
             },
             {
               "time": "2026-08-25T23:00",
               "hour": "23:00",
-              "cloudCover": 18,
-              "humidity": 90,
+              "cloudCover": 10,
+              "humidity": 85,
               "moonUp": true
             },
             {
               "time": "2026-08-26T00:00",
               "hour": "00:00",
-              "cloudCover": 27,
-              "humidity": 88,
+              "cloudCover": 15,
+              "humidity": 87,
               "moonUp": true
             },
             {
               "time": "2026-08-26T01:00",
               "hour": "01:00",
-              "cloudCover": 28,
-              "humidity": 90,
+              "cloudCover": 12,
+              "humidity": 89,
               "moonUp": true
             },
             {
               "time": "2026-08-26T02:00",
               "hour": "02:00",
-              "cloudCover": 23,
+              "cloudCover": 6,
               "humidity": 90,
               "moonUp": true
             },
             {
               "time": "2026-08-26T03:00",
               "hour": "03:00",
-              "cloudCover": 11,
-              "humidity": 92,
+              "cloudCover": 5,
+              "humidity": 94,
               "moonUp": true
             }
           ]
@@ -2559,10 +2559,10 @@
           "date": "2026-08-26",
           "offset": 2,
           "starScore": 1,
-          "score100": 25,
+          "score100": 21,
           "label": "不向き",
-          "cloudCover": 61,
-          "humidity": 89,
+          "cloudCover": 68,
+          "humidity": 93,
           "moonAge": 12.8,
           "moonIllumination": 96,
           "moonPhase": 0.434,
@@ -2575,57 +2575,57 @@
             {
               "time": "2026-08-26T20:00",
               "hour": "20:00",
-              "cloudCover": 70,
-              "humidity": 82,
+              "cloudCover": 67,
+              "humidity": 91,
               "moonUp": true
             },
             {
               "time": "2026-08-26T21:00",
               "hour": "21:00",
-              "cloudCover": 82,
-              "humidity": 84,
+              "cloudCover": 67,
+              "humidity": 92,
               "moonUp": true
             },
             {
               "time": "2026-08-26T22:00",
               "hour": "22:00",
-              "cloudCover": 90,
-              "humidity": 90,
+              "cloudCover": 65,
+              "humidity": 93,
               "moonUp": true
             },
             {
               "time": "2026-08-26T23:00",
               "hour": "23:00",
-              "cloudCover": 35,
-              "humidity": 87,
+              "cloudCover": 44,
+              "humidity": 93,
               "moonUp": true
             },
             {
               "time": "2026-08-27T00:00",
               "hour": "00:00",
-              "cloudCover": 100,
-              "humidity": 88,
+              "cloudCover": 73,
+              "humidity": 92,
               "moonUp": true
             },
             {
               "time": "2026-08-27T01:00",
               "hour": "01:00",
-              "cloudCover": 37,
-              "humidity": 93,
+              "cloudCover": 55,
+              "humidity": 94,
               "moonUp": true
             },
             {
               "time": "2026-08-27T02:00",
               "hour": "02:00",
-              "cloudCover": 42,
-              "humidity": 95,
+              "cloudCover": 77,
+              "humidity": 93,
               "moonUp": true
             },
             {
               "time": "2026-08-27T03:00",
               "hour": "03:00",
-              "cloudCover": 31,
-              "humidity": 96,
+              "cloudCover": 92,
+              "humidity": 94,
               "moonUp": true
             }
           ]
@@ -2634,10 +2634,10 @@
           "date": "2026-08-27",
           "offset": 3,
           "starScore": 1,
-          "score100": 6,
+          "score100": 4,
           "label": "不向き",
-          "cloudCover": 97,
-          "humidity": 98,
+          "cloudCover": 100,
+          "humidity": 99,
           "moonAge": 13.8,
           "moonIllumination": 99,
           "moonPhase": 0.466,
@@ -2650,50 +2650,50 @@
             {
               "time": "2026-08-27T20:00",
               "hour": "20:00",
-              "cloudCover": 91,
-              "humidity": 98,
+              "cloudCover": 100,
+              "humidity": 99,
               "moonUp": true
             },
             {
               "time": "2026-08-27T21:00",
               "hour": "21:00",
-              "cloudCover": 92,
-              "humidity": 97,
+              "cloudCover": 100,
+              "humidity": 98,
               "moonUp": true
             },
             {
               "time": "2026-08-27T22:00",
               "hour": "22:00",
-              "cloudCover": 94,
-              "humidity": 98,
+              "cloudCover": 99,
+              "humidity": 99,
               "moonUp": true
             },
             {
               "time": "2026-08-27T23:00",
               "hour": "23:00",
-              "cloudCover": 97,
-              "humidity": 98,
+              "cloudCover": 100,
+              "humidity": 99,
               "moonUp": true
             },
             {
               "time": "2026-08-28T00:00",
               "hour": "00:00",
-              "cloudCover": 99,
-              "humidity": 98,
+              "cloudCover": 100,
+              "humidity": 100,
               "moonUp": true
             },
             {
               "time": "2026-08-28T01:00",
               "hour": "01:00",
-              "cloudCover": 100,
-              "humidity": 98,
+              "cloudCover": 99,
+              "humidity": 99,
               "moonUp": true
             },
             {
               "time": "2026-08-28T02:00",
               "hour": "02:00",
-              "cloudCover": 100,
-              "humidity": 98,
+              "cloudCover": 99,
+              "humidity": 99,
               "moonUp": true
             },
             {
@@ -2709,10 +2709,10 @@
           "date": "2026-08-28",
           "offset": 4,
           "starScore": 1,
-          "score100": 5,
+          "score100": 4,
           "label": "不向き",
-          "cloudCover": 98,
-          "humidity": 99,
+          "cloudCover": 100,
+          "humidity": 100,
           "moonAge": 14.7,
           "moonIllumination": 100,
           "moonPhase": 0.498,
@@ -2725,57 +2725,57 @@
             {
               "time": "2026-08-28T20:00",
               "hour": "20:00",
-              "cloudCover": 96,
+              "cloudCover": 100,
               "humidity": 100,
               "moonUp": true
             },
             {
               "time": "2026-08-28T21:00",
               "hour": "21:00",
-              "cloudCover": 95,
-              "humidity": 99,
+              "cloudCover": 100,
+              "humidity": 100,
               "moonUp": true
             },
             {
               "time": "2026-08-28T22:00",
               "hour": "22:00",
-              "cloudCover": 96,
-              "humidity": 99,
+              "cloudCover": 100,
+              "humidity": 100,
               "moonUp": true
             },
             {
               "time": "2026-08-28T23:00",
               "hour": "23:00",
-              "cloudCover": 98,
-              "humidity": 99,
+              "cloudCover": 100,
+              "humidity": 100,
               "moonUp": true
             },
             {
               "time": "2026-08-29T00:00",
               "hour": "00:00",
-              "cloudCover": 99,
-              "humidity": 98,
+              "cloudCover": 100,
+              "humidity": 100,
               "moonUp": true
             },
             {
               "time": "2026-08-29T01:00",
               "hour": "01:00",
-              "cloudCover": 99,
-              "humidity": 98,
+              "cloudCover": 100,
+              "humidity": 100,
               "moonUp": true
             },
             {
               "time": "2026-08-29T02:00",
               "hour": "02:00",
-              "cloudCover": 99,
-              "humidity": 98,
+              "cloudCover": 100,
+              "humidity": 100,
               "moonUp": true
             },
             {
               "time": "2026-08-29T03:00",
               "hour": "03:00",
-              "cloudCover": 99,
-              "humidity": 98,
+              "cloudCover": 100,
+              "humidity": 100,
               "moonUp": true
             }
           ]
@@ -2784,9 +2784,9 @@
           "date": "2026-08-29",
           "offset": 5,
           "starScore": 1,
-          "score100": 5,
+          "score100": 6,
           "label": "不向き",
-          "cloudCover": 98,
+          "cloudCover": 97,
           "humidity": 99,
           "moonAge": 15.7,
           "moonIllumination": 99,
@@ -2800,56 +2800,56 @@
             {
               "time": "2026-08-29T20:00",
               "hour": "20:00",
-              "cloudCover": 97,
+              "cloudCover": 99,
               "humidity": 99,
               "moonUp": true
             },
             {
               "time": "2026-08-29T21:00",
               "hour": "21:00",
-              "cloudCover": 97,
+              "cloudCover": 99,
               "humidity": 99,
               "moonUp": true
             },
             {
               "time": "2026-08-29T22:00",
               "hour": "22:00",
-              "cloudCover": 97,
+              "cloudCover": 99,
               "humidity": 99,
               "moonUp": true
             },
             {
               "time": "2026-08-29T23:00",
               "hour": "23:00",
-              "cloudCover": 97,
-              "humidity": 100,
+              "cloudCover": 98,
+              "humidity": 99,
               "moonUp": true
             },
             {
               "time": "2026-08-30T00:00",
               "hour": "00:00",
-              "cloudCover": 98,
+              "cloudCover": 97,
               "humidity": 99,
               "moonUp": true
             },
             {
               "time": "2026-08-30T01:00",
               "hour": "01:00",
-              "cloudCover": 99,
-              "humidity": 100,
+              "cloudCover": 96,
+              "humidity": 99,
               "moonUp": true
             },
             {
               "time": "2026-08-30T02:00",
               "hour": "02:00",
-              "cloudCover": 99,
+              "cloudCover": 95,
               "humidity": 99,
               "moonUp": true
             },
             {
               "time": "2026-08-30T03:00",
               "hour": "03:00",
-              "cloudCover": 99,
+              "cloudCover": 95,
               "humidity": 99,
               "moonUp": true
             }
@@ -2859,10 +2859,10 @@
           "date": "2026-08-30",
           "offset": 6,
           "starScore": 1,
-          "score100": 8,
+          "score100": 15,
           "label": "不向き",
-          "cloudCover": 94,
-          "humidity": 99,
+          "cloudCover": 81,
+          "humidity": 98,
           "moonAge": 16.7,
           "moonIllumination": 96,
           "moonPhase": 0.565,
@@ -2875,57 +2875,57 @@
             {
               "time": "2026-08-30T20:00",
               "hour": "20:00",
-              "cloudCover": 91,
-              "humidity": 99,
+              "cloudCover": 96,
+              "humidity": 95,
               "moonUp": true
             },
             {
               "time": "2026-08-30T21:00",
               "hour": "21:00",
-              "cloudCover": 90,
-              "humidity": 99,
+              "cloudCover": 95,
+              "humidity": 97,
               "moonUp": true
             },
             {
               "time": "2026-08-30T22:00",
               "hour": "22:00",
-              "cloudCover": 90,
-              "humidity": 99,
+              "cloudCover": 91,
+              "humidity": 98,
               "moonUp": true
             },
             {
               "time": "2026-08-30T23:00",
               "hour": "23:00",
-              "cloudCover": 92,
+              "cloudCover": 85,
               "humidity": 99,
               "moonUp": true
             },
             {
               "time": "2026-08-31T00:00",
               "hour": "00:00",
-              "cloudCover": 94,
+              "cloudCover": 79,
               "humidity": 99,
               "moonUp": true
             },
             {
               "time": "2026-08-31T01:00",
               "hour": "01:00",
-              "cloudCover": 96,
+              "cloudCover": 72,
               "humidity": 99,
               "moonUp": true
             },
             {
               "time": "2026-08-31T02:00",
               "hour": "02:00",
-              "cloudCover": 98,
-              "humidity": 99,
+              "cloudCover": 67,
+              "humidity": 98,
               "moonUp": true
             },
             {
               "time": "2026-08-31T03:00",
               "hour": "03:00",
-              "cloudCover": 99,
-              "humidity": 99,
+              "cloudCover": 65,
+              "humidity": 96,
               "moonUp": true
             }
           ]
@@ -2936,8 +2936,8 @@
           "starScore": 1,
           "score100": 7,
           "label": "不向き",
-          "cloudCover": 100,
-          "humidity": 99,
+          "cloudCover": 99,
+          "humidity": 98,
           "moonAge": 17.7,
           "moonIllumination": 91,
           "moonPhase": 0.599,
@@ -2951,10 +2951,10 @@
           "date": "2026-09-01",
           "offset": 8,
           "starScore": 1,
-          "score100": 11,
+          "score100": 16,
           "label": "不向き",
-          "cloudCover": 98,
-          "humidity": 99,
+          "cloudCover": 89,
+          "humidity": 98,
           "moonAge": 18.8,
           "moonIllumination": 83,
           "moonPhase": 0.635,
@@ -2968,9 +2968,9 @@
           "date": "2026-09-02",
           "offset": 9,
           "starScore": 1,
-          "score100": 23,
+          "score100": 21,
           "label": "不向き",
-          "cloudCover": 82,
+          "cloudCover": 86,
           "humidity": 99,
           "moonAge": 19.8,
           "moonIllumination": 74,
@@ -2985,10 +2985,10 @@
           "date": "2026-09-03",
           "offset": 10,
           "starScore": 1,
-          "score100": 25,
+          "score100": 17,
           "label": "不向き",
-          "cloudCover": 84,
-          "humidity": 99,
+          "cloudCover": 100,
+          "humidity": 100,
           "moonAge": 20.8,
           "moonIllumination": 64,
           "moonPhase": 0.706,
@@ -3005,7 +3005,7 @@
           "score100": 22,
           "label": "不向き",
           "cloudCover": 100,
-          "humidity": 100,
+          "humidity": 99,
           "moonAge": 21.9,
           "moonIllumination": 52,
           "moonPhase": 0.743,
@@ -3019,10 +3019,10 @@
           "date": "2026-09-05",
           "offset": 12,
           "starScore": 2,
-          "score100": 30,
+          "score100": 27,
           "label": "やや不良",
-          "cloudCover": 94,
-          "humidity": 96,
+          "cloudCover": 100,
+          "humidity": 100,
           "moonAge": 23.0,
           "moonIllumination": 41,
           "moonPhase": 0.779,
@@ -3035,11 +3035,11 @@
         {
           "date": "2026-09-06",
           "offset": 13,
-          "starScore": 4,
-          "score100": 70,
-          "label": "新月級・観測適",
-          "cloudCover": 22,
-          "humidity": 90,
+          "starScore": 2,
+          "score100": 32,
+          "label": "やや不良",
+          "cloudCover": 98,
+          "humidity": 98,
           "moonAge": 24.1,
           "moonIllumination": 30,
           "moonPhase": 0.816,
@@ -3052,11 +3052,11 @@
         {
           "date": "2026-09-07",
           "offset": 14,
-          "starScore": 4,
-          "score100": 67,
-          "label": "観測向き",
-          "cloudCover": 40,
-          "humidity": 96,
+          "starScore": 3,
+          "score100": 53,
+          "label": "条件つき可",
+          "cloudCover": 68,
+          "humidity": 93,
           "moonAge": 25.2,
           "moonIllumination": 20,
           "moonPhase": 0.853,
@@ -3069,18 +3069,18 @@
         {
           "date": "2026-09-08",
           "offset": 15,
-          "starScore": 5,
-          "score100": 90,
-          "label": "新月級・観測適",
-          "cloudCover": 2,
-          "humidity": 94,
+          "starScore": 2,
+          "score100": 41,
+          "label": "やや不良",
+          "cloudCover": 100,
+          "humidity": 95,
           "moonAge": 26.3,
           "moonIllumination": 11,
           "moonPhase": 0.89,
           "moonPhaseName": "有明月",
           "moonrise": "2026-09-08T02:03",
           "moonset": "2026-09-08T16:40",
-          "moonDownHours": 2,
+          "moonDownHours": 4,
           "moonDownRatio": 1.0
         }
       ]
@@ -3105,8 +3105,8 @@
       "starScore": 1,
       "condition": {
         "label": "不向き",
-        "cloudCover": 75,
-        "humidity": 81,
+        "cloudCover": 95,
+        "humidity": 87,
         "moonPhase": "十三夜",
         "moonIllumination": 85,
         "moonAge": 11.0
@@ -3115,56 +3115,56 @@
         {
           "time": "2026-08-24T20:00",
           "hour": "20:00",
-          "cloudCover": 75,
-          "humidity": 78,
+          "cloudCover": 100,
+          "humidity": 88,
           "moonUp": true
         },
         {
           "time": "2026-08-24T21:00",
           "hour": "21:00",
-          "cloudCover": 95,
-          "humidity": 79,
+          "cloudCover": 100,
+          "humidity": 88,
           "moonUp": true
         },
         {
           "time": "2026-08-24T22:00",
           "hour": "22:00",
-          "cloudCover": 58,
-          "humidity": 79,
+          "cloudCover": 100,
+          "humidity": 87,
           "moonUp": true
         },
         {
           "time": "2026-08-24T23:00",
           "hour": "23:00",
-          "cloudCover": 98,
-          "humidity": 80,
+          "cloudCover": 100,
+          "humidity": 87,
           "moonUp": true
         },
         {
           "time": "2026-08-25T00:00",
           "hour": "00:00",
-          "cloudCover": 92,
-          "humidity": 81,
+          "cloudCover": 98,
+          "humidity": 88,
           "moonUp": true
         },
         {
           "time": "2026-08-25T01:00",
           "hour": "01:00",
-          "cloudCover": 91,
-          "humidity": 82,
+          "cloudCover": 98,
+          "humidity": 89,
           "moonUp": true
         },
         {
           "time": "2026-08-25T02:00",
           "hour": "02:00",
-          "cloudCover": 66,
-          "humidity": 83,
+          "cloudCover": 90,
+          "humidity": 87,
           "moonUp": true
         },
         {
           "time": "2026-08-25T03:00",
           "hour": "03:00",
-          "cloudCover": 25,
+          "cloudCover": 71,
           "humidity": 83,
           "moonUp": true
         }
@@ -3174,10 +3174,10 @@
           "date": "2026-08-24",
           "offset": 0,
           "starScore": 1,
-          "score100": 25,
+          "score100": 11,
           "label": "不向き",
-          "cloudCover": 75,
-          "humidity": 81,
+          "cloudCover": 95,
+          "humidity": 87,
           "moonAge": 11.0,
           "moonIllumination": 85,
           "moonPhase": 0.372,
@@ -3190,56 +3190,56 @@
             {
               "time": "2026-08-24T20:00",
               "hour": "20:00",
-              "cloudCover": 75,
-              "humidity": 78,
+              "cloudCover": 100,
+              "humidity": 88,
               "moonUp": true
             },
             {
               "time": "2026-08-24T21:00",
               "hour": "21:00",
-              "cloudCover": 95,
-              "humidity": 79,
+              "cloudCover": 100,
+              "humidity": 88,
               "moonUp": true
             },
             {
               "time": "2026-08-24T22:00",
               "hour": "22:00",
-              "cloudCover": 58,
-              "humidity": 79,
+              "cloudCover": 100,
+              "humidity": 87,
               "moonUp": true
             },
             {
               "time": "2026-08-24T23:00",
               "hour": "23:00",
-              "cloudCover": 98,
-              "humidity": 80,
+              "cloudCover": 100,
+              "humidity": 87,
               "moonUp": true
             },
             {
               "time": "2026-08-25T00:00",
               "hour": "00:00",
-              "cloudCover": 92,
-              "humidity": 81,
+              "cloudCover": 98,
+              "humidity": 88,
               "moonUp": true
             },
             {
               "time": "2026-08-25T01:00",
               "hour": "01:00",
-              "cloudCover": 91,
-              "humidity": 82,
+              "cloudCover": 98,
+              "humidity": 89,
               "moonUp": true
             },
             {
               "time": "2026-08-25T02:00",
               "hour": "02:00",
-              "cloudCover": 66,
-              "humidity": 83,
+              "cloudCover": 90,
+              "humidity": 87,
               "moonUp": true
             },
             {
               "time": "2026-08-25T03:00",
               "hour": "03:00",
-              "cloudCover": 25,
+              "cloudCover": 71,
               "humidity": 83,
               "moonUp": true
             }
@@ -3249,10 +3249,10 @@
           "date": "2026-08-25",
           "offset": 1,
           "starScore": 1,
-          "score100": 15,
+          "score100": 8,
           "label": "不向き",
-          "cloudCover": 92,
-          "humidity": 82,
+          "cloudCover": 97,
+          "humidity": 88,
           "moonAge": 11.9,
           "moonIllumination": 91,
           "moonPhase": 0.403,
@@ -3266,56 +3266,56 @@
               "time": "2026-08-25T20:00",
               "hour": "20:00",
               "cloudCover": 100,
-              "humidity": 83,
+              "humidity": 90,
               "moonUp": true
             },
             {
               "time": "2026-08-25T21:00",
               "hour": "21:00",
               "cloudCover": 100,
-              "humidity": 82,
+              "humidity": 90,
               "moonUp": true
             },
             {
               "time": "2026-08-25T22:00",
               "hour": "22:00",
-              "cloudCover": 97,
-              "humidity": 82,
+              "cloudCover": 99,
+              "humidity": 89,
               "moonUp": true
             },
             {
               "time": "2026-08-25T23:00",
               "hour": "23:00",
-              "cloudCover": 91,
-              "humidity": 82,
+              "cloudCover": 99,
+              "humidity": 90,
               "moonUp": true
             },
             {
               "time": "2026-08-26T00:00",
               "hour": "00:00",
-              "cloudCover": 91,
-              "humidity": 81,
+              "cloudCover": 96,
+              "humidity": 89,
               "moonUp": true
             },
             {
               "time": "2026-08-26T01:00",
               "hour": "01:00",
-              "cloudCover": 59,
-              "humidity": 82,
+              "cloudCover": 95,
+              "humidity": 88,
               "moonUp": true
             },
             {
               "time": "2026-08-26T02:00",
               "hour": "02:00",
-              "cloudCover": 97,
-              "humidity": 82,
+              "cloudCover": 100,
+              "humidity": 85,
               "moonUp": true
             },
             {
               "time": "2026-08-26T03:00",
               "hour": "03:00",
-              "cloudCover": 98,
-              "humidity": 84,
+              "cloudCover": 88,
+              "humidity": 85,
               "moonUp": true
             }
           ]
@@ -3324,10 +3324,10 @@
           "date": "2026-08-26",
           "offset": 2,
           "starScore": 1,
-          "score100": 9,
+          "score100": 6,
           "label": "不向き",
-          "cloudCover": 100,
-          "humidity": 82,
+          "cloudCover": 99,
+          "humidity": 86,
           "moonAge": 12.8,
           "moonIllumination": 96,
           "moonPhase": 0.434,
@@ -3340,57 +3340,57 @@
             {
               "time": "2026-08-26T20:00",
               "hour": "20:00",
-              "cloudCover": 99,
-              "humidity": 81,
+              "cloudCover": 95,
+              "humidity": 83,
               "moonUp": true
             },
             {
               "time": "2026-08-26T21:00",
               "hour": "21:00",
-              "cloudCover": 100,
-              "humidity": 79,
+              "cloudCover": 97,
+              "humidity": 84,
               "moonUp": true
             },
             {
               "time": "2026-08-26T22:00",
               "hour": "22:00",
               "cloudCover": 100,
-              "humidity": 77,
+              "humidity": 87,
               "moonUp": true
             },
             {
               "time": "2026-08-26T23:00",
               "hour": "23:00",
               "cloudCover": 100,
-              "humidity": 77,
+              "humidity": 87,
               "moonUp": true
             },
             {
               "time": "2026-08-27T00:00",
               "hour": "00:00",
-              "cloudCover": 99,
-              "humidity": 79,
+              "cloudCover": 100,
+              "humidity": 88,
               "moonUp": true
             },
             {
               "time": "2026-08-27T01:00",
               "hour": "01:00",
               "cloudCover": 100,
-              "humidity": 80,
+              "humidity": 86,
               "moonUp": true
             },
             {
               "time": "2026-08-27T02:00",
               "hour": "02:00",
               "cloudCover": 100,
-              "humidity": 91,
+              "humidity": 85,
               "moonUp": true
             },
             {
               "time": "2026-08-27T03:00",
               "hour": "03:00",
               "cloudCover": 100,
-              "humidity": 90,
+              "humidity": 84,
               "moonUp": true
             }
           ]
@@ -3416,14 +3416,14 @@
               "time": "2026-08-27T20:00",
               "hour": "20:00",
               "cloudCover": 100,
-              "humidity": 88,
+              "humidity": 86,
               "moonUp": true
             },
             {
               "time": "2026-08-27T21:00",
               "hour": "21:00",
               "cloudCover": 100,
-              "humidity": 88,
+              "humidity": 89,
               "moonUp": true
             },
             {
@@ -3444,28 +3444,28 @@
               "time": "2026-08-28T00:00",
               "hour": "00:00",
               "cloudCover": 100,
-              "humidity": 87,
+              "humidity": 86,
               "moonUp": true
             },
             {
               "time": "2026-08-28T01:00",
               "hour": "01:00",
               "cloudCover": 100,
-              "humidity": 86,
+              "humidity": 87,
               "moonUp": true
             },
             {
               "time": "2026-08-28T02:00",
               "hour": "02:00",
               "cloudCover": 100,
-              "humidity": 85,
+              "humidity": 86,
               "moonUp": true
             },
             {
               "time": "2026-08-28T03:00",
               "hour": "03:00",
               "cloudCover": 100,
-              "humidity": 84,
+              "humidity": 88,
               "moonUp": true
             }
           ]
@@ -3474,10 +3474,10 @@
           "date": "2026-08-28",
           "offset": 4,
           "starScore": 1,
-          "score100": 16,
+          "score100": 12,
           "label": "不向き",
-          "cloudCover": 76,
-          "humidity": 88,
+          "cloudCover": 84,
+          "humidity": 89,
           "moonAge": 14.7,
           "moonIllumination": 100,
           "moonPhase": 0.498,
@@ -3490,57 +3490,57 @@
             {
               "time": "2026-08-28T20:00",
               "hour": "20:00",
-              "cloudCover": 100,
-              "humidity": 86,
+              "cloudCover": 90,
+              "humidity": 88,
               "moonUp": true
             },
             {
               "time": "2026-08-28T21:00",
               "hour": "21:00",
-              "cloudCover": 100,
-              "humidity": 87,
+              "cloudCover": 91,
+              "humidity": 88,
               "moonUp": true
             },
             {
               "time": "2026-08-28T22:00",
               "hour": "22:00",
-              "cloudCover": 99,
-              "humidity": 87,
+              "cloudCover": 95,
+              "humidity": 88,
               "moonUp": true
             },
             {
               "time": "2026-08-28T23:00",
               "hour": "23:00",
-              "cloudCover": 97,
-              "humidity": 88,
+              "cloudCover": 100,
+              "humidity": 89,
               "moonUp": true
             },
             {
               "time": "2026-08-29T00:00",
               "hour": "00:00",
-              "cloudCover": 89,
+              "cloudCover": 99,
               "humidity": 89,
               "moonUp": true
             },
             {
               "time": "2026-08-29T01:00",
               "hour": "01:00",
-              "cloudCover": 66,
+              "cloudCover": 85,
               "humidity": 89,
               "moonUp": true
             },
             {
               "time": "2026-08-29T02:00",
               "hour": "02:00",
-              "cloudCover": 36,
+              "cloudCover": 65,
               "humidity": 89,
               "moonUp": true
             },
             {
               "time": "2026-08-29T03:00",
               "hour": "03:00",
-              "cloudCover": 21,
-              "humidity": 89,
+              "cloudCover": 51,
+              "humidity": 90,
               "moonUp": true
             }
           ]
@@ -3548,10 +3548,10 @@
         {
           "date": "2026-08-29",
           "offset": 5,
-          "starScore": 2,
-          "score100": 37,
-          "label": "やや不良",
-          "cloudCover": 35,
+          "starScore": 1,
+          "score100": 15,
+          "label": "不向き",
+          "cloudCover": 79,
           "humidity": 89,
           "moonAge": 15.7,
           "moonIllumination": 99,
@@ -3565,57 +3565,57 @@
             {
               "time": "2026-08-29T20:00",
               "hour": "20:00",
-              "cloudCover": 37,
-              "humidity": 88,
+              "cloudCover": 73,
+              "humidity": 85,
               "moonUp": true
             },
             {
               "time": "2026-08-29T21:00",
               "hour": "21:00",
-              "cloudCover": 41,
-              "humidity": 89,
+              "cloudCover": 89,
+              "humidity": 85,
               "moonUp": true
             },
             {
               "time": "2026-08-29T22:00",
               "hour": "22:00",
-              "cloudCover": 41,
-              "humidity": 90,
+              "cloudCover": 98,
+              "humidity": 86,
               "moonUp": true
             },
             {
               "time": "2026-08-29T23:00",
               "hour": "23:00",
-              "cloudCover": 39,
-              "humidity": 90,
+              "cloudCover": 100,
+              "humidity": 88,
               "moonUp": true
             },
             {
               "time": "2026-08-30T00:00",
               "hour": "00:00",
-              "cloudCover": 36,
+              "cloudCover": 99,
               "humidity": 90,
               "moonUp": true
             },
             {
               "time": "2026-08-30T01:00",
               "hour": "01:00",
-              "cloudCover": 32,
-              "humidity": 89,
+              "cloudCover": 82,
+              "humidity": 91,
               "moonUp": true
             },
             {
               "time": "2026-08-30T02:00",
               "hour": "02:00",
-              "cloudCover": 29,
-              "humidity": 89,
+              "cloudCover": 56,
+              "humidity": 92,
               "moonUp": true
             },
             {
               "time": "2026-08-30T03:00",
               "hour": "03:00",
-              "cloudCover": 27,
-              "humidity": 88,
+              "cloudCover": 37,
+              "humidity": 92,
               "moonUp": true
             }
           ]
@@ -3623,11 +3623,11 @@
         {
           "date": "2026-08-30",
           "offset": 6,
-          "starScore": 2,
-          "score100": 39,
-          "label": "やや不良",
-          "cloudCover": 35,
-          "humidity": 86,
+          "starScore": 3,
+          "score100": 50,
+          "label": "月明かり注意",
+          "cloudCover": 13,
+          "humidity": 89,
           "moonAge": 16.7,
           "moonIllumination": 96,
           "moonPhase": 0.565,
@@ -3640,57 +3640,57 @@
             {
               "time": "2026-08-30T20:00",
               "hour": "20:00",
-              "cloudCover": 0,
-              "humidity": 84,
+              "cloudCover": 7,
+              "humidity": 87,
               "moonUp": false
             },
             {
               "time": "2026-08-30T21:00",
               "hour": "21:00",
-              "cloudCover": 2,
-              "humidity": 85,
+              "cloudCover": 8,
+              "humidity": 89,
               "moonUp": true
             },
             {
               "time": "2026-08-30T22:00",
               "hour": "22:00",
-              "cloudCover": 11,
-              "humidity": 86,
+              "cloudCover": 9,
+              "humidity": 89,
               "moonUp": true
             },
             {
               "time": "2026-08-30T23:00",
               "hour": "23:00",
-              "cloudCover": 24,
-              "humidity": 86,
+              "cloudCover": 12,
+              "humidity": 90,
               "moonUp": true
             },
             {
               "time": "2026-08-31T00:00",
               "hour": "00:00",
-              "cloudCover": 40,
-              "humidity": 87,
+              "cloudCover": 14,
+              "humidity": 90,
               "moonUp": true
             },
             {
               "time": "2026-08-31T01:00",
               "hour": "01:00",
-              "cloudCover": 56,
-              "humidity": 87,
+              "cloudCover": 17,
+              "humidity": 90,
               "moonUp": true
             },
             {
               "time": "2026-08-31T02:00",
               "hour": "02:00",
-              "cloudCover": 69,
-              "humidity": 87,
+              "cloudCover": 19,
+              "humidity": 89,
               "moonUp": true
             },
             {
               "time": "2026-08-31T03:00",
               "hour": "03:00",
-              "cloudCover": 77,
-              "humidity": 88,
+              "cloudCover": 21,
+              "humidity": 89,
               "moonUp": true
             }
           ]
@@ -3699,10 +3699,10 @@
           "date": "2026-08-31",
           "offset": 7,
           "starScore": 3,
-          "score100": 55,
+          "score100": 52,
           "label": "月明かり注意",
-          "cloudCover": 7,
-          "humidity": 89,
+          "cloudCover": 13,
+          "humidity": 87,
           "moonAge": 17.7,
           "moonIllumination": 91,
           "moonPhase": 0.599,
@@ -3715,11 +3715,11 @@
         {
           "date": "2026-09-01",
           "offset": 8,
-          "starScore": 3,
-          "score100": 51,
-          "label": "条件つき可",
-          "cloudCover": 21,
-          "humidity": 86,
+          "starScore": 2,
+          "score100": 36,
+          "label": "やや不良",
+          "cloudCover": 60,
+          "humidity": 84,
           "moonAge": 18.8,
           "moonIllumination": 83,
           "moonPhase": 0.635,
@@ -3733,10 +3733,10 @@
           "date": "2026-09-02",
           "offset": 9,
           "starScore": 1,
-          "score100": 25,
+          "score100": 18,
           "label": "不向き",
-          "cloudCover": 82,
-          "humidity": 92,
+          "cloudCover": 96,
+          "humidity": 86,
           "moonAge": 19.8,
           "moonIllumination": 74,
           "moonPhase": 0.67,
@@ -3752,8 +3752,8 @@
           "starScore": 1,
           "score100": 20,
           "label": "不向き",
-          "cloudCover": 98,
-          "humidity": 89,
+          "cloudCover": 97,
+          "humidity": 93,
           "moonAge": 20.8,
           "moonIllumination": 64,
           "moonPhase": 0.706,
@@ -3766,11 +3766,11 @@
         {
           "date": "2026-09-04",
           "offset": 11,
-          "starScore": 1,
-          "score100": 25,
-          "label": "不向き",
-          "cloudCover": 96,
-          "humidity": 89,
+          "starScore": 2,
+          "score100": 27,
+          "label": "やや不良",
+          "cloudCover": 92,
+          "humidity": 90,
           "moonAge": 21.9,
           "moonIllumination": 52,
           "moonPhase": 0.743,
@@ -3783,10 +3783,10 @@
         {
           "date": "2026-09-05",
           "offset": 12,
-          "starScore": 4,
-          "score100": 68,
-          "label": "新月級・観測適",
-          "cloudCover": 21,
+          "starScore": 2,
+          "score100": 28,
+          "label": "やや不良",
+          "cloudCover": 100,
           "humidity": 88,
           "moonAge": 23.0,
           "moonIllumination": 41,
@@ -3800,10 +3800,10 @@
         {
           "date": "2026-09-06",
           "offset": 13,
-          "starScore": 4,
-          "score100": 75,
-          "label": "新月級・観測適",
-          "cloudCover": 16,
+          "starScore": 3,
+          "score100": 53,
+          "label": "条件つき可",
+          "cloudCover": 60,
           "humidity": 88,
           "moonAge": 24.1,
           "moonIllumination": 30,
@@ -3817,11 +3817,11 @@
         {
           "date": "2026-09-07",
           "offset": 14,
-          "starScore": 5,
-          "score100": 90,
-          "label": "新月級・観測適",
-          "cloudCover": 4,
-          "humidity": 81,
+          "starScore": 4,
+          "score100": 72,
+          "label": "観測向き",
+          "cloudCover": 32,
+          "humidity": 86,
           "moonAge": 25.2,
           "moonIllumination": 20,
           "moonPhase": 0.853,
@@ -3834,10 +3834,10 @@
         {
           "date": "2026-09-08",
           "offset": 15,
-          "starScore": 3,
-          "score100": 48,
-          "label": "条件つき可",
-          "cloudCover": 86,
+          "starScore": 2,
+          "score100": 41,
+          "label": "やや不良",
+          "cloudCover": 100,
           "humidity": 86,
           "moonAge": 26.3,
           "moonIllumination": 11,
@@ -3845,7 +3845,7 @@
           "moonPhaseName": "有明月",
           "moonrise": "2026-09-08T03:07",
           "moonset": "2026-09-08T16:58",
-          "moonDownHours": 2,
+          "moonDownHours": 4,
           "moonDownRatio": 1.0
         }
       ]
