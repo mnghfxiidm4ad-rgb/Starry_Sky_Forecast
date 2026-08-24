@@ -120,6 +120,8 @@
     panel: document.getElementById("side-panel"),
     panelContent: document.getElementById("panel-content"),
     panelClose: document.getElementById("panel-close"),
+    panelExpand: document.getElementById("panel-expand"),
+    panelHandle: document.getElementById("panel-handle"),
     backdrop: document.getElementById("panel-backdrop"),
     chips: document.getElementById("spot-chips"),
     mockDate: document.getElementById("mock-date"),
@@ -332,13 +334,44 @@
     }
   }
 
+  function uniqueSpotList(lists) {
+    const seen = new Set();
+    const out = [];
+    lists.flat().forEach((raw) => {
+      if (!raw) return;
+      const lat = Number(raw.lat);
+      const lng = Number(raw.lng ?? raw.lon);
+      const key = String(raw.id || `${raw.name}|${lat.toFixed(5)}|${lng.toFixed(5)}`);
+      if (seen.has(key)) return;
+      seen.add(key);
+      out.push(raw);
+    });
+    return out;
+  }
+
+  function categoryLabel(spot) {
+    const cat = String(spot.category || spot.subtitle || "");
+    if (cat === "camp_site" || cat === "キャンプ場") return "キャンプ場";
+    if (cat === "viewpoint" || cat === "展望台") return "展望台";
+    if (cat === "michinoeki" || cat === "道の駅") return "道の駅";
+    return cat;
+  }
+
+  function categoryBadge(spot) {
+    const label = categoryLabel(spot);
+    if (!label) return "";
+    const kind = label === "キャンプ場" ? "camp" : "place";
+    return `<span class="category-badge category-badge--${kind}">${escapeHtml(label)}</span>`;
+  }
+
   async function loadSpots() {
     const [auto, forecast, spots] = await Promise.all([
       loadOptional("./data/auto_spots.json"),
       loadOptional("./data/forecast.json"),
       loadOptional("./data/spots.json"),
     ]);
-    const baseList = auto?.spots || spots?.spots || FALLBACK.spots;
+    const baseList = uniqueSpotList([spots?.spots || [], auto?.spots || []]);
+    if (!baseList.length) baseList.push(...FALLBACK.spots);
     const forecastList = Array.isArray(forecast?.spots) ? forecast.spots : [];
     const byId = new Map(forecastList.map((s) => [s.id, s]));
     const byName = new Map(forecastList.map((s) => [s.name, s]));
@@ -508,8 +541,11 @@
     if (els.panel.classList.contains("is-open") && activeId) {
       const current = allSpots.find((s) => s.id === activeId);
       if (current) {
+        const expanded = els.panel.classList.contains("is-expanded");
         els.panelContent.innerHTML = panelHtml(current);
         bindPanelEvents();
+        if (!isMobile() || expanded) expandPanel();
+        else collapsePanel();
       }
     }
   }
@@ -544,17 +580,28 @@
     );
   }
 
+  function cloudIcon(value) {
+    const n = Number(value);
+    if (!Number.isFinite(n)) return { symbol: "–", text: "なし" };
+    if (n <= 30) return { symbol: "☀", text: n + "%" };
+    if (n <= 60) return { symbol: "⛅", text: n + "%" };
+    return { symbol: "☁", text: n + "%" };
+  }
+
   function calendarHtml(spot) {
     const days = Array.isArray(spot.daily) ? spot.daily : [];
     if (!days.length) return "";
     const cards = days
       .map((day, index) => {
         const label = dateLabel(day.date, index);
-        const near = index < 7;
-        return `<button type="button" class="cal-card score-${day.starScore}${index === selectedDayIndex ? " is-active" : ""}" data-day="${index}">
-          <span class="cal-card__date">${escapeHtml(label.main)} ${escapeHtml(label.sub)}</span>
-          <span class="cal-card__score">${"★".repeat(day.starScore)} ${day.score100}点</span>
-          <span class="cal-card__meta">雲${day.cloudCover}% / ${escapeHtml(day.moonPhaseName)}${near ? " / 時間別あり" : ""}</span>
+        const cloud = cloudIcon(day.cloudCover);
+        const score = Number(day.starScore) || 1;
+        const age = Number.isFinite(Number(day.moonAge)) ? Number(day.moonAge).toFixed(1) : "–";
+        return `<button type="button" class="cal-card score-${score}${index === selectedDayIndex ? " is-active" : ""}" data-day="${index}" aria-label="${escapeHtml(label.main)} スコア${score} 雲量${cloud.text} 月齢${age}">
+          <span class="cal-card__date">${escapeHtml(label.main)}<small>${escapeHtml(label.sub)}</small></span>
+          <span class="cal-card__score">${"★".repeat(score)}<span class="dim">${"★".repeat(Math.max(0, 5 - score))}</span></span>
+          <span class="cal-card__cloud">${cloud.symbol} ${escapeHtml(cloud.text)}</span>
+          <span class="cal-card__moon">月齢 ${escapeHtml(age)}</span>
         </button>`;
       })
       .join("");
@@ -604,13 +651,16 @@
       ? ""
       : `<p class="panel-notice">この地点には選択した夜の気象予報がありません。月相・月明かりは日付から計算した値、星空スコアは標高と光害の静的な目安です。</p>`;
     return `
-      <p class="panel-kicker">${escapeHtml(spot.prefecture)} ・ ${kicker}</p>
-      <h2 class="panel-title" id="panel-title">${escapeHtml(spot.name)}</h2>
+      <div class="panel-peek">
+      <p class="panel-kicker">${escapeHtml(spot.prefecture || "")} ・ ${escapeHtml(categoryLabel(spot) || "観測スポット")} ・ ${kicker}</p>
+      <h2 class="panel-title" id="panel-title">${escapeHtml(spot.name)} ${categoryBadge(spot)}</h2>
       <p class="panel-subtitle">${escapeHtml(spot.subtitle || "")}</p>
       <div class="score-row">
         ${stars(spot.starScore)}
         <span class="condition-pill">${escapeHtml(c.label || (spot.winter_closure ? "冬季注意" : "標高ベース判定"))}</span>
       </div>
+      </div>
+      <div class="panel-details">
       <dl class="stats">
         <div class="stat"><dt>標高</dt><dd>${escapeHtml(spot.elevation)} m</dd></div>
         <div class="stat"><dt>光害度</dt><dd>${escapeHtml(spot.lightPollution)}${spot.bortle_scale != null ? " / Bortle " + escapeHtml(spot.bortle_scale) : ""}</dd></div>
@@ -639,6 +689,7 @@
         <p class="ad-slot__label">スポンサーリンク</p>
         <div class="ad-slot__box">広告用プレースホルダー<small>300 × 250 想定</small></div>
       </section>
+      </div>
     `;
   }
 
@@ -656,7 +707,7 @@
     requestAnimationFrame(() => {
       const point = map.latLngToContainerPoint(latlng);
       if (isMobile()) {
-        map.panBy([0, Math.round(window.innerHeight * 0.22)], { animate: true });
+        map.panBy([0, Math.round(window.innerHeight * 0.12)], { animate: true });
       } else {
         const panelWidth = els.panel.getBoundingClientRect().width || 400;
         const targetX = panelWidth + (window.innerWidth - panelWidth) / 2;
@@ -667,6 +718,26 @@
     });
   }
 
+  function syncExpandButton() {
+    const expanded = !isMobile() || els.panel.classList.contains("is-expanded");
+    if (!els.panelExpand) return;
+    els.panelExpand.setAttribute("aria-expanded", expanded ? "true" : "false");
+    els.panelExpand.textContent = expanded ? "簡易表示" : "詳細を見る";
+  }
+
+  function expandPanel() {
+    els.panel.classList.add("is-expanded");
+    els.panel.setAttribute("aria-modal", isMobile() ? "false" : "true");
+    syncExpandButton();
+  }
+
+  function collapsePanel() {
+    els.panel.classList.remove("is-expanded");
+    els.panel.setAttribute("aria-modal", "false");
+    if (els.panelContent) els.panelContent.scrollTop = 0;
+    syncExpandButton();
+  }
+
   function openSpot(spot, shouldPan) {
     lastFocus = document.activeElement;
     els.panelContent.innerHTML = panelHtml(spot);
@@ -675,6 +746,8 @@
     els.panel.setAttribute("aria-hidden", "false");
     document.body.classList.add("is-panel-open");
     els.backdrop.hidden = false;
+    if (isMobile()) collapsePanel();
+    else expandPanel();
     setActive(spot.id);
     els.panelClose.focus();
     if (shouldPan) panToSpot(spot);
@@ -685,6 +758,7 @@
     els.panel.setAttribute("aria-hidden", "true");
     document.body.classList.remove("is-panel-open");
     els.backdrop.hidden = true;
+    collapsePanel();
     setActive(null);
     if (lastFocus && typeof lastFocus.focus === "function") lastFocus.focus();
   }
@@ -714,8 +788,60 @@
     }
   }
 
+  function bindSheetGestures() {
+    const panel = els.panel;
+    if (!panel) return;
+    let startY = 0;
+    let lastY = 0;
+    let tracking = false;
+
+    panel.addEventListener("touchstart", (event) => {
+      if (!isMobile() || !panel.classList.contains("is-open")) return;
+      const touch = event.touches[0];
+      if (!touch) return;
+      const expanded = panel.classList.contains("is-expanded");
+      const fromChrome = event.target.closest(".side-panel__handle, .panel-peek, .side-panel__expand");
+      if (expanded && els.panelContent.scrollTop > 4 && !fromChrome) return;
+      startY = touch.clientY;
+      lastY = touch.clientY;
+      tracking = true;
+    }, { passive: true });
+
+    panel.addEventListener("touchmove", (event) => {
+      if (!tracking) return;
+      const touch = event.touches[0];
+      if (touch) lastY = touch.clientY;
+    }, { passive: true });
+
+    panel.addEventListener("touchend", () => {
+      if (!tracking) return;
+      tracking = false;
+      const dy = lastY - startY;
+      if (dy < -48) {
+        expandPanel();
+      } else if (dy > 48) {
+        if (panel.classList.contains("is-expanded")) collapsePanel();
+        else closePanel();
+      }
+    });
+  }
+
   function bindUi() {
     els.panelClose.addEventListener("click", closePanel);
+    if (els.panelExpand) {
+      els.panelExpand.addEventListener("click", (event) => {
+        event.stopPropagation();
+        if (!isMobile()) return;
+        if (els.panel.classList.contains("is-expanded")) collapsePanel();
+        else expandPanel();
+      });
+    }
+    bindSheetGestures();
+    window.addEventListener("resize", () => {
+      if (!els.panel.classList.contains("is-open")) return;
+      if (!isMobile()) expandPanel();
+      else syncExpandButton();
+    });
     els.backdrop.addEventListener("click", closePanel);
     map.on("click", closePanel);
     document.addEventListener("keydown", (event) => {

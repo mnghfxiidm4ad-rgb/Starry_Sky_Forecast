@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style.css?v=20260824c">
 </head>
 <body>
   <a class="skip-link" href="#map">地図へスキップ</a>
@@ -52,8 +52,9 @@
 
   <div class="panel-backdrop" id="panel-backdrop" hidden></div>
   <aside class="side-panel" id="side-panel" role="dialog" aria-modal="true" aria-labelledby="panel-title" aria-hidden="true">
-    <div class="side-panel__handle" aria-hidden="true"></div>
-    <button type="button" class="side-panel__close" id="panel-close" aria-label="パネルを閉じる"><span aria-hidden="true">×</span></button>
+    <div class="side-panel__handle" id="panel-handle" aria-hidden="true"></div>
+    <button type="button" class="side-panel__close" id="panel-close" aria-label="パネルを閉じる"><span aria-hidden="true">✕</span></button>
+    <button type="button" class="side-panel__expand" id="panel-expand" aria-expanded="false" aria-controls="panel-content">詳細を見る</button>
     <div class="side-panel__scroll" id="panel-content"></div>
   </aside>
 
@@ -139,7 +140,7 @@
       <h3>アクセス解析</h3>
       <p>当サイトは、利用状況の把握のため Google アナリティクス等のアクセス解析ツールを導入する場合があります。これらは Cookie を利用して匿名のトラフィックデータを収集します。個人を特定する情報は収集しません。ブラウザの設定で Cookie を無効にすることで、収集を拒否できます。</p>
       <h3>保有データ</h3>
-      <p>地図表示と予報計算に必要な公開位置情報（観測スポットの名称・緯度経度・標高）を掲載します。お問い合わせフォームから送信された内容は、回答とサイト改善の目的に限り利用します。</p>
+      <p>地図表示と予報計算に必要な公開位置情報（観測スポットの名称・緯度経度・標高）を掲載します。お問い合わせの受付はただいま準備中です。フォーム公開後に送信された内容は、回答とサイト改善の目的に限り利用します。</p>
     </div>
   </article>
 
@@ -166,8 +167,8 @@
     </div>
     <div class="legal-modal__body">
       <h3>お問い合わせ</h3>
-      <p>誤情報の指摘、スポット情報の修正、広告掲載に関するご連絡は、Google フォームから受け付けます。個人情報は回答に必要な範囲でのみ利用します。</p>
-      <p><a href="https://docs.google.com/forms/" target="_blank" rel="noopener noreferrer">Googleフォームで問い合わせる</a>（公開前に運営者のフォームURLへ差し替えてください）</p>
+      <p>誤情報の指摘、スポット情報の修正、広告掲載に関するご連絡の受付フォームは、ただいま準備中です。</p>
+      <p>お問い合わせ用のフォームURLは、準備が整い次第こちらに掲載します。</p>
       <h3>運営者情報</h3>
       <ul>
         <li>サイト名：星空予想</li>
@@ -180,8 +181,8 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
-  <script src="./data/auto_spots.js"></script>
-  <script src="./data/forecast.js"></script>
-  <script src="./js/app.js"></script>
+  <script src="./data/auto_spots.js?v=20260823d"></script>
+  <script src="./data/forecast.js?v=20260823d"></script>
+  <script src="./js/app.js?v=20260824c"></script>
 </body>
 </html>

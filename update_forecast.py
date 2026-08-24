@@ -299,7 +299,8 @@ def to_output_spot(spot: dict, daily: list[dict]) -> dict:
     return {
         "id": spot["id"],
         "name": spot["name"],
-        "subtitle": spot.get("subtitle", ""),
+        "subtitle": spot.get("subtitle") or ("キャンプ場" if spot.get("category") == "camp_site" else ""),
+        "category": spot.get("category", ""),
         "prefecture": spot.get("prefecture", ""),
         "lat": lat,
         "lng": lng,
