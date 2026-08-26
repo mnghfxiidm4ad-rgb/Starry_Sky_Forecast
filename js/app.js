@@ -881,8 +881,18 @@
     });
     const legalBackdrop = document.getElementById("legal-backdrop");
     if (legalBackdrop) legalBackdrop.addEventListener("click", closeLegal);
+    if (location.hash.replace("#", "") === "privacy") {
+      location.replace("./privacy.html");
+      return;
+    }
     if (location.hash) openLegal(location.hash.replace("#", ""));
-    window.addEventListener("hashchange", () => openLegal(location.hash.replace("#", "")));
+    window.addEventListener("hashchange", () => {
+      if (location.hash.replace("#", "") === "privacy") {
+        location.replace("./privacy.html");
+        return;
+      }
+      openLegal(location.hash.replace("#", ""));
+    });
   }
 
   function openLegal(id) {

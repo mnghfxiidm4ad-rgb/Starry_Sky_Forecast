@@ -11,8 +11,16 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
-  <link rel="stylesheet" href="./css/style.css?v=20260826a">
+  <link rel="stylesheet" href="./css/style.css?v=20260826b">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2075840815269276" crossorigin="anonymous"></script>
+  <script>
+    (function () {
+      var params = new URLSearchParams(location.search);
+      if (params.has("privacy") || location.hash === "#privacy") {
+        location.replace("./privacy.html");
+      }
+    })();
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#map">地図へスキップ</a>
@@ -61,7 +69,7 @@
 
   <footer class="site-footer">
     <a href="#about" data-legal="about">当サイトについて</a>
-    <a href="#privacy" data-legal="privacy">プライバシーポリシー</a>
+    <a href="./privacy.html">プライバシーポリシー</a>
     <a href="#disclaimer" data-legal="disclaimer">免責事項</a>
     <a href="#contact" data-legal="contact">お問い合わせ</a>
     <span>© 星空予想</span>
@@ -184,6 +192,6 @@
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
   <script src="./data/auto_spots.js?v=20260823d"></script>
   <script src="./data/forecast.js?v=20260823d"></script>
-  <script src="./js/app.js?v=20260826a"></script>
+  <script src="./js/app.js?v=20260826b"></script>
 </body>
 </html>
