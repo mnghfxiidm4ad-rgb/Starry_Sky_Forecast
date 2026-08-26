@@ -1165,3 +1165,9 @@ body.is-legal-open {
     background: rgba(255, 255, 255, 0.28);
   }
 }
+
+.ad-slot__box .adsbygoogle {
+  display: block;
+  width: 100%;
+  min-height: 250px;
+}

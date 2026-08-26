@@ -2,35 +2,43 @@ name: Update Forecast Data
 
 on:
   schedule:
-    # 毎日 日本時間 06:00 (UTC 21:00) と 18:00 (UTC 09:00) の1日2回自動実行
-    - cron: '0 21,9 * * *'
-  workflow_dispatch: # GitHubの管理画面からボタン1つで手動実行できるようにする設定
+    # 毎日 日本時間 06:00 (UTC 21:00) と 18:00 (UTC 09:00)
+    - cron: "0 21,9 * * *"
+  workflow_dispatch:
+  push:
+    paths:
+      - "update_forecast.py"
+      - "data/spots.json"
+      - ".github/workflows/update.yml"
+
+permissions:
+  contents: write
 
 jobs:
   update-data:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write # 更新したforecast.jsonをリポジトリへ保存する権限
-
     steps:
-      # 1. リポジトリ内のファイルをGitHubの仮想マシンに読み込む
-      - name: リポジトリをチェックアウト
+      - name: Checkout
         uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
-      # 2. Pythonの実行環境を用意する
-      - name: Pythonのセットアップ
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.11"
 
-      # 3. 予報計算スクリプトを実行（標準ライブラリのみ使用）
-      - name: 予報データの計算と更新
+      - name: Build forecast
         run: python update_forecast.py
 
-      # 4. 更新された予報ファイルを自動コミット＆プッシュ
-      - name: forecast.json を自動コミット＆プッシュ
+      - name: Commit forecast files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/forecast.json data/forecast.js
-          git diff --staged --quiet || (git commit -m "Auto update forecast data [skip ci]" && git push)
+          if git diff --staged --quiet; then
+            echo "No forecast changes"
+          else
+            git commit --trailer "Co-authored-by: Cursor <cursoragent@cursor.com>" -m "Auto update forecast data [skip ci]"
+            git push
+          fi

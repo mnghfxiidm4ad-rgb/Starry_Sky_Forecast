@@ -687,7 +687,13 @@
       ${calendarHtml(spot)}
       <section class="ad-slot" aria-label="スポンサーリンク枠">
         <p class="ad-slot__label">スポンサーリンク</p>
-        <div class="ad-slot__box">広告用プレースホルダー<small>300 × 250 想定</small></div>
+        <div class="ad-slot__box">
+          <ins class="adsbygoogle"
+               style="display:block;min-height:250px;width:100%"
+               data-ad-client="ca-pub-2075840815269276"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+        </div>
       </section>
       </div>
     `;
@@ -697,6 +703,17 @@
     els.panelContent.querySelectorAll(".cal-card").forEach((card) => {
       card.addEventListener("click", () => applyDay(Number(card.dataset.day)));
     });
+    fillAdSlot();
+  }
+
+  function fillAdSlot() {
+    const slot = els.panelContent.querySelector("ins.adsbygoogle");
+    if (!slot || slot.getAttribute("data-adsbygoogle-status")) return;
+    try {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    } catch (err) {
+      /* AdSense 未読込時はプレースホルダーのまま */
+    }
   }
 
   function panToSpot(spot) {
