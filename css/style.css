@@ -994,6 +994,9 @@ body.is-panel-open .spot-chips {
 .legal-modal__body li {
   margin: 0 0 10px;
 }
+.legal-modal__body a {
+  color: var(--gold);
+}
 body.is-legal-open {
   overflow: hidden;
 }
