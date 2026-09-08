@@ -211,13 +211,26 @@
     return { name, illumination, age: Math.round(age * 10) / 10 };
   }
 
+  function tonightIso() {
+    const jst = new Date(Date.now() + 9 * 3600000);
+    if (jst.getUTCHours() < 4) jst.setUTCDate(jst.getUTCDate() - 1);
+    const y = jst.getUTCFullYear();
+    const m = String(jst.getUTCMonth() + 1).padStart(2, "0");
+    const d = String(jst.getUTCDate()).padStart(2, "0");
+    return y + "-" + m + "-" + d;
+  }
+
+  function firstVisibleIndex(nights) {
+    if (!nights.length) return 0;
+    const today = tonightIso();
+    const idx = nights.findIndex((iso) => iso >= today);
+    return idx >= 0 ? idx : nights.length - 1;
+  }
+
   function selectedNightDate() {
     const iso = forecastNights[selectedDayIndex];
     if (iso) return new Date(iso + "T21:00:00+09:00");
-    const now = new Date();
-    const jst = new Date(now.getTime() + 9 * 3600000);
-    if (jst.getUTCHours() < 4) jst.setUTCDate(jst.getUTCDate() - 1);
-    return new Date(Date.UTC(jst.getUTCFullYear(), jst.getUTCMonth(), jst.getUTCDate(), 12, 0, 0));
+    return new Date(tonightIso() + "T21:00:00+09:00");
   }
 
   function phaseText(value) {
@@ -365,10 +378,11 @@
   }
 
   async function loadSpots() {
+    const bust = "?v=" + tonightIso();
     const [auto, forecast, spots] = await Promise.all([
-      loadOptional("./data/auto_spots.json"),
-      loadOptional("./data/forecast.json"),
-      loadOptional("./data/spots.json"),
+      loadOptional("./data/auto_spots.json" + bust),
+      loadOptional("./data/forecast.json" + bust),
+      loadOptional("./data/spots.json" + bust),
     ]);
     const baseList = uniqueSpotList([spots?.spots || [], auto?.spots || []]);
     if (!baseList.length) baseList.push(...FALLBACK.spots);
@@ -550,12 +564,16 @@
     }
   }
 
-  function dateLabel(iso, index) {
-    if (index === 0) return { main: "今日", sub: iso.slice(5).replace("-", "/") };
-    if (index === 1) return { main: "明日", sub: iso.slice(5).replace("-", "/") };
-    const dt = new Date(iso + "T12:00:00");
-    const wd = ["日", "月", "火", "水", "木", "金", "土"][dt.getDay()];
-    return { main: iso.slice(5).replace("-", "/"), sub: wd };
+  function dateLabel(iso) {
+    const today = tonightIso();
+    const sub = iso.slice(5).replace("-", "/");
+    const day = new Date(iso + "T12:00:00+09:00");
+    const base = new Date(today + "T12:00:00+09:00");
+    const diff = Math.round((day.getTime() - base.getTime()) / 86400000);
+    if (diff === 0) return { main: "今日", sub };
+    if (diff === 1) return { main: "明日", sub };
+    const wd = ["日", "月", "火", "水", "木", "金", "土"][day.getDay()];
+    return { main: sub, sub: wd };
   }
 
   function renderDateBar(nights) {
@@ -565,10 +583,12 @@
       bar.hidden = true;
       return;
     }
+    const start = firstVisibleIndex(nights);
     bar.hidden = false;
     bar.replaceChildren(
-      ...nights.map((iso, index) => {
-        const label = dateLabel(iso, index);
+      ...nights.slice(start).map((iso, offset) => {
+        const index = start + offset;
+        const label = dateLabel(iso);
         const btn = document.createElement("button");
         btn.type = "button";
         btn.className = "date-bar__btn" + (index === selectedDayIndex ? " is-active" : "");
@@ -591,9 +611,12 @@
   function calendarHtml(spot) {
     const days = Array.isArray(spot.daily) ? spot.daily : [];
     if (!days.length) return "";
+    const start = firstVisibleIndex(days.map((d) => d.date).filter(Boolean));
     const cards = days
-      .map((day, index) => {
-        const label = dateLabel(day.date, index);
+      .map((day, index) => ({ day, index }))
+      .filter((entry) => entry.index >= start)
+      .map(({ day, index }) => {
+        const label = dateLabel(day.date);
         const cloud = cloudIcon(day.cloudCover);
         const score = Number(day.starScore) || 1;
         const age = Number.isFinite(Number(day.moonAge)) ? Number(day.moonAge).toFixed(1) : "–";
@@ -926,11 +949,11 @@
     const data = await loadSpots();
     allSpots = data.spots;
     forecastNights = data.nights || [];
-    selectedDayIndex = 0;
+    selectedDayIndex = firstVisibleIndex(forecastNights);
     setHeaderMeta(data);
     createMap();
     renderDateBar(forecastNights);
-    applyDay(0);
+    applyDay(selectedDayIndex);
     renderChips(allSpots);
     placeMarkers(allSpots);
     bindUi();

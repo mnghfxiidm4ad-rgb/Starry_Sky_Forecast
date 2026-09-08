@@ -22,16 +22,22 @@ FORECAST_JS_PATH = DATA_DIR / "forecast.js"
 
 JST = timezone(timedelta(hours=9), name="JST")
 API_URL = "https://api.open-meteo.com/v1/forecast"
-USER_AGENT = "HoshizoraYosou/1.1 (16-day-forecast)"
+USER_AGENT = "HoshizoraYosou/1.2 (16-day-forecast)"
 SYNODIC_DAYS = 29.530588853
 NIGHT_HOURS = (20, 21, 22, 23, 0, 1, 2, 3)
 FORECAST_DAYS = 16
-SPOT_SLEEP = 0.3
+BATCH_SIZE = 25
+SPOT_SLEEP = 0.4
+MAX_RETRIES = 4
 POLLUTION_TO_BORTLE = {"低": 3, "中": 4, "高": 6}
 
 
 def log(msg: str) -> None:
-    print(msg, flush=True)
+    try:
+        print(msg, flush=True)
+    except UnicodeEncodeError:
+        encoding = getattr(sys.stdout, "encoding", None) or "utf-8"
+        print(str(msg).encode(encoding, errors="replace").decode(encoding, errors="replace"), flush=True)
 
 
 def open_url(req: urllib.request.Request, timeout: int):
@@ -44,10 +50,19 @@ def open_url(req: urllib.request.Request, timeout: int):
         return urllib.request.urlopen(req, timeout=timeout, context=ssl._create_unverified_context())
 
 
-def http_json(url: str, timeout: int = 30) -> dict:
+def http_json(url: str, timeout: int = 90) -> dict | list:
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "application/json"})
-    with open_url(req, timeout) as resp:
-        return json.loads(resp.read().decode("utf-8"))
+    last_error: Exception | None = None
+    for attempt in range(1, MAX_RETRIES + 1):
+        try:
+            with open_url(req, timeout) as resp:
+                return json.loads(resp.read().decode("utf-8"))
+        except Exception as exc:
+            last_error = exc
+            wait = min(20, 2**attempt)
+            log(f"HTTP retry {attempt}/{MAX_RETRIES} after {exc}; sleep {wait}s")
+            time.sleep(wait)
+    raise last_error or RuntimeError("HTTP request failed")
 
 
 def parse_iso(value: str | None) -> datetime | None:
@@ -104,16 +119,29 @@ def night_dates(now: datetime | None = None) -> list[datetime]:
     return [start + timedelta(days=i) for i in range(FORECAST_DAYS)]
 
 
-def fetch_open_meteo(lat: float, lng: float) -> dict:
+def fetch_open_meteo_batch(coords: list[tuple[float, float]]) -> list[dict]:
+    if not coords:
+        return []
     params = {
-        "latitude": f"{lat:.4f}",
-        "longitude": f"{lng:.4f}",
+        "latitude": ",".join(f"{lat:.4f}" for lat, _ in coords),
+        "longitude": ",".join(f"{lng:.4f}" for _, lng in coords),
         "hourly": "cloud_cover,relative_humidity_2m",
         "daily": "moon_phase,moonrise,moonset",
         "timezone": "Asia/Tokyo",
         "forecast_days": FORECAST_DAYS,
     }
-    return http_json(f"{API_URL}?{urllib.parse.urlencode(params)}")
+    data = http_json(f"{API_URL}?{urllib.parse.urlencode(params)}")
+    if isinstance(data, list):
+        if len(data) != len(coords):
+            raise RuntimeError(f"Open-Meteo件数不一致: {len(data)} != {len(coords)}")
+        return data
+    if len(coords) != 1:
+        raise RuntimeError("複数地点なのに単一応答でした")
+    return [data]
+
+
+def fetch_open_meteo(lat: float, lng: float) -> dict:
+    return fetch_open_meteo_batch([(lat, lng)])[0]
 
 
 def hourly_index(api: dict) -> dict[str, dict]:
@@ -343,31 +371,55 @@ def write_outputs(payload: dict) -> None:
     log(f"wrote {FORECAST_JS_PATH}")
 
 
+def fetch_batch_with_fallback(coords: list[tuple[float, float]]) -> list[dict | Exception]:
+    try:
+        return list(fetch_open_meteo_batch(coords))
+    except Exception as exc:
+        log(f"batch of {len(coords)} failed ({exc}); fallback one-by-one")
+        results: list[dict | Exception] = []
+        for index, coord in enumerate(coords):
+            try:
+                results.append(fetch_open_meteo_batch([coord])[0])
+            except Exception as one_exc:
+                results.append(one_exc)
+            if index < len(coords) - 1:
+                time.sleep(SPOT_SLEEP)
+        return results
+
+
 def main() -> int:
     spots = load_spots()
     nights = night_dates()
     generated = datetime.now(JST)
     out_spots = []
     errors = []
-    for index, spot in enumerate(spots, 1):
-        name = spot.get("name", spot.get("id"))
-        try:
+    for start in range(0, len(spots), BATCH_SIZE):
+        batch = spots[start : start + BATCH_SIZE]
+        coords: list[tuple[float, float]] = []
+        for spot in batch:
             lat = float(spot["lat"])
             lng = float(spot.get("lng", spot.get("lon")))
-            api = fetch_open_meteo(lat, lng)
-            daily = build_daily(api, nights, spot_bortle(spot))
-            if not daily:
-                raise RuntimeError("夜間雲量が空です")
-            out_spots.append(to_output_spot(spot, daily))
-            tonight = daily[0]
-            log(
-                f"[{index}/{len(spots)}] {name}: "
-                f"★{tonight['starScore']} {tonight['score100']}点 雲量{tonight['cloudCover']}%"
-            )
-        except Exception as exc:
-            errors.append(f"{name}: {exc}")
-            log(f"[{index}/{len(spots)}] {name}: ERROR {exc}")
-        if index < len(spots):
+            coords.append((lat, lng))
+        apis = fetch_batch_with_fallback(coords)
+        for offset, (spot, api) in enumerate(zip(batch, apis)):
+            index = start + offset + 1
+            name = spot.get("name", spot.get("id"))
+            try:
+                if isinstance(api, Exception):
+                    raise api
+                daily = build_daily(api, nights, spot_bortle(spot))
+                if not daily:
+                    raise RuntimeError("夜間雲量が空です")
+                out_spots.append(to_output_spot(spot, daily))
+                tonight = daily[0]
+                log(
+                    f"[{index}/{len(spots)}] {name}: "
+                    f"★{tonight['starScore']} {tonight['score100']}点 雲量{tonight['cloudCover']}%"
+                )
+            except Exception as exc:
+                errors.append(f"{name}: {exc}")
+                log(f"[{index}/{len(spots)}] {name}: ERROR {exc}")
+        if start + BATCH_SIZE < len(spots):
             time.sleep(SPOT_SLEEP)
 
     if not out_spots:
