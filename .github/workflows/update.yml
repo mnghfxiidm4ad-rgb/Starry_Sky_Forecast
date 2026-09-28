@@ -44,6 +44,8 @@ jobs:
           if git diff --staged --quiet; then
             echo "No forecast changes"
           else
-            git commit --trailer "Co-authored-by: Cursor <cursoragent@cursor.com>" -m "Auto update forecast data [skip ci]"
+            # Do NOT use [skip ci]: Cloudflare Pages / GitHub Pages skip rebuilds on that token,
+            # which left the live calendar stuck on stale forecast nights.
+            git commit --trailer "Co-authored-by: Cursor <cursoragent@cursor.com>" -m "Auto update forecast data"
             git push
           fi
