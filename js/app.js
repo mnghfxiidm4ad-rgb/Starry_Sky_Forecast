@@ -347,6 +347,45 @@
     }
   }
 
+  function forecastNightsOf(forecast) {
+    if (!forecast) return [];
+    const fromWindow = forecast.nightWindow?.nights;
+    if (Array.isArray(fromWindow) && fromWindow.length) return fromWindow.filter(Boolean);
+    const first = Array.isArray(forecast.spots) ? forecast.spots[0] : null;
+    if (first && Array.isArray(first.daily)) {
+      return first.daily.map((d) => d?.date).filter(Boolean);
+    }
+    return [];
+  }
+
+  function forecastCoversTonight(forecast) {
+    const nights = forecastNightsOf(forecast);
+    if (!nights.length) return false;
+    const today = tonightIso();
+    return nights.some((iso) => iso >= today);
+  }
+
+  async function loadForecast(bust) {
+    const local = await loadOptional("./data/forecast.json" + bust);
+    if (forecastCoversTonight(local)) return local;
+
+    // Hosting can lag behind main (e.g. [skip ci] blocked Pages rebuilds).
+    // Pull the latest forecast committed on GitHub when local nights are all past.
+    const remoteUrls = [
+      "https://raw.githubusercontent.com/mnghfxiidm4ad-rgb/Starry_Sky_Forecast/main/data/forecast.json",
+      "https://cdn.jsdelivr.net/gh/mnghfxiidm4ad-rgb/Starry_Sky_Forecast@main/data/forecast.json",
+    ];
+    for (const url of remoteUrls) {
+      try {
+        const remote = await fetchJson(url);
+        if (forecastCoversTonight(remote)) return remote;
+      } catch {
+        /* try next mirror */
+      }
+    }
+    return local;
+  }
+
   function uniqueSpotList(lists) {
     const seen = new Set();
     const out = [];
@@ -381,7 +420,7 @@
     const bust = "?v=" + tonightIso();
     const [auto, forecast, spots] = await Promise.all([
       loadOptional("./data/auto_spots.json" + bust),
-      loadOptional("./data/forecast.json" + bust),
+      loadForecast(bust),
       loadOptional("./data/spots.json" + bust),
     ]);
     const baseList = uniqueSpotList([spots?.spots || [], auto?.spots || []]);
@@ -418,9 +457,9 @@
         : spots
           ? "./data/spots.json"
           : "fallback";
-    const nights = forecast?.nightWindow?.nights || forecast?.nightWindow?.nights || forecastList[0]?.daily?.map((d) => d.date || d.date) || [];
+    const nights = forecastNightsOf(forecast);
     return {
-      updatedAt: forecast?.updatedAt || forecast?.updatedAt || auto?.updatedAt || auto?.updatedAt || spots?.updatedAt || spots?.updatedAt || FALLBACK.updatedAt,
+      updatedAt: forecast?.updatedAt || auto?.updatedAt || spots?.updatedAt || FALLBACK.updatedAt,
       sourceFile,
       hasForecast: Boolean(forecastList.length),
       nights,
