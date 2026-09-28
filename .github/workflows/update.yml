@@ -44,6 +44,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "No forecast changes"
           else
-            git commit --trailer "Co-authored-by: Cursor <cursoragent@cursor.com>" -m "Auto update forecast data [skip ci]"
+            # [skip ci] を付けると Cloudflare Workers Builds が公開をスキップする
+            git commit --trailer "Co-authored-by: Cursor <cursoragent@cursor.com>" -m "Auto update forecast data"
             git push
           fi
